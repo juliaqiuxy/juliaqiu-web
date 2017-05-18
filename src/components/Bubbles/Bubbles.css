@@ -1,0 +1,10 @@
+.Bubbles-Container {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: -1000;
+}
