@@ -1,12 +1,17 @@
 import React from 'react';
 import './Footer.css';
 
+const stopEventPropagation = (event) => {
+  event.stopPropagation();
+};
+
 const Footer = () => (
   <div className="Footer-container">
     <div className="row align-items-center" >
       <div className="col-2 offset-3 col-md-1 offset-md-9">
         <div className="Footer-icon-container">
           <a
+            onClick={stopEventPropagation}
             href={'https://mail.google.com/mail/?view=cm&fs=1&to=juliaqiuxy@gmail.com'}
             target="_blank"
             rel="noopener noreferrer"
@@ -25,6 +30,7 @@ const Footer = () => (
       <div className="col-2 col-md-1">
         <div className="Footer-icon-container">
           <a
+            onClick={stopEventPropagation}
             href={'https://github.com/juliaqiuxy'}
             target={'_blank'}
           >
@@ -42,6 +48,7 @@ const Footer = () => (
       <div className="col-2 col-md-1">
         <div className="Footer-icon-container">
           <a
+            onClick={stopEventPropagation}
             href="https://www.linkedin.com/in/juliaqiuxy"
             target={'_blank'}
           >
