@@ -9,7 +9,6 @@ const Home = ({ onChangeCard }) => {
   return (
     <div
       className="Home-container"
-      onClick={() => onChangeCard('portfolio')}
     >
       <Bubbles min="75" max="90" />
       <Logo />
@@ -34,3 +33,5 @@ export default Home;
 //   </div>
 // );
 // <HomeFlipButton onChangeCard={onChangeCard} />
+
+// onClick={() => onChangeCard('portfolio')}
