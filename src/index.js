@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App/App';
+
+import 'normalize.css';
 import './index.css';
 
-ReactDOM.render(
-  <div className="Index-container">
-    <App />
-  </div>
-  ,
-  document.getElementById('👩🏻‍💻')
-);
+import App from './App/App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render(<App />, document.getElementById('🦄'));
+registerServiceWorker();

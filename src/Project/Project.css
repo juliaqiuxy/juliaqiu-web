@@ -1,0 +1,130 @@
+.Project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+.Project-title {
+  font-size: 26px;
+}
+
+.Project-description {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 6px;
+  color: #EDEDED;
+}
+
+.Project-subDescription {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #EDEDED;
+  font-weight: 300;
+}
+
+.Project-subDescription a {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+.Project-tag {
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.Project-etc {
+  font-size: 6px;
+}
+
+.Project-contact-tag {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.Project-skills {
+  display: block;
+  margin-top: 10px;
+}
+
+.Project-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+@custom-media --sm-viewport only screen and (min-width: 48em); // 768px
+@custom-media --md-viewport only screen and (min-width: 64em); // 994px
+@custom-media --lg-viewport only screen and (min-width: 75em); / 1200px
+*/
+
+@media only screen and (min-width: 768px) {
+  .Project-skills {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-top: 1pc;
+  }
+
+  .Project-tag {
+    font-size: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+    margin-right: 1pc;
+  }
+
+  .Project-etc {
+    font-size: 8px;
+  }
+
+  .Project-title {
+    font-size: 28px;
+  }
+
+  .Project-description {
+    font-size: 22px;
+  }
+
+  .Project-subDescription {
+    font-size: 16px;
+  }
+
+  .dashed-gradient {
+    background-image: linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to bottom, #9B9B9B 50%, transparent 50%), linear-gradient(to bottom, #9B9B9B 50%, transparent 50%);
+    background-position: left top, left bottom, left top, right top;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 20px 1px, 20px 1px, 1px 20px, 1px 20px;
+  }
+}
+
+@media only screen and (min-width: 994px) {
+  .Project-title {
+    font-size: 32px;
+  }
+
+  .Project-description {
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  .Project-subDescription {
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+}
