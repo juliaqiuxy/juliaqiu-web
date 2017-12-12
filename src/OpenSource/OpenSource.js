@@ -15,6 +15,7 @@ const OpenSource = () => (
       description={PROJECT_DETAIL['Slope Ninja'].description}
       subDescription={PROJECT_DETAIL['Slope Ninja'].subDescription}
       shortSkills={PROJECT_DETAIL['Slope Ninja'].shortSkills}
+      longSkills={PROJECT_DETAIL['Slope Ninja'].longSkills}
     />
     <Link link="https://github.com/juliaqiuxy" text="More on Github" />
   </div>

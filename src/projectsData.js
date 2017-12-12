@@ -18,6 +18,7 @@ export const PROJECT_DETAIL = {
     description: 'Social Platform for exchanging handbags',
     subDescription: 'Mobile',
     shortSkills: ['UI/UX'],
+    longSkills: ['UI/UX'],
   },
   'Once Upon a Cloud': {
     title: 'Once Upon a Cloud',
@@ -37,5 +38,6 @@ export const PROJECT_DETAIL = {
     title: 'Shift Payments',
     description: 'A motion graphics video intro on Shift Payments',
     shortSkills: ['Illustration', 'After Effects', 'Motion Graphics'],
+    longSkills: ['Illustration', 'After Effects', 'Motion Graphics'],
   },
 };

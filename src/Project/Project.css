@@ -41,6 +41,7 @@
   border-radius: 4px;
   margin-right: 6px;
   display: inline-block;
+  margin-top: 10px;
 }
 
 .Project-etc {
@@ -49,7 +50,6 @@
 
 .Project-skills {
   display: block;
-  margin-top: 10px;
 }
 
 .Project-header {
@@ -67,10 +67,7 @@
 
 @media only screen and (min-width: 768px) {
   .Project-skills {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    margin-top: 1pc;
+    display: block;
   }
 
   .Project-tag {
@@ -81,6 +78,7 @@
     padding-bottom: 6px;
     border-radius: 6px;
     margin-right: 1pc;
+    margin-top: 1pc;
   }
 
   .Project-etc {
