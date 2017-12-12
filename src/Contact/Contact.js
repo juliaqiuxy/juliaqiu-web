@@ -35,17 +35,17 @@ const ContactItem = () => (
     </span>
     <div className="Project-skills">
       <span
-        className="Project-contact-tag Project-tag"
+        className="Contact-contact-tag Project-tag"
       >
         Your
       </span>
       <span
-        className="Project-contact-tag Project-tag"
+        className="Contact-contact-tag Project-tag"
       >
         Tech
       </span>
       <span
-        className="Project-contact-tag Project-tag"
+        className="Contact-contact-tag Project-tag"
       >
         Stack
       </span>
