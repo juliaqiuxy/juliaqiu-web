@@ -20,7 +20,21 @@
   flex: 1;
   padding-left: 20px;
   padding-right: 20px;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 /*
 @custom-media --sm-viewport only screen and (min-width: 48em); // 768px

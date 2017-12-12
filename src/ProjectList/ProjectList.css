@@ -1,8 +1,5 @@
 .ProjectList-container {
   flex: 1;
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  animation-timing-function: ease-out;
   overflow: scroll;
   text-align: left;
   margin-bottom: 62px;
@@ -11,14 +8,4 @@
 .ProjectList-container a {
   text-decoration: none;
   color: inherit;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
