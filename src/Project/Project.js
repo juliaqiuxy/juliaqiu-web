@@ -58,7 +58,13 @@ const Project = ({ title, description, subDescription, shortSkills, link, text }
         }}
       >
         <span className="Project-title">{title}</span>
-        {link ? <Link link={link} text={text} /> : null}
+        {link ?
+          <Link link={link} text={text} /> :
+          <Link
+            link="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
+            text="Request Access"
+          />
+        }
       </a>
       <span className="Project-description">{description}</span>
       <span className="Project-subDescription">{subDescription}</span>

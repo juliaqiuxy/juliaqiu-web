@@ -18,13 +18,24 @@ export const PROJECT_DETAIL = {
     description: 'Social Platform for exchanging handbags',
     subDescription: 'Mobile',
     shortSkills: ['UI/UX'],
-    longSkills: ['User Experience Design', 'Visual Design', 'User Experience Research', 'Prototying', 'Wireframing'],
   },
   'Once Upon a Cloud': {
     title: 'Once Upon a Cloud',
     description: 'VR experience to learn about the earth water cycle',
     subDescription: 'Virtual Reality on Oculus',
-    shortSkills: ['VR', 'Unity', 'Oculus'],
-    longSkills: ['VR', 'Unity', 'Oculus', 'Unity Script', 'C#', '3D', 'Interaction Design', 'UI/UX'],
+    shortSkills: ['VR', 'Unity', '...', 'Oculus'],
+    longSkills: ['VR', 'Unity', 'Oculus', 'C#', '3D', 'UI/UX'],
+  },
+  'Hotdog Chase': {
+    title: 'Hotdog Chase',
+    description: 'VR game experience to collect hotdogs',
+    subDescription: 'Virtual Reality on Google Cardboard',
+    shortSkills: ['VR', 'Unity', '...', 'Google Cardboard'],
+    longSkills: ['VR', 'Unity', 'Google Cardboard', 'C#', '3D', 'UI/UX'],
+  },
+  'Shift Payments': {
+    title: 'Shift Payments',
+    description: 'A motion graphics video intro on Shift Payments',
+    shortSkills: ['Illustration', 'After Effects', 'Motion Graphics'],
   },
 };

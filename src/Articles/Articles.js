@@ -1,6 +1,8 @@
 import React from 'react';
 import Category from '../Category/Category';
 import linkIcon from '../images/link.svg';
+import lock from '../images/lock.svg';
+
 import './Articles.css';
 
 export const Link = ({ text, link }) => (
@@ -15,7 +17,11 @@ export const Link = ({ text, link }) => (
     }}
   >
     <span className="Articles-link">{text}</span>
-    <img src={linkIcon} alt="link" />
+    {
+      text === 'Request Access' ?
+        <img src={lock} alt="lock" /> :
+        <img src={linkIcon} alt="link" />
+    }
   </a>
 );
 

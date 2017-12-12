@@ -26,6 +26,18 @@ const ProjectList = () => (
       subDescription={PROJECT_DETAIL['Once Upon a Cloud'].subDescription}
       shortSkills={PROJECT_DETAIL['Once Upon a Cloud'].shortSkills}
     />
+    <Project
+      title={PROJECT_DETAIL['Hotdog Chase'].title}
+      description={PROJECT_DETAIL['Hotdog Chase'].description}
+      subDescription={PROJECT_DETAIL['Hotdog Chase'].subDescription}
+      shortSkills={PROJECT_DETAIL['Hotdog Chase'].shortSkills}
+    />
+    <Project
+      title={PROJECT_DETAIL['Shift Payments'].title}
+      description={PROJECT_DETAIL['Shift Payments'].description}
+      subDescription={PROJECT_DETAIL['Shift Payments'].subDescription}
+      shortSkills={PROJECT_DETAIL['Shift Payments'].shortSkills}
+    />
   </div>
 );
 
