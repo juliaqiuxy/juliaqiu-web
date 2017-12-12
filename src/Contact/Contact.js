@@ -1,5 +1,4 @@
 import React from 'react';
-import Category from '../Category/Category';
 import './Contact.css';
 
 const ContactItem = () => (

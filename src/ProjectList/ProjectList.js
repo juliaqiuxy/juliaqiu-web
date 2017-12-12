@@ -5,17 +5,6 @@ import { PROJECT_DETAIL } from '../projectsData';
 
 import './ProjectList.css';
 
-const TAG_COLORS = {
-  React: '#84F752',
-  'React Native': '#A54AF6',
-  Redux: '#4AB5F7',
-  'node.js': '#F7524A',
-  'UI/UX': '#E4B549',
-  VR: '#5252F6',
-  Unity: '#F7EF4C',
-  '...': '#4A4A4A',
-};
-
 const ProjectList = () => (
   <div className="ProjectList-container">
     <Category category="Projects" />

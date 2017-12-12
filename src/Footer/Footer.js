@@ -3,7 +3,7 @@ import './Footer.css';
 import heart from '../images/heart.svg';
 import unicorn from '../images/unicorn.svg';
 
-const Footer = ({ theme }) => {
+const Footer = () => {
   const backgroundColor = '#0D0E14';
   return (
     <div
@@ -30,6 +30,6 @@ const Footer = ({ theme }) => {
       />
     </div>
   );
-}
+};
 
 export default Footer;
