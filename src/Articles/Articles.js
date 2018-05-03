@@ -13,7 +13,6 @@ export const Link = ({ text, link }) => (
     style={{
       textDecoration: 'none',
       display: 'block',
-      marginTop: '24px',
     }}
   >
     <span className="Articles-link">{text}</span>
