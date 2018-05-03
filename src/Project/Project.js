@@ -105,7 +105,11 @@ class Project extends Component {
           }
         </a>
         <span className="Project-description">{this.props.description}</span>
-        <span className="Project-subDescription">{this.props.subDescription}</span>
+        {
+          this.props.subDescription ? (
+            <span className="Project-subDescription">{this.props.subDescription}</span>
+          ) : null
+        }
         <div className="Project-skills">
           {skillElements}
         </div>
