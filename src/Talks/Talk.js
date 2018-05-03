@@ -16,7 +16,7 @@ const Talk = ({ src, des, link, linkText, title, event }) => (
     <div className="Talk-gif-wrapper">
       <img className="Talk-gif" src={src} alt={des} />
     </div>
-    <Link link={link} text={linkText} />
+    <Link link={link} text={linkText} newLine />
   </a>
 );
 

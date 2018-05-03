@@ -5,7 +5,7 @@ import lock from '../images/lock.svg';
 
 import './Articles.css';
 
-export const Link = ({ text, link }) => (
+export const Link = ({ text, link, newLine }) => (
   <a
     href={link}
     target="_blank"
@@ -13,6 +13,7 @@ export const Link = ({ text, link }) => (
     style={{
       textDecoration: 'none',
       display: 'block',
+      marginTop: newLine ? '18px' : 0,
     }}
   >
     <span className="Articles-link">{text}</span>
