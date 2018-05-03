@@ -18,7 +18,7 @@ export const Link = ({ text, link, newLine }) => (
   >
     <span className="Articles-link">{text}</span>
     {
-      text === 'Request Access' ?
+      text === 'request access' ?
         <img src={lock} alt="lock" /> :
         <img src={linkIcon} alt="link" />
     }

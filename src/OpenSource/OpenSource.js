@@ -9,8 +9,8 @@ const OpenSource = () => (
   <div className="OpenSource-container">
     <Category category="Open Source" />
     <Project
-      link="https://www.slope.ninja"
-      text="www.slope.ninja"
+      link="https://slope.ninja"
+      text="slope.ninja"
       title={PROJECT_DETAIL['Slope Ninja'].title}
       description={PROJECT_DETAIL['Slope Ninja'].description}
       subDescription={PROJECT_DETAIL['Slope Ninja'].subDescription}

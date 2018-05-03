@@ -9,12 +9,12 @@ const TAG_COLORS = {
   'node.js': '#F7524A',
   'UI/UX': '#52F7C5',
   VR: '#5252F6',
-  postgreSQL: '#E4B549',
+  PostgreSQL: '#E4B549',
   koa: '#9145F5',
   knex: '#41A6F4',
   Unity: '#F7EF4C',
   '...': '#4A4A4A',
-  'bootstrap grid': '#FF6F42',
+  'Bootstrap Grid': '#FF6F42',
   'Google Cardboard': '#2D9095',
   Oculus: '#F74AB5',
   '3D': '#FB5371',
@@ -23,6 +23,7 @@ const TAG_COLORS = {
   Illustration: '#5284F7',
   'After Effects': '#4CF799',
   'Motion Graphics': '#C6E449',
+  DynamoDB: '#F9B519',
 };
 class Project extends Component {
   constructor(props) {
@@ -100,7 +101,7 @@ class Project extends Component {
             <Link link={this.props.link} text={this.props.text} /> :
             <Link
               link="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
-              text="Request Access"
+              text="request access"
             />
           }
         </a>

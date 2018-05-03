@@ -3,21 +3,29 @@ import { Link } from '../Articles/Articles';
 
 import './Talks.css';
 
-const Talk = ({ src, des, link, linkText, title, event }) => (
-  <a
+const Talk = ({ src, des, link, linkText, title, name }) => (
+  <div
     className="Talk-wrapper"
   >
-    <span className="Talk-title">
+    <div className="Talk-header">
+      <span className="Talk-title">
+        {name}
+      </span>
+
+      <Link link={link} text={linkText} />
+    </div>
+    <span className="Talk-description">
       {title}
     </span>
-    <span className="Talk-description">
-      {event}
-    </span>
     <div className="Talk-gif-wrapper">
-      <img className="Talk-gif" src={src} alt={des} />
+      <a
+        href="http://bit.ly/2jmkNOu"
+        target="blank"
+      >
+        <img className="Talk-gif" src={src} alt={des} />
+      </a>
     </div>
-    <Link link={link} text={linkText} newLine />
-  </a>
+  </div>
 );
 
 export default Talk;

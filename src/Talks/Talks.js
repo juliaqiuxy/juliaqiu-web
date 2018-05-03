@@ -11,9 +11,10 @@ const Talks = () => (
     <Talk
       src={zeit}
       des="zeit day"
-      linkText="Coming soon"
+      link="https://zeit.co/day"
+      linkText="zeit.co/day"
       title="Migrating Slope Ninja to Zeit for Fun and Profit"
-      event="Zeit Day 2018"
+      name="Zeit Day 2018"
     />
   </div>
 );
