@@ -6,6 +6,15 @@ export const PROJECT_DETAIL = {
     shortSkills: ['React', 'React Native', 'Redux', 'node.js', '...', 'UI/UX'],
     longSkills: ['React', 'React Native', 'Redux', 'node.js', 'postgreSQL', 'koa', 'knex', 'bootstrap grid', 'UI/UX'],
   },
+  Astroworker: {
+    title: 'Astroworker',
+    description: 'Get on-demand work',
+    subDescription: 'Web',
+    shortSkills: ['React', 'Redux', 'node.js', '...', 'UI/UX'],
+    longSkills: ['React', 'Redux', 'node.js', 'postgreSQL', 'koa', 'knex', 'UI/UX'],
+    link: 'http://www.astroworker.com',
+    text: 'www.astroworker.com',
+  },
   Debut: {
     title: 'Debut',
     description: 'Beautiful, simple, clutter-free newsletters',
@@ -25,14 +34,14 @@ export const PROJECT_DETAIL = {
     description: 'VR experience to learn about the earth water cycle',
     subDescription: 'Virtual Reality on Oculus',
     shortSkills: ['VR', 'Unity', '...', 'Oculus'],
-    longSkills: ['VR', 'Unity', 'Oculus', 'C#', '3D', 'UI/UX'],
+    longSkills: ['VR', 'Unity', 'C#', '3D', 'UI/UX', 'Oculus'],
   },
   'Hotdog Chase': {
     title: 'Hotdog Chase',
     description: 'VR game experience to collect hotdogs',
     subDescription: 'Virtual Reality on Google Cardboard',
     shortSkills: ['VR', 'Unity', '...', 'Google Cardboard'],
-    longSkills: ['VR', 'Unity', 'Google Cardboard', 'C#', '3D', 'UI/UX'],
+    longSkills: ['VR', 'Unity', 'C#', '3D', 'UI/UX', 'Google Cardboard'],
   },
   'Shift Payments': {
     title: 'Shift Payments',

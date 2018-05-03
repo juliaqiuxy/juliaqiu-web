@@ -9,6 +9,15 @@ const ProjectList = () => (
   <div className="ProjectList-container">
     <Category category="Projects" />
     <Project
+      title={PROJECT_DETAIL.Astroworker.title}
+      description={PROJECT_DETAIL.Astroworker.description}
+      subDescription={PROJECT_DETAIL.Astroworker.subDescription}
+      shortSkills={PROJECT_DETAIL.Astroworker.shortSkills}
+      longSkills={PROJECT_DETAIL.Astroworker.longSkills}
+      link={PROJECT_DETAIL.Astroworker.link}
+      text={PROJECT_DETAIL.Astroworker.text}
+    />
+    <Project
       title={PROJECT_DETAIL.Debut.title}
       description={PROJECT_DETAIL.Debut.description}
       subDescription={PROJECT_DETAIL.Debut.subDescription}
