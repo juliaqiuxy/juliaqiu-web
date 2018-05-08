@@ -8,7 +8,7 @@ const STRIPE_HEIGHTS = ['4px', '8px', '10px', '20px', '26px', '30px'];
 
 const ColorfulStripe = () => {
   const getRandom = getRandomInt();
-  const stripes = Array(150).fill(0).map((item, index) => (
+  const stripes = Array(200).fill(0).map((item, index) => (
     <div
       key={index}
       style={{
