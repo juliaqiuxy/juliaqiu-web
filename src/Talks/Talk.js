@@ -19,7 +19,7 @@ const Talk = ({ src, des, link, linkText, title, name }) => (
     </span>
     <div className="Talk-gif-wrapper">
       <a
-        href="http://bit.ly/2jmkNOu"
+        href="http://bit.ly/zeitday-juliaqiu"
         target="blank"
       >
         <img className="Talk-gif" src={src} alt={des} />
