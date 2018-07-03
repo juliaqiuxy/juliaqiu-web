@@ -10,6 +10,19 @@
 
 .Project-title {
   font-size: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.Project-wip {
+  margin-left: 1pc;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 8px;
+  color: #000;
+  text-dzecoration: none;
+  cursor: pointer;
+  background-color: #F7EF4C;
 }
 
 .Project-description {

@@ -15,9 +15,9 @@ const Home = () => (
       <SmartLogo />
     </div>
     <div className="Home-content">
-      <Article />
       <OpenSource />
       <Talks />
+      <Article />
       <ProjectList />
       <Contact />
     </div>

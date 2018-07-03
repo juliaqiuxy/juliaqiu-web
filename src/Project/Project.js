@@ -24,6 +24,10 @@ const TAG_COLORS = {
   'After Effects': '#4CF799',
   'Motion Graphics': '#C6E449',
   DynamoDB: '#F9B519',
+  Apollo: '#FB5371',
+  GraphQL: '#F7EF4C',
+  'AWS SES': '#F74AB5',
+  PHP: '#2D9095',
 };
 class Project extends Component {
   constructor(props) {
@@ -96,7 +100,14 @@ class Project extends Component {
             textDecoration: 'none',
           }}
         >
-          <span className="Project-title">{this.props.title}</span>
+          <span className="Project-title">
+            {this.props.title}
+            {
+              this.props.wip ? (
+                <span className="Project-wip" title="Work in progress">WIP</span>
+              ) : null
+            }
+          </span>
           {this.props.link ?
             <Link link={this.props.link} text={this.props.text} /> :
             <Link

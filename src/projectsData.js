@@ -6,6 +6,22 @@ export const PROJECT_DETAIL = {
     shortSkills: ['React', 'React Native', 'Redux', 'node.js', '...', 'UI/UX'],
     longSkills: ['React', 'React Native', 'Redux', 'node.js', 'PostgreSQL', 'Koa', 'Knex', 'DynamoDB', 'Bootstrap Grid', 'UI/UX'],
   },
+  NDAify: {
+    title: 'NDAify',
+    description: 'NDA-walls for your business secrets',
+    subDescription: 'Web',
+    shortSkills: ['React', 'GraphQL', 'Apollo', '...', 'UI/UX'],
+    longSkills: ['React', 'GraphQL', 'Apollo', 'node.js', 'PostgreSQL', 'Koa', 'Knex', 'DynamoDB', 'AWS SES', 'Bootstrap Grid', 'UI/UX'],
+  },
+  Trulia: {
+    title: 'Trulia',
+    description: 'Real estate listings and rental properties',
+    subDescription: 'Web',
+    shortSkills: ['React', 'Redux', '...', 'PHP'],
+    longSkills: ['React', 'Redux', 'PHP'],
+    link: 'https://trulia.com',
+    text: 'trulia.com',
+  },
   Astroworker: {
     title: 'Astroworker',
     description: 'Get on-demand work',
