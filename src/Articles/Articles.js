@@ -13,7 +13,7 @@ export const Link = ({ text, link, newLine }) => (
     style={{
       textDecoration: 'none',
       display: 'block',
-      marginTop: newLine ? '18px' : 0,
+      marginTop: newLine ? '2pc' : 0,
     }}
   >
     <span className="Articles-link">{text}</span>
@@ -36,7 +36,7 @@ const Articles = () => (
     >
       Learning how to code one email at a time
     </a>
-    <Link text="More on Medium" link="https://medium.com/@juliaqiuxy" />
+    <Link newLine text="More on Medium" link="https://medium.com/@juliaqiuxy" />
   </div>
 );
 

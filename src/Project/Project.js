@@ -28,6 +28,8 @@ const TAG_COLORS = {
   GraphQL: '#F7EF4C',
   'AWS SES': '#F74AB5',
   PHP: '#2D9095',
+  TypeScript: '#007ACC',
+  'Next.js': '#CC0088',
 };
 class Project extends Component {
   constructor(props) {
@@ -44,18 +46,19 @@ class Project extends Component {
         const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : '#FFFFFF';
         if (skill === '...') {
           return (
-            <span
+            <button
               className="Project-tag Project-etc"
               style={{
                 border: `1px solid ${color}`,
                 color,
                 textDecoration: 'none',
                 cursor: 'pointer',
+                backgroundColor: 'transparent',
               }}
               onClick={() => this.setState({ skillList: 'longSkills' })}
             >
               &#9679;&#9679;&#9679;
-            </span>
+            </button>
           );
         }
         return (

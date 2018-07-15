@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Project from '../Project/Project';
 import Category from '../Category/Category';
 import { PROJECT_DETAIL } from '../projectsData';
@@ -82,7 +82,7 @@ class ProjectList extends Component {
                 shortSkills={PROJECT_DETAIL['Shift Payments'].shortSkills}
                 longSkills={PROJECT_DETAIL['Shift Payments'].longSkills}
               />
-          </div>
+            </div>
           ) : (
             <div className="ProjectList-button-wrapper">
               <button

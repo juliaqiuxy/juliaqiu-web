@@ -27,7 +27,7 @@ const OpenSource = () => (
       shortSkills={PROJECT_DETAIL.NDAify.shortSkills}
       longSkills={PROJECT_DETAIL.NDAify.longSkills}
     />
-    <Link link="https://github.com/juliaqiuxy" text="More on GitHub" />
+    <Link newLine link="https://github.com/juliaqiuxy" text="More on GitHub" />
   </div>
 );
 
