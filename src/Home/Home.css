@@ -4,16 +4,24 @@
   color: #ffffff;
 }
 
-.Home-logo-container {
-  height: 60px;
+.Home-header-container {
+  box-sizing: border-box;
+  width: 100%;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-self: flex-start;
+  align-items: flex-start;
 }
 
-.Home-logo-container img {
-  height: 100%;
+.Home-header-container img {
+  height: 60px;
+}
+
+.Home-calendly-link {
+  margin-top: 1pc;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .Home-content {
@@ -49,10 +57,18 @@
     justify-content: center;
     align-items: center;
   }
-  .Home-logo-container {
+  .Home-header-container img {
     height: 100px;
+  }
+  .Home-header-container {
     padding: 2pc;
     padding-bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Home-calendly-link {
+    margin-top: 0;
   }
   .Home-content {
     margin-top: 24px;

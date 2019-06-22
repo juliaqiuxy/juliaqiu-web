@@ -9,10 +9,25 @@ import SmartLogo from './SmartLogo';
 
 import './Home.css';
 
+const openCalendly = () => {
+  window.Calendly.initPopupWidget({ url: 'https://calendly.com/juliaqiuxy/quick-intro' });
+}
+
 const Home = () => (
   <div className="Home-container">
-    <div className="Home-logo-container">
+    <div className="Home-header-container">
       <SmartLogo />
+      <a
+        className="Home-calendly-link"
+        href=""
+        onClick={(evt) => { 
+          evt.preventDefault();
+          openCalendly(); 
+          return false;
+        }}
+      >
+        Want to meet over coffee?
+      </a>
     </div>
     <div className="Home-content">
       <OpenSource />

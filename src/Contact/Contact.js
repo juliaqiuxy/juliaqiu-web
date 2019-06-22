@@ -1,6 +1,10 @@
 import React from 'react';
 import './Contact.css';
 
+const openCalendly = () => {
+  window.Calendly.initPopupWidget({ url: 'https://calendly.com/juliaqiuxy/contact-me' });
+}
+
 const ContactItem = () => (
   <div className="ContactItem-container dashed-gradient">
     <span className="Project-title">Are you the next unicorn?</span>
@@ -14,6 +18,20 @@ const ContactItem = () => (
       >
         julia@juliaqiu.com
       </a>
+      {' '}
+      or
+      {' '}
+      <a
+        href=""
+        onClick={(evt) => { 
+          evt.preventDefault();
+          openCalendly(); 
+          return false;
+        }}
+      >
+        schedule a call
+      </a>
+      .
     </span>
     <span className="Project-subDescription">
       {'Add me on ' }

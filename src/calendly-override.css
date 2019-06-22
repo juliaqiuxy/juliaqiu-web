@@ -1,0 +1,12 @@
+.calendly-overlay .calendly-popup .calendly-popup-content {
+  background-color: transparent;
+}
+
+.calendly-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.calendly-popup {
+  background-color: transparent !important;
+}
+

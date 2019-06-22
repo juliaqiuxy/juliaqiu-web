@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import 'normalize.css';
 import './index.css';
+import './calendly-override.css';
 
 import App from './App/App';
 
