@@ -23,17 +23,21 @@ const ColorfulStripeWrapper = styled.div`
 
 const ColorfulStripe = () => {
   const getRandom = getRandomInt();
-  const stripes = Array(200).fill(0).map((item, index) => (
-    <div
-      key={index}
-      style={{
-        backgroundColor: STRIPE_COLORS[getRandom(0, STRIPE_COLORS.length)],
-        height: STRIPE_HEIGHTS[getRandom(0, STRIPE_HEIGHTS.length)],
-        width: '100%',
-        zIndex: 999,
-      }}
-    />
-  ));
+  const keyPrefix = getRandom(1, 100);
+  const stripes = Array(200).fill(0).map((pos, ii) => {
+    const key = `stripe_${keyPrefix}_${ii}`;
+    return (
+      <div
+        key={key}
+        style={{
+          backgroundColor: STRIPE_COLORS[getRandom(0, STRIPE_COLORS.length)],
+          height: STRIPE_HEIGHTS[getRandom(0, STRIPE_HEIGHTS.length)],
+          width: '100%',
+          zIndex: 999,
+        }}
+      />
+    );
+  });
 
   return (
     <ColorfulStripeContainer>

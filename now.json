@@ -1,7 +1,7 @@
 {
   "alias": [
-    "www.juliaqiu.com",
-    "portfolio.juliaqiu.com",
     "juliaqiu.com"
-  ]
+  ],
+  "version": 2,
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }

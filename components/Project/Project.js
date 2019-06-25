@@ -170,13 +170,19 @@ class Project extends Component {
   }
 
   render() {
+    const {
+      longSkills, shortSkills, link, title, wip, text, description, subDescription,
+    } = this.props;
+    const { skillList } = this.state;
+
     let skillElements;
-    if (this.state.skillList === 'shortSkills') {
-      skillElements = this.props.shortSkills.map((skill) => {
+    if (skillList === 'shortSkills') {
+      skillElements = shortSkills.map((skill) => {
         const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : '#FFFFFF';
         if (skill === '...') {
           return (
             <ProjectEtcTag
+              key={skill}
               style={{
                 border: `1px solid ${color}`,
                 color,
@@ -203,8 +209,8 @@ class Project extends Component {
         );
       });
     }
-    if (this.state.skillList === 'longSkills') {
-      skillElements = this.props.longSkills.map((skill) => {
+    if (skillList === 'longSkills') {
+      skillElements = longSkills.map((skill) => {
         const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : '#FFFFFF';
         return (
           <ProjectTag
@@ -222,7 +228,7 @@ class Project extends Component {
     return (
       <Container>
         <ProjectHeader
-          href={this.props.link}
+          href={link}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -230,27 +236,27 @@ class Project extends Component {
           }}
         >
           <ProjectTitle>
-            {this.props.title}
+            {title}
             {
-              this.props.wip ? (
+              wip ? (
                 <WIP title="Work in progress">WIP</WIP>
               ) : null
             }
           </ProjectTitle>
-          {this.props.link
-            ? <Link link={this.props.link} text={this.props.text} />
+          {link
+            ? <Link href={link} text={text} />
             : (
               <Link
-                link="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
                 text="request access"
               />
             )
           }
         </ProjectHeader>
-        <ProjectDescription>{this.props.description}</ProjectDescription>
+        <ProjectDescription>{description}</ProjectDescription>
         {
-          this.props.subDescription ? (
-            <ProjectSubDescription>{this.props.subDescription}</ProjectSubDescription>
+          subDescription ? (
+            <ProjectSubDescription>{subDescription}</ProjectSubDescription>
           ) : null
         }
         <div>

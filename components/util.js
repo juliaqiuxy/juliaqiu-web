@@ -10,6 +10,7 @@ export const throttle = (callback, wait, context = this) => {
 
   return () => {
     if (!timeout) {
+      // eslint-disable-next-line no-undef
       callbackArgs = arguments;
       timeout = setTimeout(later, wait);
     }

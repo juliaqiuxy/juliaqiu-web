@@ -95,6 +95,7 @@ const HomeCalendlyLink = styled.a`
 `;
 
 const openCalendly = () => {
+  // eslint-disable-next-line no-undef
   window.Calendly.initPopupWidget({ url: 'https://calendly.com/juliaqiuxy/quick-intro' });
 };
 

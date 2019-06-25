@@ -39,20 +39,23 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // eslint-disable-next-line no-undef
     window.addEventListener('scroll', this.handleScroll);
   }
 
   compoentWillUnmount() {
+    // eslint-disable-next-line no-undef
     window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
+    const { colorIteration } = this.state;
     return (
       <Container>
         <Main>
           <Home />
         </Main>
-        <ColorfulStripe iteration={this.state.colorIteration} />
+        <ColorfulStripe iteration={colorIteration} />
       </Container>
     );
   }

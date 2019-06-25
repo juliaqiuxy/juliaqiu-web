@@ -37,9 +37,9 @@ const ArticleLink = styled.a`
   }
 `;
 
-export const Link = ({ text, link, newLine }) => (
+export const Link = ({ text, href, newLine }) => (
   <a
-    href={link}
+    href={href}
     target="_blank"
     rel="noopener noreferrer"
     style={{
@@ -68,7 +68,7 @@ const Articles = () => (
     >
       Learning how to code one email at a time
     </ArticleItem>
-    <Link newLine text="More on Medium" link="https://medium.com/@juliaqiuxy" />
+    <Link newLine text="More on Medium" href="https://medium.com/@juliaqiuxy" />
   </Container>
 );
 

@@ -104,9 +104,11 @@ const ContactTag = styled.span`
 `;
 
 const openCalendly = () => {
+  // eslint-disable-next-line no-undef
   window.Calendly.initPopupWidget({ url: 'https://calendly.com/juliaqiuxy/contact-me' });
 };
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
 const ContactItem = () => (
   <Container>
     <ProjectTitle>Are you the next unicorn?</ProjectTitle>
@@ -168,6 +170,7 @@ const ContactItem = () => (
     </div>
   </Container>
 );
+/* eslint-enable */
 
 const Contact = () => (
   <div>

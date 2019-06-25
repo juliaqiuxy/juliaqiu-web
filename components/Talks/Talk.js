@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 import { Link } from '../Articles/Articles';
 
-const TalkWrappr = styled.div`
-  text-decoration: none;
-`;
-
 const TalkHeader = styled.div`
   display: flex;
   width: 100%;
@@ -67,7 +63,7 @@ const Talk = ({
         {name}
       </TalkTitle>
 
-      <Link link={link} text={linkText} />
+      <Link href={link} text={linkText} />
     </TalkHeader>
     <TalkDescription>
       {title}

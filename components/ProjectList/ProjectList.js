@@ -57,6 +57,7 @@ class ProjectList extends Component {
   }
 
   render() {
+    const { showMore } = this.state;
     return (
       <Container>
         <Category category="Work" />
@@ -86,7 +87,7 @@ class ProjectList extends Component {
           longSkills={PROJECT_DETAIL.Debut.longSkills}
         />
         {
-          this.state.showMore ? (
+          showMore ? (
             <div>
               <Project
                 title={PROJECT_DETAIL.Bagpal.title}
