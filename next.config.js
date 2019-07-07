@@ -1,7 +1,7 @@
 module.exports = () => ({
-  target: 'serverless',
+  // target: 'serverless',
   // delegate to next-routes
-  useFileSystemPublicRoutes: false,
+  useFileSystemPublicRoutes: true,
   env: {
     // Build-time configuration (that we want inlined in the bundle)
     // This option inlines the environment variables of the build machine e.g. If you build on a
