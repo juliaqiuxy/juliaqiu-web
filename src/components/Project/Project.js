@@ -140,6 +140,9 @@ const ProjectEtcTag = styled.button`
   margin-right: 6px;
   display: inline-block;
   margin-top: 10px;
+  textDecoration: none;
+  cursor: pointer;
+  background-color: transparent;
 
   @media only screen and (min-width: 768px) {
     font-size: 8px;
@@ -158,6 +161,7 @@ const ProjectHeader = styled.a`
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
+  text-decoration: none;
 `;
 
 class Project extends Component {
@@ -186,9 +190,6 @@ class Project extends Component {
               style={{
                 border: `1px solid ${color}`,
                 color,
-                textDecoration: 'none',
-                cursor: 'pointer',
-                backgroundColor: 'transparent',
               }}
               onClick={() => this.setState({ skillList: 'longSkills' })}
             >
@@ -231,9 +232,6 @@ class Project extends Component {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            textDecoration: 'none',
-          }}
         >
           <ProjectTitle>
             {title}

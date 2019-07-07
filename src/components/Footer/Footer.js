@@ -10,6 +10,7 @@ const Container = styled.div`
   flex-direction: row;
   margin-top: 5px;
   position: relative;
+  background-color: #0D0E14;
 
   @media only screen and (min-width: 994px) {
     height: auto;
@@ -68,13 +69,8 @@ const FooterGraph = styled.img`
 `;
 
 const Footer = () => {
-  const backgroundColor = '#0D0E14';
   return (
-    <Container
-      style={{
-        backgroundColor,
-      }}
-    >
+    <Container>
       <FooterTextContainer>
         <FooterText>
           © Julia Qiu. All rights reserved. Made with

@@ -22,7 +22,7 @@ const ArticleItem = styled.a`
   }
 `;
 
-const ArticleLink = styled.a`
+const ArticleLink = styled.span`
   font-size: 18px;
   font-weight: 300;
   margin-right: 12px;
@@ -37,24 +37,15 @@ const ArticleLink = styled.a`
   }
 `;
 
-export const Link = ({ text, href, newLine }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      textDecoration: 'none',
-      display: 'block',
-      marginTop: newLine ? '2pc' : 0,
-    }}
-  >
+export const Link = ({ text, addMaginTop }) => (
+  <div style={{ marginTop: addMaginTop ? '2pc': '0'}}>
     <ArticleLink>{text}</ArticleLink>
     {
       text === 'request access'
         ? <img src="/static/images/lock.svg" alt="lock" />
         : <img src="/static/images/link.svg" alt="link" />
     }
-  </a>
+  </div>
 );
 
 const Articles = () => (
@@ -68,7 +59,7 @@ const Articles = () => (
     >
       Learning how to code one email at a time
     </ArticleItem>
-    <Link newLine text="More on Medium" href="https://medium.com/@juliaqiuxy" />
+    <Link addMaginTop text="More on Medium" href="https://medium.com/@juliaqiuxy" />
   </Container>
 );
 
