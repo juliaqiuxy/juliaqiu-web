@@ -16,5 +16,6 @@ module.exports = () => ({
   publicRuntimeConfig: {
     // Runtime configuration
     // publicRuntimeConfig is exposed to both server and client
+    GOOGLE_TAG_MANAGER_ID: process.env.GOOGLE_TAG_MANAGER_ID
   },
 });

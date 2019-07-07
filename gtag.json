@@ -1,0 +1,188 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2019-07-07 07:27:36",
+    "containerVersion": {
+        "path": "accounts/4702327246/containers/12350567/versions/2",
+        "accountId": "4702327246",
+        "containerId": "12350567",
+        "containerVersionId": "2",
+        "name": "added tags",
+        "container": {
+            "path": "accounts/4702327246/containers/12350567",
+            "accountId": "4702327246",
+            "containerId": "12350567",
+            "name": "juliaqiu.com",
+            "publicId": "GTM-PP8XZCT",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1562484308184",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4702327246/containers/12350567/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "tagId": "2",
+                "name": "Calendly",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "{/* Calendly link widget begin  */}\n<link\n  href=\"https://assets.calendly.com/assets/external/widget.css\"\n  rel=\"stylesheet\"\n/>\n<script\n  src=\"https://assets.calendly.com/assets/external/widget.js\"\n  type=\"text/javascript\"\n/>\n{/* Calendly link widget end  */}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1562484104908",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "tagId": "1",
+                "name": "Google Analytics - Universal Analytics",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_PAGEVIEW"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{GOOGLE_TRACKING_ID}}"
+                    }
+                ],
+                "fingerprint": "1562484315506",
+                "firingTriggerId": [
+                    "2147479553",
+                    "8"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "triggerId": "8",
+                "name": "History Change",
+                "type": "HISTORY_CHANGE",
+                "fingerprint": "1562484308184"
+            },
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "triggerId": "7",
+                "name": "Window Loaded",
+                "type": "WINDOW_LOADED",
+                "fingerprint": "1562484085588"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "variableId": "1",
+                "name": "GOOGLE_TRACKING_ID",
+                "type": "gas",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cookieDomain",
+                        "value": "auto"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-143400844-1"
+                    }
+                ],
+                "fingerprint": "1562483578395"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "4702327246",
+                "containerId": "12350567",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1562484380723",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4702327246/containers/12350567/versions/2?apiLink=version"
+    }
+}

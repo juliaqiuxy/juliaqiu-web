@@ -1,48 +1,144 @@
 import React from 'react';
 import NextHead from 'next/head';
+import getConfig from 'next/config';
+import { withRouter } from "next/router";
 
-const META_DESCRIPTION = "Julia Qiu's Portfolio";
+const META_DESCRIPTION = "Software Engineer. Full Stack, iOS, Android. Recently launched Slope Ninja, http://slope.ninja . Also available on the App store.";
 const TITLE = "Julia Qiu's Portfolio";
 
-const Head = ({ description = META_DESCRIPTION }) => (
+const JSONLD_DATA = {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  email: "mailto:julia@juliaqiu.com",
+  firstName: "Julia",
+  id: "juliaqiuxy",
+  image: "/static/images/migratingSlopeNinjaToZeit.gif",
+  jobTitle: "Software Engineer",
+  lastName: "Qiu",
+  name: "Julia Qiu", 
+  sameAs: [
+    "https://www.linkedin.com/in/juliaqiuxy",
+    "http://twitter.com/juliaqiuxy",
+    "http://instagram.com/juliaqiuxy"
+  ],
+  url: "https://juliaqiu.com",
+};
+
+const GOOGLE_MAX_LENGTH = 160;
+
+const {
+  publicRuntimeConfig: {
+    GOOGLE_TAG_MANAGER_ID,
+  },
+} = getConfig();
+
+export const PageTitle = ({ title = TITLE, prepend = '', append = '' }) => (
+  <NextHead>
+    <title>{`${prepend}${title}${append}`}</title>
+    <meta property="og:title" content={title} key="og:title" />
+    <meta name="twitter:title" key="twitter:title" content={title} />
+  </NextHead>
+);
+
+export const PageDescription = ({ description = META_DESCRIPTION }) => {
+  if (description.length > GOOGLE_MAX_LENGTH) {
+    // eslint-disable-next-line no-console
+    console.warn(`You should keep your page description under ${GOOGLE_MAX_LENGTH} characters`);
+  }
+
+  return (
+    <NextHead>
+      <meta name="description" content={description} />
+      <meta
+        property="og:description"
+        key="og:description"
+        content={description}
+      />
+      <meta
+        name="twitter:description"
+        key="twitter:description"
+        content={description}
+      />
+    </NextHead>
+  );
+};
+
+export const PageAlternate = href => (
+  <NextHead>
+    <link rel="alternate" href={href} />
+  </NextHead>
+);
+
+// StaticHead is rendered in _document
+export const StaticHead = () => (
+  <NextHead>
+    { /* eslint-disable react/no-danger */ }
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','${GOOGLE_TAG_MANAGER_ID}');
+        `,
+      }}
+    />
+    { /* eslint-enable react/no-danger */ }
+
+    {/* JsonLD */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_DATA) }}
+    />
+  </NextHead>
+);
+
+// Head is rendered in _app
+const Head = withRouter(props => (
   <NextHead>
     <meta charSet="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#FFFFFF" />
+
+    <link rel="shortcut icon" href="static/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/static/images/favicon.png" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400"
       rel="stylesheet"
     />
 
-    <meta name="description" content={description} />
-
-    {/* manifest.json provides metadata used when your web app is added to the
-    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/ */}
-
-    <link rel="shortcut icon" href="static/images/favicon.png" />
-
-    {/* Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`. */}
-
-    <title>{TITLE}</title>
-    {/* Calendly link widget begin  */}
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
+    {/* OPEN GRAPH */}
+    <meta property="og:type" key="og:type" content="website" />
+    <meta
+      property="og:url"
+      key="og:url"
+      content={`https://juliaqiu.com${props.router.pathname}`}
     />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
+    <meta
+      property="og:image"
+      key="og:image"
+      content={`https://juliaqiu.com/static/images/logo.png`}
     />
-    {/* Calendly link widget end  */}
+
+    {/* TWITTER */}
+    <meta
+      name="twitter:card"
+      key="twitter:card"
+      content="summary_large_image"
+    />
+    <meta name="twitter:site" key="twitter:site" content="@juliaqiuxy" />
+    <meta name="twitter:creator" key="twitter:creator" content="@juliaqiuxy" />
+    <meta
+      name="twitter:image"
+      key="twitter:image"
+      content={`https://juliaqiu.com/static/images/logo.png`}
+    />
   </NextHead>
-);
+));
 
 export default Head;
+
+
