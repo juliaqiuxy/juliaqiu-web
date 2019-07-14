@@ -2,6 +2,7 @@
   "name": "juliaqiu-web",
   "version": "1.0.0",
   "private": true,
+  "main": "src/server.js",
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/node": "^7.5.0",
@@ -15,10 +16,9 @@
     "eslint-plugin-react": "^7.11.0"
   },
   "dependencies": {
-    "@now/next": "^0.5.0",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
-    "next": "^8.0.4",
+    "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sitemap": "^3.1.0",
@@ -27,9 +27,9 @@
   },
   "scripts": {
     "dev": "babel-node -r node_modules/dotenv/config src/server.js",
-    "build": "next build src/ && node_modules/.bin/babel src/ -d src/.next/dist --ignore 'src/.next/*'",
-    "start": "NODE_ENV=production node src/.next/dist/server.js",
-    "deploy": "now",
+    "build": "next build src/ && node_modules/.bin/babel src/ -d .next/dist",
+    "start": "NODE_ENV=production node .next/dist/server.js",
+    "deploy": "now -e GOOGLE_TAG_MANAGER_ID=@juliaqiu-google-tag-manager-id",
     "lint": "eslint src/"
   }
 }
