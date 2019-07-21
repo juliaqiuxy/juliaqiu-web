@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Category from '../Category/Category';
+import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
 const Container = styled.div`
   margin-bottom: 62px;
@@ -22,31 +23,10 @@ const ArticleItem = styled.a`
   }
 `;
 
-const ArticleLink = styled.span`
-  font-size: 18px;
-  font-weight: 300;
-  margin-right: 12px;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 16px;
-  }
-
-  @media only screen and (min-width: 994px) {
-    font-size: 18px;
-    font-weight: 100;
-  }
+const LinkWrapper = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
-
-export const Link = ({ text, addMaginTop }) => (
-  <div style={{ marginTop: addMaginTop ? '2pc': '0'}}>
-    <ArticleLink>{text}</ArticleLink>
-    {
-      text === 'request access'
-        ? <img src="/static/images/lock.svg" alt="lock" />
-        : <img src="/static/images/link.svg" alt="link" />
-    }
-  </div>
-);
 
 const Articles = () => (
   <Container>
@@ -59,7 +39,13 @@ const Articles = () => (
     >
       Learning how to code one email at a time
     </ArticleItem>
-    <Link addMaginTop text="More on Medium" href="https://medium.com/@juliaqiuxy" />
+    <LinkWrapper 
+      href="https://medium.com/@juliaqiuxy" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ExternalUrl addMaginTop text="More on Medium"/>
+    </LinkWrapper>
   </Container>
 );
 

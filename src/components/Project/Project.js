@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { Link } from '../Articles/Articles';
+import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
 const TAG_COLORS = {
   React: '#84F752',
@@ -242,9 +242,9 @@ class Project extends Component {
             }
           </ProjectTitle>
           {link
-            ? <Link href={link} text={text} />
+            ? <ExternalUrl href={link} text={text} />
             : (
-              <Link
+              <ExternalUrl
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
                 text="request access"
               />

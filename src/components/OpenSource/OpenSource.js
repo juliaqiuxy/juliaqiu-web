@@ -3,11 +3,16 @@ import styled from 'styled-components';
 
 import Category from '../Category/Category';
 import Project from '../Project/Project';
-import { Link } from '../Articles/Articles';
+import ExternalUrl from '../ExternalUrl/ExternalUrl';
 import { PROJECT_DETAIL } from '../projectsData';
 
 const Container = styled.div`
   margin-bottom: 62px;
+`;
+
+const LinkWrapper = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
 
 const OpenSource = () => (
@@ -32,7 +37,13 @@ const OpenSource = () => (
       shortSkills={PROJECT_DETAIL.NDAify.shortSkills}
       longSkills={PROJECT_DETAIL.NDAify.longSkills}
     />
-    <Link addMaginTop href="https://github.com/juliaqiuxy" text="More on GitHub" />
+    <LinkWrapper
+      href="https://github.com/juliaqiuxy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >      
+      <ExternalUrl addMaginTop text="More on GitHub" />
+    </LinkWrapper>
   </Container>
 );
 

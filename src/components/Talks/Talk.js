@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Link } from '../Articles/Articles';
+import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
-const TalkHeader = styled.div`
+const TalkHeader = styled.a`
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
+  text-decoration: none;
 `;
 
 const TalkTitle = styled.span`
@@ -58,12 +59,15 @@ const Talk = ({
   src, des, link, linkText, title, name,
 }) => (
   <div>
-    <TalkHeader>
+    <TalkHeader
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <TalkTitle>
         {name}
       </TalkTitle>
-
-      <Link href={link} text={linkText} />
+      <ExternalUrl href={link} text={linkText} />
     </TalkHeader>
     <TalkDescription>
       {title}
