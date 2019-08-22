@@ -3,8 +3,8 @@ import NextHead from 'next/head';
 import getConfig from 'next/config';
 import { withRouter } from "next/router";
 
-const META_DESCRIPTION = "Software Engineer. Full Stack, iOS, Android. Recently launched Slope Ninja, http://slope.ninja . Also available on the App store.";
-const TITLE = "Julia Qiu's Portfolio";
+const META_DESCRIPTION = "Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, GraphQL 😍, React Native, EcmaScript. She, her.";
+const TITLE = "Julia Qiu";
 
 const JSONLD_DATA = {
   "@context": "http://schema.org",
