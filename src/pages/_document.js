@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import NextDocument, {
   Html,
   Head,
@@ -24,11 +24,14 @@ class Document extends NextDocument {
 
     try {
       ctx.renderPage = () => originalRenderPage({
-        enhanceApp: App => props => sheet.collectStyles(
-          <Fragment>
+        enhanceApp: (App) => (props) => sheet.collectStyles(
+          <>
             <StaticHead />
-            <App {...props} />
-          </Fragment>,
+            <App
+            // eslint-disable-next-line react/jsx-props-no-spreading
+              {...props}
+            />
+          </>,
         ),
       });
 
@@ -36,14 +39,14 @@ class Document extends NextDocument {
       return {
         ...initialProps,
         styles: (
-          <Fragment>
+          <>
             {
               initialProps.styles
             }
             {
               sheet.getStyleElement()
             }
-          </Fragment>
+          </>
         ),
       };
     } finally {

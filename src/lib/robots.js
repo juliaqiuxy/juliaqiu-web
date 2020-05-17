@@ -35,7 +35,7 @@ const USER_AGENT_WHITE_LIST = [
   'Yeti',
 ];
 
-const rules = USER_AGENT_WHITE_LIST.map(userAgent => `
+const rules = USER_AGENT_WHITE_LIST.map((userAgent) => `
 User-agent: ${userAgent}
 Allow: /
 `).join('');

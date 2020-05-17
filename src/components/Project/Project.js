@@ -248,8 +248,7 @@ class Project extends Component {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
                 text="request access"
               />
-            )
-          }
+            )}
         </ProjectHeader>
         <ProjectDescription>{description}</ProjectDescription>
         {

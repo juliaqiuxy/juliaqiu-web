@@ -68,25 +68,23 @@ const FooterGraph = styled.img`
   }
 `;
 
-const Footer = () => {
-  return (
-    <Container>
-      <FooterTextContainer>
-        <FooterText>
-          © Julia Qiu. All rights reserved. Made with
-          <FooterHeart
-            alt="heart"
-            src="/static/images/heart.svg"
-          />
-          in San Francisco.
-        </FooterText>
-      </FooterTextContainer>
-      <FooterGraph
-        src="/static/images/unicorn.svg"
-        alt="unicorn"
-      />
-    </Container>
-  );
-};
+const Footer = () => (
+  <Container>
+    <FooterTextContainer>
+      <FooterText>
+        © Julia Qiu. All rights reserved. Made with
+        <FooterHeart
+          alt="heart"
+          src="/static/images/heart.svg"
+        />
+        in San Francisco.
+      </FooterText>
+    </FooterTextContainer>
+    <FooterGraph
+      src="/static/images/unicorn.svg"
+      alt="unicorn"
+    />
+  </Container>
+);
 
 export default Footer;

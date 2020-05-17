@@ -30,7 +30,7 @@ class App extends Component {
     };
 
     const reloadStrip = () => {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         colorIteration: prevState.colorIteration + 1,
       }));
     };

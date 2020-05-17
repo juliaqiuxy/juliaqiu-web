@@ -17,7 +17,7 @@ const UrlText = styled.span`
 `;
 
 const ExternalUrl = ({ text, addMaginTop }) => (
-  <div style={{ marginTop: addMaginTop ? '2pc': '0'}}>
+  <div style={{ marginTop: addMaginTop ? '2pc' : '0' }}>
     <UrlText>{text}</UrlText>
     {
       text === 'request access'

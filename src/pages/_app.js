@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import NextApp, { Container } from 'next/app';
 
 import { createGlobalStyle } from 'styled-components';
@@ -54,15 +54,18 @@ class App extends NextApp {
   }
 
   render() {
-    const { Component, pageProps, ssrNow } = this.props;
+    const { Component, pageProps /* ssrNow */ } = this.props;
     return (
-      <Fragment>
+      <>
         <Head />
         <GlobalStyle />
         <Container>
-          <Component {...pageProps} />
+          <Component
+          // eslint-disable-next-line react/jsx-props-no-spreading
+            {...pageProps}
+          />
         </Container>
-      </Fragment>
+      </>
     );
   }
 }

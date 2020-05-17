@@ -39,12 +39,12 @@ const Articles = () => (
     >
       Learning how to code one email at a time
     </ArticleItem>
-    <LinkWrapper 
-      href="https://medium.com/@juliaqiuxy" 
+    <LinkWrapper
+      href="https://medium.com/@juliaqiuxy"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ExternalUrl addMaginTop text="More on Medium"/>
+      <ExternalUrl addMaginTop text="More on Medium" />
     </LinkWrapper>
   </Container>
 );

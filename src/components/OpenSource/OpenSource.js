@@ -41,7 +41,7 @@ const OpenSource = () => (
       href="https://github.com/juliaqiuxy"
       target="_blank"
       rel="noopener noreferrer"
-    >      
+    >
       <ExternalUrl addMaginTop text="More on GitHub" />
     </LinkWrapper>
   </Container>

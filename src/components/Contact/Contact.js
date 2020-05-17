@@ -146,7 +146,7 @@ const ContactItem = () => (
       >
         LinkedIn
       </a>
-.
+      .
       {' Follow my work on '}
       <a
         href="https://github.com/juliaqiuxy"
@@ -155,7 +155,7 @@ const ContactItem = () => (
       >
         Github
       </a>
-.
+      .
     </ProjectSubDescription>
     <div>
       <ContactTag>

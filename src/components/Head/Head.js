@@ -1,27 +1,27 @@
 import React from 'react';
 import NextHead from 'next/head';
 import getConfig from 'next/config';
-import { withRouter } from "next/router";
+import { withRouter } from 'next/router';
 
-const META_DESCRIPTION = "Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, GraphQL 😍, React Native, EcmaScript. She, her.";
-const TITLE = "Julia Qiu";
+const META_DESCRIPTION = 'Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, GraphQL 😍, React Native, EcmaScript. She, her.';
+const TITLE = 'Julia Qiu';
 
 const JSONLD_DATA = {
-  "@context": "http://schema.org",
-  "@type": "Person",
-  email: "mailto:julia@juliaqiu.com",
-  firstName: "Julia",
-  id: "juliaqiuxy",
-  image: "/static/images/migratingSlopeNinjaToZeit.gif",
-  jobTitle: "Software Engineer",
-  lastName: "Qiu",
-  name: "Julia Qiu", 
+  '@context': 'http://schema.org',
+  '@type': 'Person',
+  email: 'mailto:julia@juliaqiu.com',
+  firstName: 'Julia',
+  id: 'juliaqiuxy',
+  image: '/static/images/migratingSlopeNinjaToZeit.gif',
+  jobTitle: 'Software Engineer',
+  lastName: 'Qiu',
+  name: 'Julia Qiu',
   sameAs: [
-    "https://www.linkedin.com/in/juliaqiuxy",
-    "http://twitter.com/juliaqiuxy",
-    "http://instagram.com/juliaqiuxy"
+    'https://www.linkedin.com/in/juliaqiuxy',
+    'http://twitter.com/juliaqiuxy',
+    'http://instagram.com/juliaqiuxy',
   ],
-  url: "https://juliaqiu.com",
+  url: 'https://juliaqiu.com',
 };
 
 const GOOGLE_MAX_LENGTH = 160;
@@ -63,7 +63,7 @@ export const PageDescription = ({ description = META_DESCRIPTION }) => {
   );
 };
 
-export const PageAlternate = href => (
+export const PageAlternate = (href) => (
   <NextHead>
     <link rel="alternate" href={href} />
   </NextHead>
@@ -89,13 +89,14 @@ export const StaticHead = () => (
     {/* JsonLD */}
     <script
       type="application/ld+json"
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_DATA) }}
     />
   </NextHead>
 );
 
 // Head is rendered in _app
-const Head = withRouter(props => (
+const Head = withRouter((props) => (
   <NextHead>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -120,7 +121,7 @@ const Head = withRouter(props => (
     <meta
       property="og:image"
       key="og:image"
-      content={`https://juliaqiu.com/static/images/logo.png`}
+      content="https://juliaqiu.com/static/images/logo.png"
     />
 
     {/* TWITTER */}
@@ -134,11 +135,9 @@ const Head = withRouter(props => (
     <meta
       name="twitter:image"
       key="twitter:image"
-      content={`https://juliaqiu.com/static/images/logo.png`}
+      content="https://juliaqiu.com/static/images/logo.png"
     />
   </NextHead>
 ));
 
 export default Head;
-
-
