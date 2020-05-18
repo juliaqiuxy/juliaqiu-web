@@ -3,7 +3,7 @@ import NextHead from 'next/head';
 import getConfig from 'next/config';
 import { withRouter } from 'next/router';
 
-const META_DESCRIPTION = 'Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, GraphQL 😍, React Native, EcmaScript. She, her.';
+const META_DESCRIPTION = 'Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, Deno, GraphQL, React Native, EcmaScript. She, her.';
 const TITLE = 'Julia Qiu';
 
 const JSONLD_DATA = {
@@ -12,7 +12,7 @@ const JSONLD_DATA = {
   email: 'mailto:julia@juliaqiu.com',
   firstName: 'Julia',
   id: 'juliaqiuxy',
-  image: '/static/images/migratingSlopeNinjaToZeit.gif',
+  image: '/images/migratingSlopeNinjaToZeit.gif',
   jobTitle: 'Software Engineer',
   lastName: 'Qiu',
   name: 'Julia Qiu',
@@ -102,9 +102,9 @@ const Head = withRouter((props) => (
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#FFFFFF" />
 
-    <link rel="shortcut icon" href="static/images/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png" />
-    <link rel="apple-touch-icon" href="/static/images/favicon.png" />
+    <link rel="shortcut icon" href="https://juliaqiu.com/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="https://juliaqiu.com/images/favicon.png" />
+    <link rel="apple-touch-icon" href="https://juliaqiu.com/images/favicon.png" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400"
@@ -116,12 +116,13 @@ const Head = withRouter((props) => (
     <meta
       property="og:url"
       key="og:url"
-      content={`https://juliaqiu.com${props.router.pathname}`}
+      content={`https://juliaqiu.com${props.router.asPath}`}
     />
+
     <meta
       property="og:image"
       key="og:image"
-      content="https://juliaqiu.com/static/images/logo.png"
+      content="https://juliaqiu.com/images/logo.png"
     />
 
     {/* TWITTER */}
@@ -135,7 +136,7 @@ const Head = withRouter((props) => (
     <meta
       name="twitter:image"
       key="twitter:image"
-      content="https://juliaqiu.com/static/images/logo.png"
+      content="https://juliaqiu.com/images/logo.png"
     />
   </NextHead>
 ));

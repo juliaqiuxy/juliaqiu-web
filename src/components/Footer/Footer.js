@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import HeartIcon from './images/heart.svg';
+import UnicornIcon from './images/unicorn.svg';
+
 const Container = styled.div`
   width: 100%;
   height: 120px;
@@ -41,7 +44,7 @@ const FooterText = styled.span`
   }
 `;
 
-const FooterHeart = styled.img`
+const FooterHeart = styled(HeartIcon)`
   width: 12px;
   margin-left: 5px;
   margin-right: 5px;
@@ -51,7 +54,7 @@ const FooterHeart = styled.img`
   }
 `;
 
-const FooterGraph = styled.img`
+const FooterGraph = styled(UnicornIcon)`
   position: absolute;
   right: 0;
   width: 140px;
@@ -75,13 +78,13 @@ const Footer = () => (
         © Julia Qiu. All rights reserved. Made with
         <FooterHeart
           alt="heart"
-          src="/static/images/heart.svg"
+          src="/images//heart.svg"
         />
         in San Francisco.
       </FooterText>
     </FooterTextContainer>
     <FooterGraph
-      src="/static/images/unicorn.svg"
+      src="/images//unicorn.svg"
       alt="unicorn"
     />
   </Container>

@@ -19,6 +19,16 @@ const OpenSource = () => (
   <Container>
     <Category category="Open Source" />
     <Project
+      link="https://ndaify.com"
+      text="ndaify.com"
+      decoration="new"
+      title={PROJECT_DETAIL.NDAify.title}
+      description={PROJECT_DETAIL.NDAify.description}
+      subDescription={PROJECT_DETAIL.NDAify.subDescription}
+      shortSkills={PROJECT_DETAIL.NDAify.shortSkills}
+      longSkills={PROJECT_DETAIL.NDAify.longSkills}
+    />
+    <Project
       link="https://slope.ninja"
       text="slope.ninja"
       title={PROJECT_DETAIL['Slope Ninja'].title}
@@ -26,16 +36,6 @@ const OpenSource = () => (
       subDescription={PROJECT_DETAIL['Slope Ninja'].subDescription}
       shortSkills={PROJECT_DETAIL['Slope Ninja'].shortSkills}
       longSkills={PROJECT_DETAIL['Slope Ninja'].longSkills}
-    />
-    <Project
-      link="https://ndaify.com"
-      text="ndaify.com"
-      wip
-      title={PROJECT_DETAIL.NDAify.title}
-      description={PROJECT_DETAIL.NDAify.description}
-      subDescription={PROJECT_DETAIL.NDAify.subDescription}
-      shortSkills={PROJECT_DETAIL.NDAify.shortSkills}
-      longSkills={PROJECT_DETAIL.NDAify.longSkills}
     />
     <LinkWrapper
       href="https://github.com/juliaqiuxy"

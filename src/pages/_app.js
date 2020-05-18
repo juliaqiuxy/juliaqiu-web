@@ -1,5 +1,5 @@
 import React from 'react';
-import NextApp, { Container } from 'next/app';
+import NextApp from 'next/app';
 
 import { createGlobalStyle } from 'styled-components';
 
@@ -59,12 +59,10 @@ class App extends NextApp {
       <>
         <Head />
         <GlobalStyle />
-        <Container>
-          <Component
+        <Component
           // eslint-disable-next-line react/jsx-props-no-spreading
-            {...pageProps}
-          />
-        </Container>
+          {...pageProps}
+        />
       </>
     );
   }

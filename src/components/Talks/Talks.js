@@ -12,7 +12,7 @@ const Talks = () => (
   <Container>
     <Category category="Talks" />
     <Talk
-      src="/static/images/migratingSlopeNinjaToZeit.gif"
+      src="/images/migratingSlopeNinjaToZeit.gif"
       des="zeit day"
       link="https://zeit.co/day"
       linkText="zeit.co/day"

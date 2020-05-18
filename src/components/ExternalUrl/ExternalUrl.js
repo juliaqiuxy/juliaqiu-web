@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import LinkIcon from './images/link.svg';
+import LockIcon from './images/lock.svg';
+
+const ExternalUrlContainer = styled.div`
+  svg {
+    width: 14px;
+  }
+`;
+
 const UrlText = styled.span`
   font-size: 18px;
   font-weight: 300;
@@ -17,14 +26,14 @@ const UrlText = styled.span`
 `;
 
 const ExternalUrl = ({ text, addMaginTop }) => (
-  <div style={{ marginTop: addMaginTop ? '2pc' : '0' }}>
+  <ExternalUrlContainer style={{ marginTop: addMaginTop ? '2pc' : '0' }}>
     <UrlText>{text}</UrlText>
     {
       text === 'request access'
-        ? <img src="/static/images/lock.svg" alt="lock" />
-        : <img src="/static/images/link.svg" alt="link" />
+        ? <LockIcon />
+        : <LinkIcon />
     }
-  </div>
+  </ExternalUrlContainer>
 );
 
 export default ExternalUrl;

@@ -1,5 +1,9 @@
 import React from 'react';
 
+import LogoIcon from './images/logo.svg';
+import LogoHolidayIcon from './images/logoHoliday.svg';
+import LogoPrideIcon from './images/logoPride.svg';
+
 const NOVEMBER = 10;
 
 const isHolidays = () => {
@@ -38,18 +42,18 @@ const isPride = () => {
 const SmartLogo = () => {
   if (isHolidays()) {
     return (
-      <img src="/static/images/logo-holiday.svg" alt="Julia" />
+      <LogoHolidayIcon />
     );
   }
 
   if (isPride()) {
     return (
-      <img src="/static/images/logo-pride.svg" alt="Julia" />
+      <LogoPrideIcon />
     );
   }
 
   return (
-    <img src="/static/images/logo.svg" alt="Julia" />
+    <LogoIcon />
   );
 };
 

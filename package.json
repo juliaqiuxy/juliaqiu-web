@@ -1,37 +1,41 @@
 {
   "name": "juliaqiu-web",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "main": "src/server.js",
+  "engines": {
+    "node": ">=14.2.0"
+  },
+  "dependencies": {
+    "chroma-js": "^2.1.0",
+    "koa": "^2.11.0",
+    "koa-helmet": "^5.2.0",
+    "koa-router": "^8.0.8",
+    "next": "9.3.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sitemap": "^2.2.0",
+    "statuses": "^2.0.0",
+    "styled-components": "^5.1.0"
+  },
+  "scripts": {
+    "dev": "babel-node -r dotenv/config src/server.js",
+    "build": "next build && babel src/ -d .next/dist",
+    "start": "node .next/dist/server.js",
+    "set-secrets": "cat .env.prod | tr '\n' ' ' | xargs flyctl secrets set",
+    "lint": "eslint src/"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/node": "^7.5.0",
-    "babel-plugin-inline-react-svg": "^1.0.1",
-    "babel-plugin-styled-components": "^1.10.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/node": "^7.8.7",
     "babel-eslint": "^10.1.0",
-    "dotenv": "^8.0.0",
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-loader": "^4.0.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0"
-  },
-  "dependencies": {
-    "koa": "^2.7.0",
-    "koa-router": "^7.4.0",
-    "next": "9.0.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "sitemap": "^3.1.0",
-    "statuses": "^1.5.0",
-    "styled-components": "^4.2.0"
-  },
-  "scripts": {
-    "dev": "babel-node -r node_modules/dotenv/config src/server.js",
-    "build": "next build src/ && node_modules/.bin/babel src/ -d .next/dist",
-    "start": "NODE_ENV=production node .next/dist/server.js",
-    "deploy": "now -e GOOGLE_TAG_MANAGER_ID=@juliaqiu-google-tag-manager-id",
-    "lint": "eslint src/"
   }
 }
