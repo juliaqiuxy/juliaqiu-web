@@ -164,8 +164,6 @@ class Project extends Component {
   }
 
   render() {
-    console.log(Object.keys(TAG_COLORS));
-
     const {
       longSkills, shortSkills, link, title, decoration, text, description, subDescription,
     } = this.props;
