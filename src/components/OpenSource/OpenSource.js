@@ -37,6 +37,15 @@ const OpenSource = () => (
       shortSkills={PROJECT_DETAIL['Slope Ninja'].shortSkills}
       longSkills={PROJECT_DETAIL['Slope Ninja'].longSkills}
     />
+    <Project
+      link="https://github.com/building-block/blocks"
+      text="building-block/blocks"
+      title={PROJECT_DETAIL['Building Block'].title}
+      description={PROJECT_DETAIL['Building Block'].description}
+      subDescription={PROJECT_DETAIL['Building Block'].subDescription}
+      shortSkills={PROJECT_DETAIL['Building Block'].shortSkills}
+      longSkills={PROJECT_DETAIL['Building Block'].longSkills}
+    />
     <LinkWrapper
       href="https://github.com/juliaqiuxy"
       target="_blank"

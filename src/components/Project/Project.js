@@ -4,10 +4,51 @@ import chroma from 'chroma-js';
 
 import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
-const tags = ['React', 'React Native', 'Redux', 'node.js', 'UI/UX', 'VR', 'PostgreSQL', 'Koa', 'Knex', 'Unity', 'Bootstrap Grid', 'Google Cardboard', 'Oculus', '3D', 'C#', 'Interaction Design', 'Illustration', 'After Effects', 'Motion Graphics', 'DynamoDB', 'Apollo', 'GraphQL', 'AWS SES', 'PHP', 'TypeScript', 'Next.js', 'Stripe API', 'OAuth', 'Swagger', 'Figma', 'Sketch'];
+const tags = [
+  'React',
+  'Figma',
+  'PHP',
+  'GraphQL',
+  'React Native',
+  'Redux',
+  'node.js',
+  'Cypress',
+  'UI/UX',
+  'VR',
+  'Babel',
+  'PostgreSQL',
+  'Koa',
+  'TypeScript',
+  'Knex',
+  'DynamoDB',
+  'Unity',
+  'CircleCI',
+  'Jenkins',
+  'Bootstrap Grid',
+  'Google Cardboard',
+  'Oculus',
+  'Docker',
+  '3D',
+  'C#',
+  'Next.js',
+  'Interaction Design',
+  'Illustration',
+  'After Effects',
+  'Motion Graphics',
+  'Apollo',
+  'AWS SES',
+  'JavaScript',
+  'Selenium',
+  'Stripe API',
+  'Swagger',
+  'Sketch',
+  'Lerna',
+  'OAuth',
+  'Groovy',
+];
 
 const colors = chroma.scale(
-  ['#84F752', '#A54AF6', '#4AB5F7', '#F7524A', '#E4B549', '#5252F6', '#F7EF4C'],
+  ['#84F752', '#A54AF6', '#4AB5F7', '#FE4A4A', '#F7EF4C'],
 ).mode('lch').colors(tags.length);
 
 const TAG_COLORS = tags.reduce((accum, tag, ii) => ({
