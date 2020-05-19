@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Greeting from '../Greeting/Greeting';
 import ProjectList from '../ProjectList/ProjectList';
 import OpenSource from '../OpenSource/OpenSource';
 import Talks from '../Talks/Talks';
@@ -79,7 +80,7 @@ const HomeContent = styled.div`
 
   @media only screen and (min-width: 1200px) {
     width: 60%;
-    max-width: 700px;
+    max-width: 720px;
     margin-bottom: 62px;
   }
 `;
@@ -115,6 +116,7 @@ const Home = () => (
       </HomeCalendlyLink>
     </HeaderContainer>
     <HomeContent>
+      <Greeting />
       <OpenSource />
       <Talks />
       <Article />

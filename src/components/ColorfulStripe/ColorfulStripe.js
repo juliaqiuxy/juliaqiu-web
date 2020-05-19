@@ -24,7 +24,7 @@ const ColorfulStripeWrapper = styled.div`
 const ColorfulStripe = () => {
   const getRandom = getRandomInt();
   const keyPrefix = getRandom(1, 100);
-  const stripes = Array(200).fill(0).map((pos, ii) => {
+  const stripes = Array(300).fill(0).map((pos, ii) => {
     const key = `stripe_${keyPrefix}_${ii}`;
     return (
       <div

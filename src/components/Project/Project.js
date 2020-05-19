@@ -100,10 +100,6 @@ const ProjectDescription = styled.span`
   margin-top: 6px;
   color: #EDEDED;
 
-  @media only screen and (min-width: 768px) {
-    font-size: 22px;
-  }
-
   @media only screen and (min-width: 994px) {
     font-size: 24px;
     font-weight: 100;  

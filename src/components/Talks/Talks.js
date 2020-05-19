@@ -14,8 +14,8 @@ const Talks = () => (
     <Talk
       src="/images/migratingSlopeNinjaToZeit.gif"
       des="zeit day"
-      link="https://zeit.co/day"
-      linkText="zeit.co/day"
+      link="https://vercel.com/tv"
+      linkText="vercel.com/tv"
       title="Migrating Slope Ninja to Zeit for Fun and Profit"
       name="Zeit Day 2018"
     />
