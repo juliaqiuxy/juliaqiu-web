@@ -272,7 +272,7 @@ class Project extends Component {
             ? <ExternalUrl href={link} text={text} />
             : (
               <ExternalUrl
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@juliaqiu.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@julia.dev"
                 text="request access"
               />
             )}

@@ -9,7 +9,7 @@ const TITLE = 'Julia Qiu';
 const JSONLD_DATA = {
   '@context': 'http://schema.org',
   '@type': 'Person',
-  email: 'mailto:julia@juliaqiu.com',
+  email: 'mailto:julia@julia.dev',
   firstName: 'Julia',
   id: 'juliaqiuxy',
   image: '/images/migratingSlopeNinjaToZeit.gif',
@@ -21,7 +21,7 @@ const JSONLD_DATA = {
     'http://twitter.com/juliaqiuxy',
     'http://instagram.com/juliaqiuxy',
   ],
-  url: 'https://juliaqiu.com',
+  url: 'https://julia.dev',
 };
 
 const GOOGLE_MAX_LENGTH = 160;
@@ -102,9 +102,9 @@ const Head = withRouter((props) => (
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#FFFFFF" />
 
-    <link rel="shortcut icon" href="https://juliaqiu.com/images/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="https://juliaqiu.com/images/favicon.png" />
-    <link rel="apple-touch-icon" href="https://juliaqiu.com/images/favicon.png" />
+    <link rel="shortcut icon" href="https://julia.dev/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="https://julia.dev/images/favicon.png" />
+    <link rel="apple-touch-icon" href="https://julia.dev/images/favicon.png" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400"
@@ -116,13 +116,13 @@ const Head = withRouter((props) => (
     <meta
       property="og:url"
       key="og:url"
-      content={`https://juliaqiu.com${props.router.asPath}`}
+      content={`https://julia.dev${props.router.asPath}`}
     />
 
     <meta
       property="og:image"
       key="og:image"
-      content="https://juliaqiu.com/images/logo.png"
+      content="https://julia.dev/images/logo.png"
     />
 
     {/* TWITTER */}
@@ -136,7 +136,7 @@ const Head = withRouter((props) => (
     <meta
       name="twitter:image"
       key="twitter:image"
-      content="https://juliaqiu.com/images/logo.png"
+      content="https://julia.dev/images/logo.png"
     />
   </NextHead>
 ));

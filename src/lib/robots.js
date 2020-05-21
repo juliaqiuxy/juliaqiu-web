@@ -49,7 +49,7 @@ ${rules}
 User-agent: *
 Disallow: /
 
-Sitemap: https://juliaqiu.com/sitemap.xml
+Sitemap: https://julia.dev/sitemap.xml
 `;
 
 const robots = () => async (ctx) => {

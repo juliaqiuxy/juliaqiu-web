@@ -3,7 +3,7 @@ import { promisify } from 'util';
 import statuses from 'statuses';
 
 const sm = createSitemap({
-  hostname: 'https://juliaqiu.com',
+  hostname: 'https://julia.dev',
 });
 
 const toXML = promisify(sm.toXML).bind(sm);
