@@ -7,7 +7,6 @@ import { PROJECT_DETAIL } from '../projectsData';
 
 const Container = styled.div`
   flex: 1;
-  overflow: scroll;
   text-align: left;
   margin-bottom: 62px;
 
