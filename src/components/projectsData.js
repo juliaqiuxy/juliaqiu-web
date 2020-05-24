@@ -11,7 +11,7 @@ export const PROJECT_DETAIL = {
     description: 'NDA-walls for your business secrets',
     subDescription: 'Web',
     shortSkills: ['React', 'Stripe API', 'OAuth', 'Docker', 'Next.js', '...', 'UI/UX'],
-    longSkills: ['React', 'Stripe API', 'OAuth', 'Docker', 'Next.js', 'node.js', 'Koa', 'DynamoDB', 'AWS SES', 'Swagger', 'Figma', 'UI/UX'],
+    longSkills: ['React', 'Stripe API', 'OAuth', 'Docker', 'Next.js', 'node.js', 'Koa', 'DynamoDB', 'AWS SQS', 'AWS S3', 'AWS Lambda', 'AWS SES', 'Open API', 'JWT', 'Markdown', 'Animations', 'Figma', 'UI/UX'],
   },
   'Building Block': {
     title: 'Blocks',
@@ -33,7 +33,7 @@ export const PROJECT_DETAIL = {
     description: 'Get on-demand work',
     subDescription: 'Web',
     shortSkills: ['React', 'Redux', 'node.js', '...', 'UI/UX'],
-    longSkills: ['React', 'Redux', 'node.js', 'PostgreSQL', 'Koa', 'Knex', 'UI/UX'],
+    longSkills: ['React', 'Redux', 'node.js', 'PostgreSQL', 'JWT', 'AWS S3', 'AWS SES', 'Koa', 'Knex', 'UI/UX'],
     link: 'http://astroworker.com',
     text: 'astroworker.com',
   },

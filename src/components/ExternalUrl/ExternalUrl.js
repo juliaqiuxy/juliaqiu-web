@@ -6,17 +6,26 @@ import LockIcon from './images/lock.svg';
 
 const ExternalUrlContainer = styled.div`
   svg {
-    width: 14px;
+    display: none;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    svg {
+      display: inline;
+      width: 14px;
+    }
   }
 `;
 
 const UrlText = styled.span`
   font-size: 18px;
   font-weight: 300;
-  margin-right: 12px;
+  ${(props) => (props.isRequestAccess ? null : 'text-decoration: underline;')}
 
   @media only screen and (min-width: 768px) {
     font-size: 16px;
+    text-decoration: none;
+    margin-right: 12px;
   }
 
   @media only screen and (min-width: 994px) {
@@ -25,15 +34,19 @@ const UrlText = styled.span`
   }
 `;
 
-const ExternalUrl = ({ text, addMaginTop }) => (
-  <ExternalUrlContainer style={{ marginTop: addMaginTop ? '2pc' : '0' }}>
-    <UrlText>{text}</UrlText>
-    {
-      text === 'request access'
-        ? <LockIcon />
-        : <LinkIcon />
-    }
-  </ExternalUrlContainer>
-);
+const ExternalUrl = ({ text, addMaginTop }) => {
+  const isRequestAccess = text === 'request access';
+
+  return (
+    <ExternalUrlContainer style={{ marginTop: addMaginTop ? '2pc' : '0' }}>
+      <UrlText isRequestAccess={isRequestAccess}>{text}</UrlText>
+      {
+        isRequestAccess
+          ? <LockIcon />
+          : <LinkIcon />
+      }
+    </ExternalUrlContainer>
+  );
+};
 
 export default ExternalUrl;

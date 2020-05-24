@@ -26,6 +26,7 @@ const tags = [
   'Jenkins',
   'Bootstrap Grid',
   'Google Cardboard',
+  'Animations',
   'Oculus',
   'Docker',
   '3D',
@@ -37,14 +38,19 @@ const tags = [
   'Motion Graphics',
   'Apollo',
   'AWS SES',
+  'AWS SQS',
+  'AWS S3',
+  'AWS Lambda',
   'JavaScript',
   'Selenium',
   'Stripe API',
-  'Swagger',
+  'Open API',
   'Sketch',
+  'JWT',
   'Lerna',
   'OAuth',
   'Groovy',
+  'Markdown',
 ];
 
 const colors = chroma.scale(
