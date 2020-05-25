@@ -107,7 +107,7 @@ const Head = withRouter((props) => (
     <link rel="apple-touch-icon" href="https://julia.dev/images/favicon.png" />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400"
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap"
       rel="stylesheet"
     />
 
