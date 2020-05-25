@@ -122,7 +122,7 @@ const Head = withRouter((props) => (
     <meta
       property="og:image"
       key="og:image"
-      content="https://julia.dev/images/logo.png"
+      content="https://julia.dev/images/meta.png"
     />
 
     {/* TWITTER */}
@@ -136,7 +136,7 @@ const Head = withRouter((props) => (
     <meta
       name="twitter:image"
       key="twitter:image"
-      content="https://julia.dev/images/logo.png"
+      content="https://julia.dev/images/meta.png"
     />
   </NextHead>
 ));
