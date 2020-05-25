@@ -11,5 +11,8 @@
       "specialLink": ["to", "route"],
       "aspects": ["invalidHref", "preferButton"]
     }]
+  },
+  "env": {
+    "browser": true
   }
 }

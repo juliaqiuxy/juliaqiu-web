@@ -10,6 +10,8 @@ import Article from '../Articles/Articles';
 import Contact from '../Contact/Contact';
 import SmartLogo from './SmartLogo';
 
+import * as calendly from '../../lib/calendly';
+
 const Container = styled.div`
   flex: 1;
   background-color: #0d0e14;
@@ -95,20 +97,20 @@ const HomeCalendlyLink = styled.a`
   }
 `;
 
-const openCalendly = () => {
-  // eslint-disable-next-line no-undef
-  window.Calendly.initPopupWidget({ url: 'https://calendly.com/juliaqiuxy/contact-me' });
-};
-
 const Home = () => (
   <Container>
     <HeaderContainer>
       <SmartLogo />
       <HomeCalendlyLink
         href=""
-        onClick={(evt) => {
+        onClick={async (evt) => {
           evt.preventDefault();
-          openCalendly();
+
+          await calendly.load();
+          calendly.initPopupWidget(
+            { url: 'https://calendly.com/juliaqiuxy/contact-me' },
+          );
+
           return false;
         }}
       >

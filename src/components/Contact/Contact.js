@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import * as calendly from '../../lib/calendly';
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -103,11 +105,6 @@ const ContactTag = styled.span`
   }
 `;
 
-const openCalendly = () => {
-  // eslint-disable-next-line no-undef
-  window.Calendly.initPopupWidget({ url: 'https://calendly.com/juliaqiuxy/contact-me' });
-};
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const ContactItem = () => (
   <Container>
@@ -127,9 +124,14 @@ const ContactItem = () => (
       {' '}
       <a
         href=""
-        onClick={(evt) => {
+        onClick={async (evt) => {
           evt.preventDefault();
-          openCalendly();
+
+          await calendly.load();
+          calendly.initPopupWidget(
+            { url: 'https://calendly.com/juliaqiuxy/contact-me' },
+          );
+
           return false;
         }}
       >
