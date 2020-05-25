@@ -12,7 +12,7 @@ const Talks = () => (
   <Container>
     <Category category="Talks" />
     <Talk
-      src="/images/migratingSlopeNinjaToZeit.gif"
+      src="/videos/zeit-day.mp4"
       des="zeit day"
       link="https://vercel.com/tv"
       linkText="vercel.com/tv"

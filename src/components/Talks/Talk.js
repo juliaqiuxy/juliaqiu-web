@@ -41,7 +41,7 @@ const TalkDescription = styled.span`
   }
 `;
 
-const TalkGifWrapper = styled.div`
+const TalkVideo = styled.video`
   width: 100%;
   margin-top: 10px;
 
@@ -50,13 +50,9 @@ const TalkGifWrapper = styled.div`
   }
 `;
 
-const TalkGif = styled.img`
-  width: 100%;
-  height: auto;
-`;
 
 const Talk = ({
-  src, des, link, linkText, title, name,
+  src, link, linkText, title, name,
 }) => (
   <div>
     <TalkHeader
@@ -72,14 +68,18 @@ const Talk = ({
     <TalkDescription>
       {title}
     </TalkDescription>
-    <TalkGifWrapper>
-      <a
-        href="http://bit.ly/zeitday-juliaqiu"
-        target="blank"
-      >
-        <TalkGif src={src} alt={des} />
-      </a>
-    </TalkGifWrapper>
+    <a
+      href="http://bit.ly/zeitday-juliaqiu"
+      target="blank"
+      rel="noopener noreferrer"
+    >
+      <TalkVideo
+        src={src}
+        autoPlay
+        loop
+        playsInline
+      />
+    </a>
   </div>
 );
 
