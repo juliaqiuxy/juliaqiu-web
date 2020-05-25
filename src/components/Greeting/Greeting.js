@@ -97,7 +97,7 @@ const Greeting = () => (
         {' '}
         <ZillowIcon />
         {' '}
-        <ZillowAnchor href="https://www.zillowgroup.com/" target="_blank">Zillow Group</ZillowAnchor>
+        <ZillowAnchor href="https://www.zillowgroup.com/" target="_blank" rel="noopener noreferrer">Zillow Group</ZillowAnchor>
         , an online real estate company.
       </GreetingText>
 
@@ -106,7 +106,7 @@ const Greeting = () => (
         {' '}
         <TruliaIcon />
         {' '}
-        <TruliaAnchor href="http://www.trulia.com/" target="_blank">Trulia</TruliaAnchor>
+        <TruliaAnchor href="http://www.trulia.com/" target="_blank" rel="noopener noreferrer">Trulia</TruliaAnchor>
         , a subsidiary of Zillow, which is the primary source of
         {' '}
         real estate and rental data for millions of users across North America.
@@ -129,7 +129,7 @@ const Greeting = () => (
         {' '}
         <TwitterIcon />
         {' '}
-        <TwitterAnchor href="https://twitter.com/juliaqiuxy" target="_blank">Twitter</TwitterAnchor>
+        <TwitterAnchor href="https://twitter.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">Twitter</TwitterAnchor>
         .
       </GreetingText>
 
