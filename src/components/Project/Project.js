@@ -37,6 +37,7 @@ const tags = [
   'After Effects',
   'Motion Graphics',
   'Apollo',
+  'i18n',
   'AWS SES',
   'AWS SQS',
   'AWS S3',
@@ -133,6 +134,11 @@ const ProjectSubDescription = styled.span`
   }
 `;
 
+const ProjectTagsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 const ProjectTag = styled.span`
   font-size: 14px;
   font-weight: 300;
@@ -142,8 +148,8 @@ const ProjectTag = styled.span`
   padding-bottom: 2px;
   border-radius: 4px;
   margin-right: 6px;
-  display: inline-block;
   margin-top: 10px;
+  user-select: contain;
 
   @media only screen and (min-width: 768px) {
     font-size: 14px;
@@ -289,9 +295,9 @@ class Project extends Component {
             <ProjectSubDescription>{subDescription}</ProjectSubDescription>
           ) : null
         }
-        <div>
+        <ProjectTagsContainer>
           {skillElements}
-        </div>
+        </ProjectTagsContainer>
       </Container>
     );
   }

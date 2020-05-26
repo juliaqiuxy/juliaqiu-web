@@ -10,8 +10,8 @@ export const PROJECT_DETAIL = {
     title: 'NDAify',
     description: 'NDA-walls for your business secrets',
     subDescription: 'Web',
-    shortSkills: ['React', 'Stripe API', 'OAuth', 'Docker', 'Next.js', '...', 'UI/UX'],
-    longSkills: ['React', 'Stripe API', 'OAuth', 'Docker', 'Next.js', 'node.js', 'Koa', 'DynamoDB', 'AWS SQS', 'AWS S3', 'AWS Lambda', 'AWS SES', 'Open API', 'JWT', 'Markdown', 'Animations', 'Figma', 'UI/UX'],
+    shortSkills: ['React', 'i18n', 'Stripe API', 'OAuth', 'Docker', '...', 'Next.js'],
+    longSkills: ['React', 'i18n', 'Stripe API', 'OAuth', 'Docker', 'node.js', 'Koa', 'DynamoDB', 'AWS SQS', 'AWS S3', 'AWS Lambda', 'AWS SES', 'Open API', 'JWT', 'Markdown', 'Animations', 'Figma', 'UI/UX', 'Next.js'],
   },
   'Building Block': {
     title: 'Blocks',

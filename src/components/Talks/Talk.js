@@ -72,6 +72,7 @@ const Talk = ({
       href="http://bit.ly/zeitday-juliaqiu"
       target="blank"
       rel="noopener noreferrer"
+      title="Zeit Day"
     >
       <TalkVideo
         src={src}
