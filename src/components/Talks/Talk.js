@@ -79,6 +79,7 @@ const Talk = ({
         autoPlay
         loop
         playsInline
+        muted
       />
     </a>
   </div>
