@@ -35,7 +35,7 @@ const Button = styled.button`
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
-  border-color: #4A4A4A;
+  border: 1px solid #4A4A4A;
 `;
 
 class ProjectList extends Component {
