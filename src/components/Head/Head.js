@@ -4,7 +4,7 @@ import getConfig from 'next/config';
 import { withRouter } from 'next/router';
 
 const META_DESCRIPTION = 'Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, Deno, GraphQL, React Native, EcmaScript. She, her.';
-const TITLE = 'Julia Qiu';
+const TITLE = 'julia.dev';
 
 const JSONLD_DATA = {
   '@context': 'http://schema.org',

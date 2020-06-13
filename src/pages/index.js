@@ -5,7 +5,7 @@ import { PageTitle, PageDescription } from '../components/Head/Head';
 
 const Index = () => (
   <>
-    <PageTitle />
+    <PageTitle prepend="Julia Qiu - Senior Software Engineer | " />
     <PageDescription />
     <App />
   </>
