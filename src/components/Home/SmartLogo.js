@@ -29,7 +29,7 @@ const isHolidays = () => {
 
 const isPride = () => {
   const now = new Date();
-  const prideStart = new Date(now.getFullYear(), 5, 15);
+  const prideStart = new Date(now.getFullYear(), 5, 10);
   const prideEnd = new Date(now.getFullYear(), 6, 2);
 
   if (prideStart < now && now < prideEnd) {
