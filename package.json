@@ -22,7 +22,8 @@
     "build": "next build && babel src/ -d .next/dist",
     "start": "node .next/dist/server.js",
     "set-secrets": "cat .env.prod | tr '\n' ' ' | xargs flyctl secrets set",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "test": "yarn lint"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -41,7 +42,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn test"
     }
   }
 }
