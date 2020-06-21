@@ -55,10 +55,17 @@ class Document extends NextDocument {
   }
 
   render() {
+    // eslint-disable-next-line no-underscore-dangle
+    const pageProps = this.props.__NEXT_DATA__.props;
+
+    let preferredTheme;
+    if (pageProps) {
+      ({ preferredTheme } = pageProps);
+    }
     return (
       <Html lang="en" dir="ltr">
         <Head />
-        <body>
+        <body className={preferredTheme}>
           <noscript>
             <iframe
               title="Google Analytics Manager"

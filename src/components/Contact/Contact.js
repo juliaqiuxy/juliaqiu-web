@@ -12,8 +12,9 @@ const Container = styled.div`
   padding-bottom: 24px;
   width: 100%;
   box-sizing: border-box;
+  background-color: var(--juliadev-bg-overlay);
 
-  background-image: linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to right, #9B9B9B 50%, transparent 50%);
+  background-image: linear-gradient(to right, var(--juliadev-dashed-border) 50%, transparent 50%), linear-gradient(to right, var(--juliadev-dashed-border) 50%, transparent 50%);
   background-position: left top, left bottom;
   background-repeat: repeat-x, repeat-x;
   background-size: 20px 1px, 20px 1px;
@@ -21,7 +22,7 @@ const Container = styled.div`
   @media only screen and (min-width: 768px) {
     align-items: center;
 
-    background-image: linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to right, #9B9B9B 50%, transparent 50%), linear-gradient(to bottom, #9B9B9B 50%, transparent 50%), linear-gradient(to bottom, #9B9B9B 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--juliadev-dashed-border) 50%, transparent 50%), linear-gradient(to right, var(--juliadev-dashed-border) 50%, transparent 50%), linear-gradient(to bottom, var(--juliadev-dashed-border) 50%, transparent 50%), linear-gradient(to bottom, var(--juliadev-dashed-border) 50%, transparent 50%);
     background-position: left top, left bottom, left top, right top;
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
     background-size: 20px 1px, 20px 1px, 1px 20px, 1px 20px;
@@ -32,6 +33,7 @@ const ProjectTitle = styled.span`
   font-size: 26px;
   display: flex;
   align-items: center;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;
@@ -46,7 +48,7 @@ const ProjectDescription = styled.span`
   font-size: 22px;
   font-weight: 300;
   margin-top: 6px;
-  color: #EDEDED;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 22px;
@@ -61,12 +63,12 @@ const ProjectDescription = styled.span`
 const ProjectSubDescription = styled.span`
   font-size: 18px;
   margin-top: 10px;
-  color: #EDEDED;
+  color: var(--juliadev-fg);
   font-weight: 300;
 
   & a {
     text-decoration: underline;
-    color: #FFFFFF;
+    color: var(--juliadev-fg);
   }
 
   @media only screen and (min-width: 768px) {
@@ -86,12 +88,12 @@ const ContactTag = styled.span`
   padding-right: 6px;
   padding-top: 3px;
   padding-bottom: 2px;
-  border-radius: 4px;
+  border-radius: var(--juliadev-accents-radius-1);
   margin-right: 6px;
   display: inline-block;
   margin-top: 10px;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
+  border: 1px solid var(--juliadev-fg);
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 14px;
@@ -99,7 +101,7 @@ const ContactTag = styled.span`
     padding-right: 18px;
     padding-top: 6px;
     padding-bottom: 6px;
-    border-radius: 6px;
+    border-radius: var(--juliadev-accents-radius-2);
     margin-right: 1pc;
     margin-top: 1pc;
   }

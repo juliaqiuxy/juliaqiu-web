@@ -62,7 +62,7 @@ const TAG_COLORS = tags.reduce((accum, tag, ii) => ({
   ...accum,
   [tag]: colors[ii],
 }), {
-  '...': '#4A4A4A',
+  '...': 'var(--juliadev-accents-0)',
 });
 
 const Container = styled.div`
@@ -79,6 +79,7 @@ const ProjectTitle = styled.span`
   font-size: 26px;
   display: flex;
   align-items: center;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;
@@ -92,7 +93,7 @@ const ProjectTitle = styled.span`
 const Decoration = styled.span`
   margin-left: 1pc;
   padding: 4px;
-  border-radius: 4px;
+  border-radius: var(--juliadev-accents-radius-1);
   font-size: 8px;
   color: #000;
   text-decoration: none;
@@ -105,7 +106,7 @@ const ProjectDescription = styled.span`
   font-size: 22px;
   font-weight: 300;
   margin-top: 6px;
-  color: #EDEDED;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 994px) {
     font-size: 24px;
@@ -116,12 +117,12 @@ const ProjectDescription = styled.span`
 const ProjectSubDescription = styled.span`
   font-size: 18px;
   margin-top: 10px;
-  color: #EDEDED;
+  color: var(--juliadev-fg);
   font-weight: 300;
 
   & a {
     text-decoration: underline;
-    color: #FFFFFF;
+    color: var(--juliadev-fg);
   }
 
   @media only screen and (min-width: 768px) {
@@ -146,7 +147,7 @@ const ProjectTag = styled.span`
   padding-right: 6px;
   padding-top: 3px;
   padding-bottom: 2px;
-  border-radius: 4px;
+  border-radius: var(--juliadev-accents-radius-1);
   margin-right: 6px;
   margin-top: 10px;
   user-select: contain;
@@ -157,7 +158,7 @@ const ProjectTag = styled.span`
     padding-right: 18px;
     padding-top: 6px;
     padding-bottom: 6px;
-    border-radius: 6px;
+    border-radius: var(--juliadev-accents-radius-2);
     margin-right: 1pc;
     margin-top: 1pc;
   }
@@ -170,11 +171,11 @@ const ProjectEtcTag = styled.button`
   padding-right: 6px;
   padding-top: 3px;
   padding-bottom: 2px;
-  border-radius: 4px;
+  border-radius: var(--juliadev-accents-radius-1);
   margin-right: 6px;
   display: inline-block;
   margin-top: 10px;
-  textDecoration: none;
+  text-decoration: none;
   cursor: pointer;
   background-color: transparent;
 
@@ -184,7 +185,7 @@ const ProjectEtcTag = styled.button`
     padding-right: 18px;
     padding-top: 6px;
     padding-bottom: 6px;
-    border-radius: 6px;
+    border-radius: var(--juliadev-accents-radius-2);
     margin-right: 1pc;
     margin-top: 1pc;
   }
@@ -221,7 +222,7 @@ class Project extends Component {
     let skillElements;
     if (skillList === 'shortSkills') {
       skillElements = shortSkills.map((skill) => {
-        const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : '#FFFFFF';
+        const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : 'var(--juliadev-fg)';
         if (skill === '...') {
           return (
             <ProjectEtcTag
@@ -251,7 +252,7 @@ class Project extends Component {
     }
     if (skillList === 'longSkills') {
       skillElements = longSkills.map((skill) => {
-        const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : '#FFFFFF';
+        const color = TAG_COLORS[skill] ? TAG_COLORS[skill] : 'var(--juliadev-fg)';
         return (
           <ProjectTag
             key={skill}

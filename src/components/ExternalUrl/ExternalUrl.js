@@ -13,6 +13,7 @@ const ExternalUrlContainer = styled.div`
     svg {
       display: inline;
       width: 14px;
+      color: var(--juliadev-fg);
     }
   }
 `;
@@ -21,6 +22,7 @@ const UrlText = styled.span`
   font-size: 18px;
   font-weight: 300;
   ${(props) => (props.isRequestAccess ? null : 'text-decoration: underline;')}
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 16px;

@@ -19,6 +19,7 @@ const gradientKeyframeRules = gradient.map((color, ii) => `
 const Container = styled.div`
   margin-top: 2pc;
   margin-bottom: 62px;
+  background-color: var(--juliadev-bg-overlay);
 
   @media only screen and (min-width: 768px) {
     margin: 3pc;
@@ -57,7 +58,7 @@ const DashedRotatedContainer = styled.div`
 const GreetingText = styled.p`
   font-size: 22px;
   font-weight: 300;
-  color: #EDEDED;
+  color: var(--juliadev-fg);
 
   :first-of-type {
     margin-top: 0;
@@ -70,7 +71,7 @@ const GreetingText = styled.p`
   @media only screen and (min-width: 768px) {
     font-size: 24px;
     font-weight: 100;
-    color: #EDEDED;
+    color: var(--juliadev-fg);
   }
 `;
 

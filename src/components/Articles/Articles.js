@@ -6,6 +6,7 @@ import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
 const Container = styled.div`
   margin-bottom: 62px;
+  color: var(--juliadev-fg);
 `;
 
 const ArticleItem = styled.a`
@@ -13,6 +14,7 @@ const ArticleItem = styled.a`
   text-decoration: none;
   display: block;
   margin-bottom: 18px;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;

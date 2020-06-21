@@ -8,6 +8,7 @@ const CategoryTitle = styled.span`
   letter-spacing: 1px;
   margin-bottom: 24px;
   display: block;
+  color: var(--juliadev-fg);
 `;
 
 const Category = ({ category }) => (

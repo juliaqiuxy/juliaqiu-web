@@ -9,11 +9,13 @@ const TalkHeader = styled.a`
   justify-content: space-between;
   align-items: flex-end;
   text-decoration: none;
+  color: var(--juliadev-fg);
 `;
 
 const TalkTitle = styled.span`
   font-size: 26px;
   text-decoration: none;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;
@@ -28,7 +30,7 @@ const TalkDescription = styled.span`
   font-size: 22px;
   font-weight: 300;
   margin-top: 6px;
-  color: #EDEDED;
+  color: var(--juliadev-fg);
   display: block;
 
   @media only screen and (min-width: 768px) {

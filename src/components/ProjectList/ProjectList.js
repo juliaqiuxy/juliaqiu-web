@@ -29,13 +29,13 @@ const Button = styled.button`
   padding: 6px;
   padding-left: 2pc;
   padding-right: 2pc;
-  border-radius: 4px;
+  border-radius: var(--juliadev-accents-radius-1);
   font-size: 14px;
-  color: #4A4A4A;
+  color: var(--juliadev-accents-0);
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #4A4A4A;
+  border: 1px solid var(--juliadev-accents-0);
 `;
 
 class ProjectList extends Component {

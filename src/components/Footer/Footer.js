@@ -13,7 +13,6 @@ const Container = styled.div`
   flex-direction: row;
   margin-top: 5px;
   position: relative;
-  background-color: #0D0E14;
 
   @media only screen and (min-width: 994px) {
     height: auto;
@@ -35,7 +34,7 @@ const FooterTextContainer = styled.div`
 `;
 
 const FooterText = styled.span`
-  color: #4A4A4A;
+  color: var(--juliadev-accents-0);
   font-size: 12px;
   text-align: center;
 

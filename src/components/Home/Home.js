@@ -9,13 +9,12 @@ import Footer from '../Footer/Footer';
 import Article from '../Articles/Articles';
 import Contact from '../Contact/Contact';
 import SmartLogo from './SmartLogo';
+import ThemeToggle from './ThemeToggle';
 
 import * as calendly from '../../lib/calendly';
 
 const Container = styled.div`
   flex: 1;
-  background-color: #0d0e14;
-  color: #ffffff;
 
   @media only screen and (min-width: 768px) {
     flex: 1;
@@ -23,10 +22,6 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  & > img:first-of-type {
-    height: 60px;
   }
 `;
 
@@ -39,20 +34,19 @@ const HeaderContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  & img {
-    height: 60px;
-  }
-
   @media only screen and (min-width: 768px) {
     padding: 2pc;
     padding-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+`;
 
-    & img {
-      height: 100px;
-    }
+const LogoContainer = styled.div`
+  & svg {
+    height: 88px;
+    color: var(--juliadev-fg);
   }
 `;
 
@@ -91,16 +85,33 @@ const HomeCalendlyLink = styled.a`
   margin-top: 1pc;
   font-weight: 300;
   font-size: 18px;
+  color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
     margin-top: 0;
   }
 `;
 
+const ThemeToggleContainer = styled.div`
+  position: absolute;
+  top: 20px;
+  right: calc(20px + 8px);
+
+  @media only screen and (min-width: 768px) {
+    position: fixed;
+    top: unset;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+`;
+
 const Home = () => (
   <Container>
     <HeaderContainer>
-      <SmartLogo />
+      <LogoContainer>
+        <SmartLogo />
+      </LogoContainer>
       <HomeCalendlyLink
         href=""
         onClick={async (evt) => {
@@ -116,6 +127,9 @@ const Home = () => (
       >
         Want to meet over coffee?
       </HomeCalendlyLink>
+      <ThemeToggleContainer>
+        <ThemeToggle />
+      </ThemeToggleContainer>
     </HeaderContainer>
     <HomeContent>
       <Greeting />

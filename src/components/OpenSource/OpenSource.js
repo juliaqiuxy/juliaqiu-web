@@ -13,6 +13,7 @@ const Container = styled.div`
 const LinkWrapper = styled.a`
   text-decoration: none;
   color: inherit;
+  color: var(--juliadev-fg);
 `;
 
 const OpenSource = () => (
