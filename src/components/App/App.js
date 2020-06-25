@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Home from '../Home/Home';
@@ -21,44 +21,37 @@ const Main = styled.main`
   min-height: 100vh;
 `;
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const useIteration = () => {
+  const [iteration, setIteration] = useState(0);
 
-    this.state = {
-      colorIteration: 0,
+  useEffect(() => {
+    const addIteration = () => {
+      setIteration((prev) => prev + 1);
     };
 
-    const reloadStrip = () => {
-      this.setState((prevState) => ({
-        colorIteration: prevState.colorIteration + 1,
-      }));
+    const handleScroll = throttle(addIteration, 100);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
 
-    this.handleScroll = throttle(reloadStrip, 100);
-  }
+  return [iteration];
+};
 
-  componentDidMount() {
-    // eslint-disable-next-line no-undef
-    window.addEventListener('scroll', this.handleScroll);
-  }
+const App = () => {
+  const [colorIteration] = useIteration();
 
-  compoentWillUnmount() {
-    // eslint-disable-next-line no-undef
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  render() {
-    const { colorIteration } = this.state;
-    return (
-      <Container>
-        <Main>
-          <Home />
-        </Main>
-        <ColorfulStripe iteration={colorIteration} />
-      </Container>
-    );
-  }
-}
+  return (
+    <Container>
+      <Main>
+        <Home />
+      </Main>
+      <ColorfulStripe iteration={colorIteration} />
+    </Container>
+  );
+};
 
 export default App;
