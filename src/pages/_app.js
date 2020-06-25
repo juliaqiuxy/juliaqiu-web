@@ -24,7 +24,7 @@ const darkVars = `
   --juliadev-bg: #0d0e14; 
   --juliadev-fg: #EDEDED;
 
-  --juliadev-accents-0: #4A4A4A;
+  --juliadev-accents-0: #9B9B9B;
 
   --juliadev-accents-radius-1: 4px;
   --juliadev-accents-radius-2: 6px;

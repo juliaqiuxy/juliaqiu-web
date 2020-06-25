@@ -32,7 +32,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <Button onClick={() => setPreferredTheme(preferredTheme === 'dark' ? 'light' : 'dark')}>
+    <Button aria-label="theme toggle" onClick={() => setPreferredTheme(preferredTheme === 'dark' ? 'light' : 'dark')}>
       {themeIcon}
     </Button>
   );
