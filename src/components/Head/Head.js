@@ -102,8 +102,9 @@ const Head = withRouter((props) => (
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#FFFFFF" />
 
-    <link rel="shortcut icon" href="https://julia.dev/images/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="https://julia.dev/images/favicon.png" />
+    <link rel="shortcut icon" href="https://julia.dev/images/favicon.svg" />
+    <link rel="icon" href="https://julia.dev/images/favicon.svg" type="image/svg+xml" />
+    <link rel="mask-icon" href="https://julia.dev/images/favicon.svg" />
     <link rel="apple-touch-icon" href="https://julia.dev/images/favicon.png" />
 
     <link
