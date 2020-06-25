@@ -103,7 +103,7 @@ const Greeting = () => (
       </GreetingText>
 
       <GreetingText>
-        My primary focus is building
+        My main focus is building
         {' '}
         <TruliaIcon />
         {' '}

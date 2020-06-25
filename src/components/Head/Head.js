@@ -3,7 +3,7 @@ import NextHead from 'next/head';
 import getConfig from 'next/config';
 import { withRouter } from 'next/router';
 
-const META_DESCRIPTION = 'Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, Deno, GraphQL, React Native, EcmaScript. She, her.';
+const META_DESCRIPTION = 'Building https://trulia.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, Deno, GraphQL, React Native. She, her.';
 const TITLE = 'julia.dev';
 
 const JSONLD_DATA = {
