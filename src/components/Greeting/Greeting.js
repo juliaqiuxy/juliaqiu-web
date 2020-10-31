@@ -94,12 +94,12 @@ const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
       <GreetingText>
-        Hi, I’m Julia. I live in San Francisco, CA and I’m a Senior Software Engineer at
+        Hi, I’m Julia. I live in San Francisco and I’m a Senior Software Engineer at
         {' '}
         <ZillowIcon />
         {' '}
-        <ZillowAnchor href="https://www.zillowgroup.com/" target="_blank" rel="noopener noreferrer">Zillow Group</ZillowAnchor>
-        , an online real estate company.
+        <ZillowAnchor href="https://www.zillowgroup.com" target="_blank" rel="noopener noreferrer">Zillow Group</ZillowAnchor>
+        .
       </GreetingText>
 
       <GreetingText>
@@ -107,22 +107,26 @@ const Greeting = () => (
         {' '}
         <TruliaIcon />
         {' '}
-        <TruliaAnchor href="http://www.trulia.com/" target="_blank" rel="noopener noreferrer">Trulia</TruliaAnchor>
-        , a subsidiary of Zillow, which is the primary source of
-        {' '}
-        real estate and rental data for millions of users across North America.
-      </GreetingText>
-
-      <GreetingText>
-        I also help maintain our UI library and the
+        <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">Trulia</TruliaAnchor>
+        , a subsidiary of Zillow. I also help maintain our UI library and the
         {' '}
         metrics dashboard for some of our internal tools.
       </GreetingText>
 
       <GreetingText>
+        My very recent personal project,
+        {' '}
+        <a href="https://ndaify.com" target="_blank" rel="noopener noreferrer">NDAify</a>
+        , helps you send non-disclosure agreements in just a few clicks and is
+        {' '}
+        <a href="https://github.com/NDAify" target="_blank" rel="noopener noreferrer">open-source on GitHub</a>
+        .
+      </GreetingText>
+
+      <GreetingText>
         I spend my free time failing to make the perfect souffle pancake,
         {' '}
-        or otherwise coding, wine tasting, snowboarding and traveling the world.
+        or otherwise coding, wine tasting, snowboarding, surfing Linda Mar and traveling the world.
       </GreetingText>
 
       <GreetingText>

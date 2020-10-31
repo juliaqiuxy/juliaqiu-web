@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
+const TalkContainer = styled.div`
+  margin-bottom: 2pc;
+`;
+
 const TalkHeader = styled.a`
   display: flex;
   width: 100%;
@@ -45,18 +49,33 @@ const TalkDescription = styled.span`
 
 const TalkVideo = styled.video`
   width: 100%;
-  margin-top: 10px;
-
+  margin-bottom: 10px;
+  border: 6px solid var(--juliadev-fg);
+  filter: grayscale(100%);
+  
   @media only screen and (min-width: 768px) {
     margin-top: 1pc;
   }
 `;
 
-
 const Talk = ({
   src, link, linkText, title, name,
 }) => (
-  <div>
+  <TalkContainer>
+    <a
+      href={link}
+      target="blank"
+      rel="noopener noreferrer"
+      title={title}
+    >
+      <TalkVideo
+        src={src}
+        autoPlay
+        loop
+        playsInline
+        muted
+      />
+    </a>
     <TalkHeader
       href={link}
       target="_blank"
@@ -70,21 +89,8 @@ const Talk = ({
     <TalkDescription>
       {title}
     </TalkDescription>
-    <a
-      href="http://bit.ly/zeitday-juliaqiu"
-      target="blank"
-      rel="noopener noreferrer"
-      title="Zeit Day"
-    >
-      <TalkVideo
-        src={src}
-        autoPlay
-        loop
-        playsInline
-        muted
-      />
-    </a>
-  </div>
+
+  </TalkContainer>
 );
 
 export default Talk;
