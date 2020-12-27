@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { getRandomInt } from '../util';
@@ -22,16 +22,6 @@ const ColorfulStripeWrapper = styled.div`
 `;
 
 const ColorfulStripe = () => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setShow(true);
-  }, []);
-
-  if (!show) {
-    return null;
-  }
-
   const getRandom = getRandomInt();
   const keyPrefix = getRandom(1, 100);
 
