@@ -75,8 +75,6 @@ class ProjectList extends Component {
           subDescription={PROJECT_DETAIL.Astroworker.subDescription}
           shortSkills={PROJECT_DETAIL.Astroworker.shortSkills}
           longSkills={PROJECT_DETAIL.Astroworker.longSkills}
-          link={PROJECT_DETAIL.Astroworker.link}
-          text={PROJECT_DETAIL.Astroworker.text}
         />
         <Project
           title={PROJECT_DETAIL.Debut.title}
