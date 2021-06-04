@@ -149,8 +149,8 @@ const ProjectTag = styled.span`
   font-weight: 300;
   padding-left: 6px;
   padding-right: 6px;
-  padding-top: 3px;
-  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom: 3px;
   border-radius: var(--juliadev-accents-radius-1);
   margin-right: 6px;
   margin-top: 10px;
