@@ -86,13 +86,13 @@ class ProjectList extends Component {
         {
           showMore ? (
             <div>
-              <Project
+              {/* <Project
                 title={PROJECT_DETAIL.Bagpal.title}
                 description={PROJECT_DETAIL.Bagpal.description}
                 subDescription={PROJECT_DETAIL.Bagpal.subDescription}
                 shortSkills={PROJECT_DETAIL.Bagpal.shortSkills}
                 longSkills={PROJECT_DETAIL.Bagpal.longSkills}
-              />
+              /> */}
               <Project
                 title={PROJECT_DETAIL['Once Upon a Cloud'].title}
                 description={PROJECT_DETAIL['Once Upon a Cloud'].description}

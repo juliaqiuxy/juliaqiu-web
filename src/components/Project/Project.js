@@ -10,26 +10,28 @@ const tags = [
   'PHP',
   'GraphQL',
   'React Native',
-  'Redux',
   'node.js',
   'Cypress',
   'UI/UX',
   'VR',
+  'Gin',
   'Babel',
   'PostgreSQL',
   'Koa',
   'TypeScript',
   'Knex',
-  'DynamoDB',
   'Unity',
   'CircleCI',
   'Jenkins',
   'Bootstrap Grid',
   'Google Cardboard',
   'Animations',
+  'Redis',
+  'Redux',
   'Oculus',
   'Docker',
   '3D',
+  'MySQL',
   'C#',
   'Next.js',
   'Interaction Design',
@@ -39,6 +41,7 @@ const tags = [
   'Apollo',
   'i18n',
   'AWS SES',
+  'DynamoDB',
   'AWS SQS',
   'AWS S3',
   'AWS Lambda',
@@ -52,6 +55,7 @@ const tags = [
   'OAuth',
   'Groovy',
   'Markdown',
+  'Go',
 ];
 
 const colors = chroma.scale(
@@ -209,7 +213,7 @@ class Project extends Component {
     super(props);
 
     this.state = {
-      skillList: 'shortSkills',
+      skillList: 'longSkills',
     };
   }
 

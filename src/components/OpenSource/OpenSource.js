@@ -20,6 +20,16 @@ const OpenSource = () => (
   <Container>
     <Category category="Open Source" />
     <Project
+      link="https://github.com/juliaqiuxy/wfcache"
+      text="wfcache"
+      decoration="new"
+      title={PROJECT_DETAIL.wfcache.title}
+      description={PROJECT_DETAIL.wfcache.description}
+      subDescription={PROJECT_DETAIL.wfcache.subDescription}
+      shortSkills={PROJECT_DETAIL.wfcache.shortSkills}
+      longSkills={PROJECT_DETAIL.wfcache.longSkills}
+    />
+    <Project
       link="https://ndaify.com"
       text="ndaify.com"
       decoration="new"
