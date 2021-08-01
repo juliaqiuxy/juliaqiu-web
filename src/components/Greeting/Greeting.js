@@ -98,7 +98,7 @@ const Greeting = () => (
         {' '}
         <ZillowIcon />
         {' '}
-        <ZillowAnchor href="https://www.zillowgroup.com" target="_blank" rel="noopener noreferrer">Zillow Group</ZillowAnchor>
+        <ZillowAnchor href="https://www.zillow.com/" target="_blank" rel="noopener noreferrer">Zillow</ZillowAnchor>
         .
       </GreetingText>
 
