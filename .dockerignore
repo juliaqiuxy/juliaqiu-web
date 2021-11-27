@@ -1,6 +1,7 @@
 .git
 .env
 .env.prod
+.next
 *Dockerfile*
 *docker-compose*
 node_modules

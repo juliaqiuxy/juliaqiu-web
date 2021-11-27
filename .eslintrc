@@ -1,6 +1,6 @@
 {
   "extends": "airbnb",
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prop-types": "off",
@@ -10,7 +10,9 @@
       "components": ["Link"],
       "specialLink": ["to", "route"],
       "aspects": ["invalidHref", "preferButton"]
-    }]
+    }],
+    "func-names": "off",
+    "react/function-component-definition": "off"
   },
   "env": {
     "browser": true
