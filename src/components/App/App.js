@@ -7,6 +7,8 @@ import ColorfulStripe from '../ColorfulStripe/ColorfulStripe';
 
 import { throttle } from '../util';
 
+const COLORFUL_STRIPE_WIDTH = 8;
+
 const Container = styled.div`
   text-align: left;
   display: flex;
@@ -19,6 +21,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: calc(100vw - ${COLORFUL_STRIPE_WIDTH}px);
 `;
 
 const useIteration = () => {

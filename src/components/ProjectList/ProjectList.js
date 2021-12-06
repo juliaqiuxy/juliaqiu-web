@@ -68,20 +68,7 @@ class ProjectList extends Component {
           longSkills={PROJECT_DETAIL.Trulia.longSkills}
           link={PROJECT_DETAIL.Trulia.link}
           text={PROJECT_DETAIL.Trulia.text}
-        />
-        <Project
-          title={PROJECT_DETAIL.Astroworker.title}
-          description={PROJECT_DETAIL.Astroworker.description}
-          subDescription={PROJECT_DETAIL.Astroworker.subDescription}
-          shortSkills={PROJECT_DETAIL.Astroworker.shortSkills}
-          longSkills={PROJECT_DETAIL.Astroworker.longSkills}
-        />
-        <Project
-          title={PROJECT_DETAIL.Debut.title}
-          description={PROJECT_DETAIL.Debut.description}
-          subDescription={PROJECT_DETAIL.Debut.subDescription}
-          shortSkills={PROJECT_DETAIL.Debut.shortSkills}
-          longSkills={PROJECT_DETAIL.Debut.longSkills}
+          enableCards={PROJECT_DETAIL.Trulia.enableCards}
         />
         {
           showMore ? (
@@ -93,6 +80,20 @@ class ProjectList extends Component {
                 shortSkills={PROJECT_DETAIL.Bagpal.shortSkills}
                 longSkills={PROJECT_DETAIL.Bagpal.longSkills}
               /> */}
+              <Project
+                title={PROJECT_DETAIL.Astroworker.title}
+                description={PROJECT_DETAIL.Astroworker.description}
+                subDescription={PROJECT_DETAIL.Astroworker.subDescription}
+                shortSkills={PROJECT_DETAIL.Astroworker.shortSkills}
+                longSkills={PROJECT_DETAIL.Astroworker.longSkills}
+              />
+              <Project
+                title={PROJECT_DETAIL.Debut.title}
+                description={PROJECT_DETAIL.Debut.description}
+                subDescription={PROJECT_DETAIL.Debut.subDescription}
+                shortSkills={PROJECT_DETAIL.Debut.shortSkills}
+                longSkills={PROJECT_DETAIL.Debut.longSkills}
+              />
               <Project
                 title={PROJECT_DETAIL['Once Upon a Cloud'].title}
                 description={PROJECT_DETAIL['Once Upon a Cloud'].description}

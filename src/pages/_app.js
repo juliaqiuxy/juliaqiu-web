@@ -12,6 +12,7 @@ const lightVars = `
   --juliadev-fg: #0d0e14;
 
   --juliadev-accents-0: #AAAAAA;
+  --juliadev-accents-1: #EEEEEE;
 
   --juliadev-accents-radius-1: 4px;
   --juliadev-accents-radius-2: 6px;
@@ -25,6 +26,7 @@ const darkVars = `
   --juliadev-fg: #EDEDED;
 
   --juliadev-accents-0: #9B9B9B;
+  --juliadev-accents-1: #25262B;
 
   --juliadev-accents-radius-1: 4px;
   --juliadev-accents-radius-2: 6px;
@@ -74,6 +76,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     background-color: var(--juliadev-bg);
+    -webkit-font-smoothing: subpixel-antialiased
   }
 
   a {

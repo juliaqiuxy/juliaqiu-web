@@ -33,6 +33,7 @@ export const PROJECT_DETAIL = {
     longSkills: ['React', 'GraphQL', 'Apollo', 'Docker', 'Next.js', 'Go', 'Gin', 'MySQL', 'PHP', 'Redux', 'Selenium', 'Cypress', 'Jenkins', 'Groovy', 'TypeScript', 'DynamoDB'],
     link: 'https://trulia.com',
     text: 'trulia.com',
+    enableCards: true,
   },
   Astroworker: {
     title: 'Astroworker',

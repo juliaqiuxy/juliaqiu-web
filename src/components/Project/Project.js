@@ -3,6 +3,16 @@ import styled from 'styled-components';
 import chroma from 'chroma-js';
 
 import ExternalUrl from '../ExternalUrl/ExternalUrl';
+import TruliaCards from '../TruliaCards/TruliaCards';
+
+const DECORATION_TITLE = {
+  wip: 'Work in progress',
+  new: 'New project',
+};
+
+const CARDS_COMPONENT = {
+  Trulia: TruliaCards,
+};
 
 const tags = [
   'React',
@@ -76,7 +86,11 @@ const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
   flex: 1;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 42px;
+  }
 `;
 
 const ProjectTitle = styled.span`
@@ -203,10 +217,12 @@ const ProjectHeader = styled.a`
   text-decoration: none;
 `;
 
-const DECORATION_TITLE = {
-  wip: 'Work in progress',
-  new: 'New project',
-};
+const ProjectCards = styled.div`
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+`;
 
 class Project extends Component {
   constructor(props) {
@@ -219,7 +235,14 @@ class Project extends Component {
 
   render() {
     const {
-      longSkills, shortSkills, link, title, decoration, text, description, subDescription,
+      longSkills,
+      shortSkills,
+      link, title,
+      decoration,
+      text,
+      description,
+      subDescription,
+      enableCards,
     } = this.props;
     const { skillList } = this.state;
 
@@ -270,6 +293,9 @@ class Project extends Component {
         );
       });
     }
+
+    const Cards = enableCards && CARDS_COMPONENT[title];
+
     return (
       <Container>
         <ProjectHeader
@@ -298,6 +324,13 @@ class Project extends Component {
         {
           subDescription ? (
             <ProjectSubDescription>{subDescription}</ProjectSubDescription>
+          ) : null
+        }
+        {
+          Cards ? (
+            <ProjectCards>
+              <Cards />
+            </ProjectCards>
           ) : null
         }
         <ProjectTagsContainer>

@@ -133,10 +133,10 @@ const Home = () => (
     </HeaderContainer>
     <HomeContent>
       <Greeting />
-      <OpenSource />
-      <Talks />
-      <Article />
       <ProjectList />
+      <Talks />
+      <OpenSource />
+      <Article />
       <Contact />
     </HomeContent>
     <Footer />

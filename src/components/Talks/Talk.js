@@ -52,6 +52,7 @@ const TalkVideo = styled.video`
   margin-bottom: 10px;
   border: 6px solid var(--juliadev-fg);
   filter: grayscale(100%);
+  box-sizing: border-box;
   
   @media only screen and (min-width: 768px) {
     margin-top: 1pc;
