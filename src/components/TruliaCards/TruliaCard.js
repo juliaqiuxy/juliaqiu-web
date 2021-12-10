@@ -18,8 +18,9 @@ const Container = styled.div`
 
 const HeroContainer = styled.div`
   width: 100%;
-  height: 136px;
+  height: 158px;
   padding: 4px;
+  padding-bottom: 0;
   position: relative;
   box-sizing: border-box;
 `;

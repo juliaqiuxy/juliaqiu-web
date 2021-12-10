@@ -4,6 +4,7 @@ import chroma from 'chroma-js';
 
 import ExternalUrl from '../ExternalUrl/ExternalUrl';
 import TruliaCards from '../TruliaCards/TruliaCards';
+import NetflixCards from '../NetflixCards/NetflixCards';
 
 const DECORATION_TITLE = {
   wip: 'Work in progress',
@@ -12,6 +13,7 @@ const DECORATION_TITLE = {
 
 const CARDS_COMPONENT = {
   Trulia: TruliaCards,
+  Netflix: NetflixCards,
 };
 
 const tags = [

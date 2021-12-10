@@ -61,6 +61,16 @@ class ProjectList extends Component {
       <Container>
         <Category category="Work" />
         <Project
+          title={PROJECT_DETAIL.Netflix.title}
+          description={PROJECT_DETAIL.Netflix.description}
+          subDescription={PROJECT_DETAIL.Netflix.subDescription}
+          shortSkills={PROJECT_DETAIL.Netflix.shortSkills}
+          longSkills={PROJECT_DETAIL.Netflix.longSkills}
+          link={PROJECT_DETAIL.Netflix.link}
+          text={PROJECT_DETAIL.Netflix.text}
+          enableCards={PROJECT_DETAIL.Netflix.enableCards}
+        />
+        <Project
           title={PROJECT_DETAIL.Trulia.title}
           description={PROJECT_DETAIL.Trulia.description}
           subDescription={PROJECT_DETAIL.Trulia.subDescription}

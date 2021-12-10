@@ -35,6 +35,16 @@ export const PROJECT_DETAIL = {
     text: 'trulia.com',
     enableCards: true,
   },
+  Netflix: {
+    title: 'Netflix',
+    description: 'Watch TV Shows Online, Watch Movies Online',
+    subDescription: 'Web',
+    shortSkills: ['React', 'GraphQL', '...', 'TypeScript'],
+    longSkills: ['React', 'GraphQL', 'TypeScript'],
+    link: 'https://netflix.com',
+    text: 'netflix.com',
+    enableCards: true,
+  },
   Astroworker: {
     title: 'Astroworker',
     description: 'Get on-demand work',
