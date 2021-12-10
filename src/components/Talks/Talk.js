@@ -20,6 +20,7 @@ const TalkTitle = styled.span`
   font-size: 26px;
   text-decoration: none;
   color: var(--juliadev-fg);
+  font-weight: 500;
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;
@@ -32,7 +33,6 @@ const TalkTitle = styled.span`
 
 const TalkDescription = styled.span`
   font-size: 22px;
-  font-weight: 300;
   margin-top: 6px;
   color: var(--juliadev-fg);
   display: block;
@@ -43,7 +43,6 @@ const TalkDescription = styled.span`
 
   @media only screen and (min-width: 994px) {
     font-size: 24px;
-    font-weight: 100;
   }
 `;
 

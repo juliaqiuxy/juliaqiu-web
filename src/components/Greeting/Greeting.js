@@ -57,7 +57,6 @@ const DashedRotatedContainer = styled.div`
 
 const GreetingText = styled.p`
   font-size: 22px;
-  font-weight: 300;
   color: var(--juliadev-fg);
 
   :first-of-type {
@@ -70,7 +69,6 @@ const GreetingText = styled.p`
 
   @media only screen and (min-width: 768px) {
     font-size: 24px;
-    font-weight: 100;
     color: var(--juliadev-fg);
   }
 `;

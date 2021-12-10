@@ -105,10 +105,9 @@ const Head = withRouter((props) => (
     <link rel="icon" href="https://julia.dev/images/favicon.png" />
     <link rel="apple-touch-icon" href="https://julia.dev/images/favicon.png" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap" rel="stylesheet" />
 
     {/* OPEN GRAPH */}
     <meta property="og:type" key="og:type" content="website" />

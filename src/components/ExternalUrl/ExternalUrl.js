@@ -20,7 +20,7 @@ const ExternalUrlContainer = styled.div`
 
 const UrlText = styled.span`
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 100;
   ${(props) => (props.isRequestAccess ? null : 'text-decoration: underline;')}
   color: var(--juliadev-fg);
 

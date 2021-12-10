@@ -34,6 +34,7 @@ const ProjectTitle = styled.span`
   display: flex;
   align-items: center;
   color: var(--juliadev-fg);
+  font-weight: 500;
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;
@@ -46,7 +47,6 @@ const ProjectTitle = styled.span`
 
 const ProjectDescription = styled.span`
   font-size: 22px;
-  font-weight: 300;
   margin-top: 6px;
   color: var(--juliadev-fg);
 
@@ -56,7 +56,6 @@ const ProjectDescription = styled.span`
 
   @media only screen and (min-width: 994px) {
     font-size: 24px;
-    font-weight: 100;  
   }
 `;
 
@@ -64,7 +63,6 @@ const ProjectSubDescription = styled.span`
   font-size: 18px;
   margin-top: 10px;
   color: var(--juliadev-fg);
-  font-weight: 300;
 
   & a {
     text-decoration: underline;
@@ -77,13 +75,11 @@ const ProjectSubDescription = styled.span`
 
   @media only screen and (min-width: 994px) {
     font-size: 18px;
-    font-weight: 100; 
   }
 `;
 
 const ContactTag = styled.span`
   font-size: 14px;
-  font-weight: 300;
   padding-left: 6px;
   padding-right: 6px;
   padding-top: 3px;

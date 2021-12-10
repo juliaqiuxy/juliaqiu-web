@@ -62,7 +62,7 @@ const ContentPropertyDetails = styled.div`
 
 const ContentPropertyPrice = styled.span`
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 const ContentPropertyFeatures = styled.span`
@@ -73,7 +73,10 @@ const ContentPropertyFeatures = styled.span`
 const ContentPropertyAddress = styled.div`
   margin-top: 6px;
   font-size: 12px;
-  font-weight: 100;
+
+  @media only screen and (min-width: 768px) {
+    font-weight: 100;
+  }
 `;
 
 const ContentPropertyFeature = styled.div`

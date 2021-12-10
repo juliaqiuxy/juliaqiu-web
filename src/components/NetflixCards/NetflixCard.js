@@ -62,7 +62,7 @@ const ContentDetails = styled.div`
 
 const ContentTitle = styled.span`
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -78,7 +78,10 @@ const ContentNotes = styled.div`
 const ContentViewDetails = styled.div`
   margin-top: 6px;
   font-size: 12px;
-  font-weight: 100;
+
+  @media only screen and (min-width: 768px) {
+    font-weight: 100;
+  }
 `;
 
 const RedStrikeContainer = styled.div`
@@ -100,12 +103,13 @@ const ContentRankDetails = styled.div`
   display: flex;
 `;
 
+const numberFormatter = new Intl.NumberFormat('en-US');
+
 const NetflixCard = ({ show }) => {
   if (!show) {
     return null;
   }
 
-  const numberFormatter = new Intl.NumberFormat('en-US');
   const formattedWatchedHours = numberFormatter.format(show.hours);
 
   return (

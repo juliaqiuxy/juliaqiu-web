@@ -83,7 +83,7 @@ const HomeContent = styled.div`
 
 const HomeCalendlyLink = styled.a`
   margin-top: 1pc;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 18px;
   color: var(--juliadev-fg);
 

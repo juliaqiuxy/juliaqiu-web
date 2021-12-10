@@ -8,8 +8,8 @@ import { ThemeProvider, getThemePreference } from '../lib/useTheme';
 import Head from '../components/Head/Head';
 
 const lightVars = `
-  --juliadev-bg: #fcffff;
-  --juliadev-fg: #0d0e14;
+  --juliadev-bg: #F2F3F3;
+  --juliadev-fg: #0D0E14;
 
   --juliadev-accents-0: #AAAAAA;
   --juliadev-accents-1: #EEEEEE;
@@ -22,7 +22,7 @@ const lightVars = `
   --juliadev-bg-overlay: #FFFFFF;
 `;
 const darkVars = `
-  --juliadev-bg: #0d0e14; 
+  --juliadev-bg: #0D0E14; 
   --juliadev-fg: #EDEDED;
 
   --juliadev-accents-0: #9B9B9B;
@@ -33,7 +33,7 @@ const darkVars = `
 
   --juliadev-dashed-border: #9B9B9B;
 
-  --juliadev-bg-overlay: #0d0e14;
+  --juliadev-bg-overlay: #0D0E14;
  `;
 
 const themeVars = `
@@ -73,8 +73,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     background-color: var(--juliadev-bg);
     -webkit-font-smoothing: subpixel-antialiased
   }

@@ -100,6 +100,7 @@ const ProjectTitle = styled.span`
   display: flex;
   align-items: center;
   color: var(--juliadev-fg);
+  font-weight: 500;
 
   @media only screen and (min-width: 768px) {
     font-size: 28px;
@@ -124,13 +125,11 @@ const Decoration = styled.span`
 
 const ProjectDescription = styled.span`
   font-size: 22px;
-  font-weight: 300;
   margin-top: 6px;
   color: var(--juliadev-fg);
 
   @media only screen and (min-width: 994px) {
     font-size: 24px;
-    font-weight: 100;  
   }
 `;
 
@@ -138,7 +137,7 @@ const ProjectSubDescription = styled.span`
   font-size: 18px;
   margin-top: 10px;
   color: var(--juliadev-fg);
-  font-weight: 300;
+  font-weight: 100;
 
   & a {
     text-decoration: underline;
@@ -162,7 +161,6 @@ const ProjectTagsContainer = styled.div`
 
 const ProjectTag = styled.span`
   font-size: 14px;
-  font-weight: 300;
   padding-left: 6px;
   padding-right: 6px;
   padding-top: 2px;
@@ -186,7 +184,7 @@ const ProjectTag = styled.span`
 
 const ProjectEtcTag = styled.button`
   font-size: 6px;
-  font-weight: 300;
+  font-weight: 100;
   padding-left: 6px;
   padding-right: 6px;
   padding-top: 3px;
