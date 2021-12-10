@@ -41,7 +41,7 @@ export const PROJECT_DETAIL = {
     subDescription: 'Web',
     shortSkills: ['React', 'GraphQL', '...', 'TypeScript'],
     longSkills: ['React', 'GraphQL', 'TypeScript'],
-    link: 'https://netflix.com',
+    link: 'https://www.netflix.com/tudum',
     text: 'netflix.com',
     enableCards: true,
   },
