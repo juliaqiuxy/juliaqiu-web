@@ -12,7 +12,7 @@ const lightVars = `
   --juliadev-fg: #0D0E14;
 
   --juliadev-accents-0: #AAAAAA;
-  --juliadev-accents-1: #EEEEEE;
+  --juliadev-accents-1: #DBDBDB;
 
   --juliadev-accents-radius-1: 4px;
   --juliadev-accents-radius-2: 6px;
