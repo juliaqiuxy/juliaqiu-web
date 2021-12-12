@@ -134,8 +134,9 @@ const NetflixCard = ({ show, ...otherProps }) => {
             <ContentRankDetails>
               <RedStrikeContainer>
                 {
-                  new Array(show.weeksInTopTen).fill('').map(() => (
-                    <RedStrike />
+                  new Array(show.weeksInTopTen).fill('').map((_, index) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <RedStrike key={index} />
                   ))
                 }
               </RedStrikeContainer>

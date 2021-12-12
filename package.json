@@ -9,6 +9,7 @@
     "@babel/runtime": "^7.16.0",
     "cheerio": "^1.0.0-rc.10",
     "chroma-js": "^2.1.2",
+    "date-fns": "^2.27.0",
     "koa": "^2.11.0",
     "koa-helmet": "^5.2.0",
     "koa-router": "^8.0.8",

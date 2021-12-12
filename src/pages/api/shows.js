@@ -38,7 +38,9 @@ export default async (req, res) => {
   try {
     const shows = await getShows();
     const massagedShows = massageShows(shows);
-    res.json(massagedShows);
+    res.json({
+      shows: massagedShows,
+    });
   } catch (error) {
     res.status = 500;
   }

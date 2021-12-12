@@ -125,7 +125,13 @@ const getHomes = async ({ city, stateCode }) => {
 
   const responseJson = await response.json();
 
-  return responseJson.data.searchHomesByDetails.homes;
+  return {
+    homes: responseJson.data.searchHomesByDetails.homes,
+    searchLocation: {
+      city,
+      stateCode,
+    },
+  };
 };
 
 export default async (req, res) => {
