@@ -60,7 +60,7 @@ class ProjectList extends Component {
     return (
       <Container>
         <Category category="Work" />
-        <Project
+        {/* <Project
           title={PROJECT_DETAIL.Netflix.title}
           description={PROJECT_DETAIL.Netflix.description}
           subDescription={PROJECT_DETAIL.Netflix.subDescription}
@@ -69,7 +69,7 @@ class ProjectList extends Component {
           link={PROJECT_DETAIL.Netflix.link}
           text={PROJECT_DETAIL.Netflix.text}
           enableCards={PROJECT_DETAIL.Netflix.enableCards}
-        />
+        /> */}
         <Project
           title={PROJECT_DETAIL.Trulia.title}
           description={PROJECT_DETAIL.Trulia.description}
