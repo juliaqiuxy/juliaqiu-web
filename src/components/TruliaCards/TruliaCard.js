@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Link = styled.a`
-  margin-left: 1pc;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
+  text-decoration: none;
+  display: block;
 `;
 
 const Container = styled.div`
@@ -87,13 +84,14 @@ const ContentPropertyFeature = styled.div`
   }
 `;
 
-const TruliaCard = ({ home }) => {
+const TruliaCard = ({ home, ...otherProps }) => {
   if (!home) {
     return null;
   }
 
   return (
-    <Link href={`https://www.trulia.com${home.url}`} target="_blank" rel="noreferrer noopener">
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Link href={`https://www.trulia.com${home.url}`} target="_blank" rel="noreferrer noopener" {...otherProps}>
       <Container>
         <HeroContainer>
           <HeroImg src={home.media?.heroImage?.webpUrl.medium} alt="" />

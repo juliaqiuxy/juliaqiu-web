@@ -3,17 +3,11 @@ import styled from 'styled-components';
 import chroma from 'chroma-js';
 
 import ExternalUrl from '../ExternalUrl/ExternalUrl';
-import TruliaCards from '../TruliaCards/TruliaCards';
-import NetflixCards from '../NetflixCards/NetflixCards';
+import ProjectCards from './ProjectCards';
 
 const DECORATION_TITLE = {
   wip: 'Work in progress',
   new: 'New project',
-};
-
-const CARDS_COMPONENT = {
-  Trulia: TruliaCards,
-  Netflix: NetflixCards,
 };
 
 const tags = [
@@ -178,7 +172,6 @@ const ProjectTag = styled.span`
     padding-bottom: 6px;
     border-radius: var(--juliadev-accents-radius-2);
     margin-right: 1pc;
-    margin-top: 1pc;
   }
 `;
 
@@ -215,13 +208,6 @@ const ProjectHeader = styled.a`
   justify-content: space-between;
   align-items: flex-end;
   text-decoration: none;
-`;
-
-const ProjectCards = styled.div`
-  margin-top: 10px;
-  display: flex;
-  width: 100%;
-  overflow: scroll;
 `;
 
 class Project extends Component {
@@ -294,8 +280,6 @@ class Project extends Component {
       });
     }
 
-    const Cards = enableCards && CARDS_COMPONENT[title];
-
     return (
       <Container>
         <ProjectHeader
@@ -326,16 +310,10 @@ class Project extends Component {
             <ProjectSubDescription>{subDescription}</ProjectSubDescription>
           ) : null
         }
-        {
-          Cards ? (
-            <ProjectCards>
-              <Cards />
-            </ProjectCards>
-          ) : null
-        }
         <ProjectTagsContainer>
           {skillElements}
         </ProjectTagsContainer>
+        <ProjectCards enableCards={enableCards} title={title} />
       </Container>
     );
   }

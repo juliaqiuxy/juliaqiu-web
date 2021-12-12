@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Link = styled.a`
-  margin-left: 1pc;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
+  text-decoration: none;
+  display: block;
 `;
 
 const Container = styled.div`
@@ -105,7 +102,7 @@ const ContentRankDetails = styled.div`
 
 const numberFormatter = new Intl.NumberFormat('en-US');
 
-const NetflixCard = ({ show }) => {
+const NetflixCard = ({ show, ...otherProps }) => {
   if (!show) {
     return null;
   }
@@ -113,7 +110,8 @@ const NetflixCard = ({ show }) => {
   const formattedWatchedHours = numberFormatter.format(show.hours);
 
   return (
-    <Link href={`https://www.netflix.com/title/${show.showId}`} target="_blank" rel="noreferrer noopener">
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Link href={`https://www.netflix.com/title/${show.showId}`} target="_blank" rel="noreferrer noopener" {...otherProps}>
       <Container>
         <HeroContainer>
           <HeroImg src={show.boxartUrls?.horizontalSmallWebP} alt="" />

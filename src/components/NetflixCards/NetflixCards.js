@@ -2,6 +2,8 @@ import React from 'react';
 import NetflixCard from './NetflixCard';
 import useApi from '../../lib/useApi';
 
+import FullBleedHorizontalScroll from '../FullBleedHorizontalScroll/FullBleedHorizontalScroll';
+
 const NetflixCards = () => {
   const [shows, loading, error] = useApi({
     fn: async () => {
@@ -15,13 +17,13 @@ const NetflixCards = () => {
   }
 
   return (
-    <>
-      {
+    <FullBleedHorizontalScroll
+      items={(
         shows.map((show) => (
           <NetflixCard key={show.showId} show={show} />
         ))
-      }
-    </>
+      )}
+    />
   );
 };
 
