@@ -5,16 +5,36 @@ import chroma from 'chroma-js';
 import ZillowIcon from './images/zillow.svg';
 import TruliaIcon from './images/trulia.svg';
 import TwitterIcon from './images/twitter.svg';
+import NetflixIcon from './images/netflix.svg';
 
 const gradient = chroma.scale(
-  ['#006AFF', '#00ADBB'],
-).mode('lch').colors(11);
+  ['#006AFF', '#00ADBB', '#E50914'],
+).mode('lch').colors(10);
 
-const gradientKeyframeRules = gradient.map((color, ii) => `
-  ${ii * 10}% {
-    background-image: linear-gradient(to right, ${color} 50%, transparent 50%), linear-gradient(to right, ${color} 50%, transparent 50%), linear-gradient(to bottom, ${color} 50%, transparent 50%), linear-gradient(to bottom, ${color} 50%, transparent 50%);
+const reversedGradient = chroma.scale(
+  ['#E50914', '#00ADBB', '#006AFF'],
+).mode('lch').colors(10);
+
+const gradientKeyframeRules = [
+  ...gradient.map((color, ii) => `
+    ${ii * 5}% {
+      background-image: 
+        linear-gradient(to right, ${color} 50%, transparent 50%), 
+        linear-gradient(to right, ${color} 50%, transparent 50%), 
+        linear-gradient(to bottom, ${color} 50%, transparent 50%), 
+        linear-gradient(to bottom, ${color} 50%, transparent 50%);
+    }
+  `),
+  ...reversedGradient.map((color, ii) => `
+  ${(ii * 5) + 50}% {
+    background-image: 
+      linear-gradient(to right, ${color} 50%, transparent 50%), 
+      linear-gradient(to right, ${color} 50%, transparent 50%), 
+      linear-gradient(to bottom, ${color} 50%, transparent 50%), 
+      linear-gradient(to bottom, ${color} 50%, transparent 50%);
   }
-`).join('\n');
+`),
+];
 
 const Container = styled.div`
   margin-top: 2pc;
@@ -22,12 +42,14 @@ const Container = styled.div`
   background-color: var(--juliadev-bg-overlay);
 
   @media only screen and (min-width: 768px) {
-    margin: 3pc;
+    margin: 1pc;
     margin-bottom: 6pc;
   }
 
   svg {
-    width: 20px;
+    height: 24px;
+    position: relative;
+    top: 4px;
   }
 `;
 
@@ -40,7 +62,7 @@ const DashedRotatedContainer = styled.div`
   padding: 16px;
 
   animation-name: borderColor;
-  animation-duration: 2s;
+  animation-duration: 20s;
   animation-timing-function: cubic-bezier(0.42,0,0.58,1);
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -51,7 +73,7 @@ const DashedRotatedContainer = styled.div`
   }
 
   @keyframes borderColor {
-    ${gradientKeyframeRules}
+    ${gradientKeyframeRules.join('\n')}
   }
 `;
 
@@ -88,31 +110,48 @@ const TwitterAnchor = styled.a`
   text-decoration: underline;
 `;
 
+const NetflixAnchor = styled.a`
+  color: #E50914;
+  text-decoration: underline;
+`;
+
 const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
       <GreetingText>
         Hi, I’m Julia. I live in San Francisco and I’m a Senior Software Engineer at
         {' '}
-        <ZillowIcon />
+        <NetflixIcon />
         {' '}
-        <ZillowAnchor href="https://www.zillow.com/" target="_blank" rel="noopener noreferrer">Zillow</ZillowAnchor>
+        <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">Netflix</NetflixAnchor>
+        {' '}
+        on the team that builds
+        {' '}
+        <a href="https://www.netflix.com/tudum" target="_blank" rel="noopener noreferrer">Tudum</a>
         .
       </GreetingText>
 
       <GreetingText>
-        My main focus is building
+        Prior to joining Netflix, I spent almost 4 years at
+        {' '}
+        <ZillowIcon />
+        {' '}
+        <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">Zillow</ZillowAnchor>
+        {' '}
+        in challenging engineering and lead roles working on
         {' '}
         <TruliaIcon />
         {' '}
         <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">Trulia</TruliaAnchor>
-        , a subsidiary of Zillow. I also help maintain our UI library and the
-        {' '}
-        metrics dashboard for some of our internal tools.
+        , where I&apos;ve had the pleasure of shipping multiple products from start to finish.
       </GreetingText>
 
       <GreetingText>
-        My very recent personal project,
+        In our mutual free time, my partner,
+        {' '}
+        <a href="https://jakemurzy.com" target="_blank" rel="noopener noreferrer">Jake Murzy</a>
+        , and I contribute to open-source through shared projects.
+        The latest of which,
         {' '}
         <a href="https://ndaify.com" target="_blank" rel="noopener noreferrer">NDAify</a>
         , helps you send non-disclosure agreements in just a few clicks and is
@@ -122,9 +161,9 @@ const Greeting = () => (
       </GreetingText>
 
       <GreetingText>
-        I spend my free time failing to make the perfect souffle pancake,
+        Otherwise, I speend my time failing to make the perfect souffle pancake,
         {' '}
-        or otherwise coding, wine tasting, snowboarding, surfing Linda Mar and traveling the world.
+        wine tasting, snowboarding, surfing Linda Mar, sailing or traveling the world.
       </GreetingText>
 
       <GreetingText>

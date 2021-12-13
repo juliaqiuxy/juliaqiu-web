@@ -76,7 +76,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     background-color: var(--juliadev-bg);
-    -webkit-font-smoothing: subpixel-antialiased
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: -0.25px;
   }
 
   a {
