@@ -45,6 +45,7 @@ const Tag = styled.span`
   text-transform: uppercase;
   cursor: pointer;
   background-color: var(--juliadev-fg);
+  flex: none;
 `;
 
 const TruliaCards = () => {
