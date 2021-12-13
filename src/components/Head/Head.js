@@ -100,7 +100,7 @@ const Head = withRouter((props) => (
   <NextHead>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="theme-color" content="#0D0E14" />
 
     <link rel="icon" href="https://julia.dev/images/favicon.png" />
     <link rel="apple-touch-icon" href="https://julia.dev/images/favicon.png" />
