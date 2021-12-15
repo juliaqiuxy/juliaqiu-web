@@ -121,9 +121,12 @@ const Greeting = () => (
       <GreetingText>
         Hi, I’m Julia. I live in San Francisco and I’m a Senior Software Engineer at
         {' '}
-        <NetflixIcon />
-        {' '}
-        <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">Netflix</NetflixAnchor>
+        <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
+          <NetflixIcon />
+          {' '}
+
+          Netflix
+        </NetflixAnchor>
         {' '}
         on the team that builds
         {' '}
@@ -161,7 +164,7 @@ const Greeting = () => (
       </GreetingText>
 
       <GreetingText>
-        Otherwise, I speend my time failing to make the perfect souffle pancake,
+        Otherwise, I spend my time failing to make the perfect souffle pancake,
         {' '}
         wine tasting, snowboarding, surfing Linda Mar, sailing or traveling the world.
       </GreetingText>
