@@ -115,6 +115,10 @@ const NetflixAnchor = styled.a`
   text-decoration: underline;
 `;
 
+const CompanyLogoWrapper = styled.span`
+  margin-right: 6px;
+`;
+
 const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
@@ -122,9 +126,9 @@ const Greeting = () => (
         Hi, I’m Julia. I live in San Francisco and I’m a Senior Software Engineer at
         {' '}
         <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
-          <NetflixIcon />
-          {' '}
-
+          <CompanyLogoWrapper>
+            <NetflixIcon />
+          </CompanyLogoWrapper>
           Netflix
         </NetflixAnchor>
         {' '}
@@ -137,15 +141,21 @@ const Greeting = () => (
       <GreetingText>
         Prior to joining Netflix, I spent almost 4 years at
         {' '}
-        <ZillowIcon />
-        {' '}
-        <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">Zillow</ZillowAnchor>
+        <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">
+          <CompanyLogoWrapper>
+            <ZillowIcon />
+          </CompanyLogoWrapper>
+          Zillow
+        </ZillowAnchor>
         {' '}
         in challenging engineering and lead roles working on
         {' '}
-        <TruliaIcon />
-        {' '}
-        <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">Trulia</TruliaAnchor>
+        <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">
+          <CompanyLogoWrapper>
+            <TruliaIcon />
+          </CompanyLogoWrapper>
+          Trulia
+        </TruliaAnchor>
         , where I&apos;ve had the pleasure of shipping multiple products from start to finish.
       </GreetingText>
 
@@ -172,9 +182,12 @@ const Greeting = () => (
       <GreetingText>
         You can listen to me blab about stuff on
         {' '}
-        <TwitterIcon />
-        {' '}
-        <TwitterAnchor href="https://twitter.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">Twitter</TwitterAnchor>
+        <TwitterAnchor href="https://twitter.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">
+          <CompanyLogoWrapper>
+            <TwitterIcon />
+          </CompanyLogoWrapper>
+          Twitter
+        </TwitterAnchor>
         .
       </GreetingText>
 
