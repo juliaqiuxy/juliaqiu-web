@@ -16,6 +16,14 @@ const STANDARD_HEADERS = {
   // "x-csrf-token": "0RtKvfvB-bDk4TJjTwyAEwfI1UcHyLklJOf4",
   // "x-request-id": "client-f1708a05-429d-4b4d-a27b-bf3484bb2b21",
   // "x-sp-search": "0",
+  cookie: [
+    // PermiterX start
+    '_pxhd=3OVACO4hWtRE84E7ik/Q9EyB8MFgYpXhlIT2wO2OdbUf9S0haRb1lufiX6L7zaDKf1mBKtTUIjmekW5skGBtAw==:KhrwBTykBr-SjilVts1TK1nX6CQ22vkciw/HPiflrlsSvMhsWuirsgRwIKSZcte-7ICX-lzV7uBW9VZPHGK6N2YsD6pFkiUVpS-fxlbaCs4=',
+    ' _pxvid=592ca72b-8a26-11ec-bea3-57546c6b6742',
+    ' _pxff_tm=1',
+    ' _px3=d17aae81af6e65b0a0a4098b4639046f861227815000f8bf934a0e989ab32b77:fIV7rWxpJQr24YjyUgk2H19NDncv2VQZpebN33Fk9KdmTzSrDzF9r5zf7Y4JZ7qH5U25dlZA8nN5A/1o/vrjoA==:1000:0gEJGzsAJWUevDqfq7Td/Hz9ENYS97dB7Tpeh1wxSHDrYaR2k+fK/mibIkOkWkAH58OppQgjfprEJ//3BdPvUBAZQ4cdQdAj/+406Kz+OQYB9/Vl/sdTDehxYy1jfkR2RIffzYo6ebV0HXbxUkenMLEw6MdMWtJYef2feEHaOQ/HlK1iMuIEWjPC78oL+SoWnTZqGOGnbc/6xlNSuPvCPQ==',
+    // PermiterX end
+  ].join(),
 };
 
 const getUserLocation = async (userIp) => {
