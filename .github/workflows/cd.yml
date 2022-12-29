@@ -15,7 +15,7 @@ jobs:
       # Install node
       - uses: actions/setup-node@v1
         with:
-          node-version: '16.13.0'
+          node-version: '18.12.1'
       # Utilize yarn cache
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
