@@ -114,7 +114,7 @@ const NetflixCard = ({ show, ...otherProps }) => {
     <Link href={`https://www.netflix.com/title/${show.showId}`} target="_blank" rel="noreferrer noopener" {...otherProps}>
       <Container>
         <HeroContainer>
-          <HeroImg src={show.boxartUrls?.horizontalSmallWebP} alt="" />
+          <HeroImg loading="lazy" src={show.boxartUrls?.horizontalSmallWebP} alt="" />
           <HeroOverlay />
         </HeroContainer>
         <ContentContainer>

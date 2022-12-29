@@ -94,7 +94,7 @@ const TruliaCard = ({ home, ...otherProps }) => {
     <Link href={`https://www.trulia.com${home.url}`} target="_blank" rel="noreferrer noopener" {...otherProps}>
       <Container>
         <HeroContainer>
-          <HeroImg src={home.media?.heroImage?.webpUrl.medium} alt="" />
+          <HeroImg loading="lazy" src={home.media?.heroImage?.webpUrl.medium} alt="" />
           <HeroOverlay />
         </HeroContainer>
         <ContentContainer>
