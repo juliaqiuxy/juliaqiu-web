@@ -29,11 +29,11 @@ const Title = styled.div`
   margin-bottom: 1pc;
 
   @media only screen and (min-width: 768px) {
-    transform: translateX(calc(max(720px, 100vw)/2 - 40vw));
+    transform: translateX(calc(max(720px, 100vw) / 2 - 40vw));
   }
 
   @media only screen and (min-width: 1200px) {
-    transform: translateX(calc(max(720px, 100vw)/2 - 360px));
+    transform: translateX(calc(max(720px, 100vw) / 2 - 360px));
   }
 `;
 
@@ -81,38 +81,60 @@ const getWeekRangeFromEndDate = (endDate) => {
 };
 
 const NetflixCards = () => {
-  const [data, loading, error] = useApi({
+  const [filmsData, filmsLoading, filmsError] = useApi({
     fn: async () => {
-      const response = await fetch('/api/shows');
+      const response = await fetch('/api/shows/films');
       return response.json();
     },
   });
-  const { shows } = data;
+  const { shows: films } = filmsData;
 
-  if (loading || error || !shows) {
-    return null;
-  }
+  const [tvShowsData, tvShowsLoading, tvShowsError] = useApi({
+    fn: async () => {
+      const response = await fetch('/api/shows/tvShows');
+      return response.json();
+    },
+  });
+  const { shows: tvShows } = tvShowsData;
 
-  const endDate = parseDate(shows[0].week);
-  const weekRange = getWeekRangeFromEndDate(endDate);
+  const endDate = films?.[0]?.week ? parseDate(films[0].week) : '';
+  const weekRange = endDate ? getWeekRangeFromEndDate(endDate) : '';
 
   return (
-    <FullBleedBackground>
-      <Title>
-        <Tag>Sneek Peak</Tag>
-        Global Top 10 Films from
-        {' '}
-        {weekRange}
-      </Title>
+    <>
+      {!filmsLoading && !filmsError && films ? (
+        <FullBleedBackground>
+          <Title>
+            <Tag>Sneek Peak</Tag>
+            Global Top 10 Films from
+            {' '}
+            {weekRange}
+          </Title>
 
-      <FullBleedHorizontalScroll
-        items={(
-          shows.map((show) => (
-            <NetflixCard key={show.showId} show={show} />
-          ))
-      )}
-      />
-    </FullBleedBackground>
+          <FullBleedHorizontalScroll
+            items={films.map((show) => (
+              <NetflixCard key={show.showId} show={show} />
+            ))}
+          />
+        </FullBleedBackground>
+      ) : null}
+      {!tvShowsLoading && !tvShowsError && tvShows ? (
+        <FullBleedBackground>
+          <Title>
+            <Tag>Sneek Peak</Tag>
+            Global Top 10 TV Shows from
+            {' '}
+            {weekRange}
+          </Title>
+
+          <FullBleedHorizontalScroll
+            items={tvShows.map((show) => (
+              <NetflixCard key={show.showId} show={show} />
+            ))}
+          />
+        </FullBleedBackground>
+      ) : null}
+    </>
   );
 };
 

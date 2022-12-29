@@ -1,9 +1,10 @@
 import * as cheerio from 'cheerio';
+import { massageShows } from '../../../lib/shows';
 
-const NETFLIX_TOP_TEN_URL = 'https://top10.netflix.com/';
+const NETFLIX_TOP_TEN_FILM_URL = 'https://top10.netflix.com/';
 
 const getShows = async () => {
-  const response = await fetch(NETFLIX_TOP_TEN_URL);
+  const response = await fetch(NETFLIX_TOP_TEN_FILM_URL);
   if (response.status !== 200) {
     throw new Error('Netflix is angry');
   }
@@ -14,24 +15,6 @@ const getShows = async () => {
   const data = $('script[id=__NEXT_DATA__]').html();
 
   return JSON.parse(data);
-};
-
-const massageShows = (shows) => {
-  if (!shows?.props?.pageProps?.data) {
-    throw new Error('Netflix is angry');
-  }
-
-  const { weeklyTopTen, weeklyBoxartUrls } = shows.props.pageProps.data;
-
-  return weeklyTopTen.map((show) => {
-    const { showId } = show;
-    const boxartUrls = weeklyBoxartUrls[showId];
-
-    return {
-      ...show,
-      boxartUrls,
-    };
-  });
 };
 
 export default async (req, res) => {

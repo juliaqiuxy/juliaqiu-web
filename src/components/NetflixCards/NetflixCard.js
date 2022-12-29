@@ -120,7 +120,7 @@ const NetflixCard = ({ show, ...otherProps }) => {
         <ContentContainer>
           <ContentDetails>
             <ContentTitle>
-              {show.showName}
+              {show.name}
             </ContentTitle>
           </ContentDetails>
           <ContentNotes>
