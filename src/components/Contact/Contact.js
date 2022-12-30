@@ -153,7 +153,7 @@ const ContactItem = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Github
+        GitHub
       </a>
       .
     </ProjectSubDescription>
