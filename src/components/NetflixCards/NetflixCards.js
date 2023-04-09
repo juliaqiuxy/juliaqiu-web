@@ -105,7 +105,7 @@ const NetflixCards = () => {
       {!filmsLoading && !filmsError && films ? (
         <FullBleedBackground>
           <Title>
-            <Tag>Sneek Peak</Tag>
+            <Tag>Sneak Peek</Tag>
             Global Top 10 Films from
             {' '}
             {weekRange}
@@ -121,7 +121,7 @@ const NetflixCards = () => {
       {!tvShowsLoading && !tvShowsError && tvShows ? (
         <FullBleedBackground>
           <Title>
-            <Tag>Sneek Peak</Tag>
+            <Tag>Sneak Peek</Tag>
             Global Top 10 TV Shows from
             {' '}
             {weekRange}
