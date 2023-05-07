@@ -14,8 +14,8 @@ const JSONLD_DATA = {
   id: 'juliaqiuxy',
   image: '/images/migratingSlopeNinjaToZeit.gif',
   jobTitle: 'Software Engineer',
-  lastName: 'Qiu',
-  name: 'Julia Qiu',
+  lastName: 'Murzy',
+  name: 'Julia Murzy',
   sameAs: [
     'https://www.linkedin.com/in/juliaqiuxy',
     'http://twitter.com/juliaqiuxy',

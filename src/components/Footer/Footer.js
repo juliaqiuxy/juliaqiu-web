@@ -74,7 +74,7 @@ const Footer = () => (
   <Container>
     <FooterTextContainer>
       <FooterText>
-        © Julia Qiu. All rights reserved. Made with
+        © Julia Murzy. All rights reserved. Made with
         <FooterHeart
           alt="heart"
           src="/images//heart.svg"
