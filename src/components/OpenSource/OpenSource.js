@@ -40,7 +40,6 @@ const OpenSource = () => (
       longSkills={PROJECT_DETAIL.NDAify.longSkills}
     />
     <Project
-      link="https://slope.ninja"
       text="slope.ninja"
       title={PROJECT_DETAIL['Slope Ninja'].title}
       description={PROJECT_DETAIL['Slope Ninja'].description}
