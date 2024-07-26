@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
 import { massageShows } from '../../../lib/shows';
 
-const NETFLIX_TOP_TEN_FILM_URL = 'https://top10.netflix.com/';
+const NETFLIX_TOP_TEN_FILM_URL = 'https://www.netflix.com/tudum/top10';
 
 const getShows = async () => {
   const response = await fetch(NETFLIX_TOP_TEN_FILM_URL);
