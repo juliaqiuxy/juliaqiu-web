@@ -4,7 +4,7 @@ import chroma from 'chroma-js';
 
 import ZillowIcon from './images/zillow.svg';
 import TruliaIcon from './images/trulia.svg';
-import TwitterIcon from './images/twitter.svg';
+import XIcon from './images/x.svg';
 import NetflixIcon from './images/netflix.svg';
 
 const gradient = chroma.scale(
@@ -105,8 +105,8 @@ const TruliaAnchor = styled.a`
   text-decoration: underline;
 `;
 
-const TwitterAnchor = styled.a`
-  color: #0F96CC;
+const XAnchor = styled.a`
+  color: var(--juliadev-fg);
   text-decoration: underline;
 `;
 
@@ -182,12 +182,12 @@ const Greeting = () => (
       <GreetingText>
         You can listen to me blab about stuff on
         {' '}
-        <TwitterAnchor href="https://twitter.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">
+        <XAnchor href="https://x.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">
           <CompanyLogoWrapper>
-            <TwitterIcon />
+            <XIcon />
           </CompanyLogoWrapper>
-          Twitter
-        </TwitterAnchor>
+          X
+        </XAnchor>
         .
       </GreetingText>
 

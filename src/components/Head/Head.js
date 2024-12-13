@@ -18,7 +18,7 @@ const JSONLD_DATA = {
   name: 'Julia Murzy',
   sameAs: [
     'https://www.linkedin.com/in/juliaqiuxy',
-    'http://twitter.com/juliaqiuxy',
+    'http://x.com/juliaqiuxy',
     'http://instagram.com/juliaqiuxy',
   ],
   url: 'https://julia.dev',
