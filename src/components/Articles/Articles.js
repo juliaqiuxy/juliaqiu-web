@@ -2,18 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Category from '../Category/Category';
-// import ExternalUrl from '../ExternalUrl/ExternalUrl';
+import ExternalUrl from '../ExternalUrl/ExternalUrl';
 
 const Container = styled.div`
   margin-bottom: 62px;
   color: var(--juliadev-fg);
 `;
 
-const ArticleItem = styled.a`
+const ArticleItem = styled.div`
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  margin-bottom: 18px;
+`;
+
+const ArticleItemContent = styled.a`
   font-size: 26px;
   text-decoration: none;
   display: block;
-  margin-bottom: 18px;
   color: var(--juliadev-fg);
 
   @media only screen and (min-width: 768px) {
@@ -25,29 +32,32 @@ const ArticleItem = styled.a`
   }
 `;
 
-// const LinkWrapper = styled.a`
-//   text-decoration: none;
-//   color: inherit;
-// `;
+const LinkWrapper = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
 
 const Articles = () => (
   <Container>
     <Category category="Articles" />
-    <ArticleItem
-      href="https://web.dev/case-studies/netflix-cq"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="Articles-item"
-    >
-      Unlocking the power of CSS container queries: lessons from the Netflix team
+    <ArticleItem>
+      <ArticleItemContent
+        href="https://web.dev/case-studies/netflix-cq"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="Articles-item"
+      >
+        Unlocking the power of CSS container queries: lessons from the Netflix
+        team
+      </ArticleItemContent>
+      <LinkWrapper
+        href="https://web.dev/case-studies/netflix-cq"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ExternalUrl text="web.dev" />
+      </LinkWrapper>
     </ArticleItem>
-    {/* <LinkWrapper
-      href="https://medium.com/@juliaqiuxy"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <ExternalUrl addMaginTop text="More on Medium" />
-    </LinkWrapper> */}
   </Container>
 );
 
