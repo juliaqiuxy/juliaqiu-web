@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import HeartIcon from './images/heart.svg';
-import UnicornIcon from './images/unicorn.svg';
+import UnicornIcon from './images/plants.svg';
 
 const Container = styled.div`
   width: 100%;
@@ -74,17 +74,17 @@ const Footer = () => (
   <Container>
     <FooterTextContainer>
       <FooterText>
-        © Julia Murzy. All rights reserved. Made with
+        © Julia. All rights reserved. Made with
         <FooterHeart
           alt="heart"
-          src="/images//heart.svg"
+          src="/images/heart.svg"
         />
         in San Francisco.
       </FooterText>
     </FooterTextContainer>
     <FooterGraph
-      src="/images//unicorn.svg"
-      alt="unicorn"
+      src="/images/home01.svg"
+      alt="home"
     />
   </Container>
 );

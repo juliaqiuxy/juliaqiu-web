@@ -41,15 +41,15 @@ Allow: /
 `).join('');
 
 const ROBOTS_TXT = `
-# NOTICE: THE USE OF ROBOTS OR OTHER AUTOMATED MEANS TO ACCESS JULIA.DEV
-# WITHOUT THE EXPRESS PERMISSION OF JULIA.DEV IS STRICTLY PROHIBITED.
+# NOTICE: THE USE OF ROBOTS OR OTHER AUTOMATED MEANS TO ACCESS JULIAMURZY.COM
+# WITHOUT THE EXPRESS PERMISSION OF JULIAMURZY.COM IS STRICTLY PROHIBITED.
 
 ${rules}
 
 User-agent: *
 Disallow: /
 
-Sitemap: https://julia.dev/sitemap.xml
+Sitemap: https://juliamurzy.com/sitemap.xml
 `;
 
 const robots = () => async (ctx) => {

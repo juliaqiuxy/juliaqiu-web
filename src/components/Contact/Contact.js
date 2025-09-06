@@ -106,16 +106,16 @@ const ContactTag = styled.span`
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const ContactItem = () => (
   <Container>
-    <ProjectTitle>Are you the next unicorn?</ProjectTitle>
+    <ProjectTitle>Looking for a real estate agent?</ProjectTitle>
     <ProjectDescription>Feel free to reach out!</ProjectDescription>
     <ProjectSubDescription>
       {'Email me at '}
       <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@julia.dev"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=re@juliamurzy.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        julia@julia.dev
+        re@juliamurzy.com
       </a>
       {' '}
       or
@@ -137,35 +137,21 @@ const ContactItem = () => (
       </a>
       .
     </ProjectSubDescription>
-    <ProjectSubDescription>
-      {'Add me on ' }
-      <a
-        href="https://www.linkedin.com/in/juliaqiuxy/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
-      .
-      {' Follow my work on '}
-      <a
-        href="https://github.com/juliaqiuxy"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-      .
-    </ProjectSubDescription>
     <div>
       <ContactTag>
-        Your
+        SF
       </ContactTag>
       <ContactTag>
-        Tech
+        Peninsula
       </ContactTag>
       <ContactTag>
-        Stack
+        East Bay
+      </ContactTag>
+      <ContactTag>
+        Marin
+      </ContactTag>
+      <ContactTag>
+        Tahoe
       </ContactTag>
     </div>
   </Container>

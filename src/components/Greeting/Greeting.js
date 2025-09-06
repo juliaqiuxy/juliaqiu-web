@@ -2,11 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import chroma from 'chroma-js';
 
-import ZillowIcon from './images/zillow.svg';
-import TruliaIcon from './images/trulia.svg';
-import XIcon from './images/x.svg';
-import NetflixIcon from './images/netflix.svg';
-
 const gradient = chroma.scale(
   ['#006AFF', '#00ADBB', '#E50914'],
 ).mode('lch').colors(10);
@@ -95,104 +90,44 @@ const GreetingText = styled.p`
   }
 `;
 
-const ZillowAnchor = styled.a`
-  color: rgba(0, 106, 255, 1);
-  text-decoration: underline;
-`;
-
-const TruliaAnchor = styled.a`
-  color: #01ADBB;
-  text-decoration: underline;
-`;
-
-const XAnchor = styled.a`
-  color: var(--juliadev-fg);
-  text-decoration: underline;
-`;
-
 const NetflixAnchor = styled.a`
-  color: #E50914;
+  color: var(--juliadev-accents-0);
   text-decoration: underline;
-`;
-
-const CompanyLogoWrapper = styled.span`
-  margin-right: 6px;
+  font-size: 16px;
 `;
 
 const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
       <GreetingText>
-        Hi, I’m Julia. I live in San Francisco and I’m a Senior Software Engineer at
-        {' '}
-        <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
-          <CompanyLogoWrapper>
-            <NetflixIcon />
-          </CompanyLogoWrapper>
-          Netflix
-        </NetflixAnchor>
-        {' '}
-        on the team that builds
-        {' '}
-        <a href="https://www.netflix.com/tudum" target="_blank" rel="noopener noreferrer">Tudum</a>
-        .
+        Hi, I’m Julia, a real estate agent in the Bay Area and Tahoe.
       </GreetingText>
 
       <GreetingText>
-        Prior to joining Netflix, I spent almost 4 years at
-        {' '}
-        <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">
-          <CompanyLogoWrapper>
-            <ZillowIcon />
-          </CompanyLogoWrapper>
-          Zillow
-        </ZillowAnchor>
-        {' '}
-        in challenging engineering and lead roles working on
-        {' '}
-        <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">
-          <CompanyLogoWrapper>
-            <TruliaIcon />
-          </CompanyLogoWrapper>
-          Trulia
-        </TruliaAnchor>
-        , where I&apos;ve had the pleasure of shipping multiple products from start to finish.
+        I’ve been on both sides of the table buying and selling homes,
+        so I get how intense it can feel. That’s why I keep things simple
+        and real, helping clients cut through the noise and actually enjoy
+        the process—whether it’s your very first home in the Bay Area or that
+        dream ski cabin in Tahoe.
       </GreetingText>
 
       <GreetingText>
-        In our mutual free time, my partner,
-        {' '}
-        <a href="https://jakemurzy.com" target="_blank" rel="noopener noreferrer">Jake Murzy</a>
-        , and I contribute to open-source through shared projects.
-        The latest of which,
-        {' '}
-        <a href="https://ndaify.com" target="_blank" rel="noopener noreferrer">NDAify</a>
-        , helps you send non-disclosure agreements in just a few clicks and is
-        {' '}
-        <a href="https://github.com/NDAify" target="_blank" rel="noopener noreferrer">open-source on GitHub</a>
-        .
+        I use familiar, millennial- and Gen Z-friendly tools to make everything
+        smooth, fast, and hassle-free.
       </GreetingText>
 
       <GreetingText>
-        Otherwise, I spend my time failing to make the perfect souffle pancake,
-        {' '}
-        wine tasting, snowboarding, surfing Linda Mar, sailing or traveling the world.
-      </GreetingText>
-
-      <GreetingText>
-        You can listen to me blab about stuff on
-        {' '}
-        <XAnchor href="https://x.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">
-          <CompanyLogoWrapper>
-            <XIcon />
-          </CompanyLogoWrapper>
-          X
-        </XAnchor>
-        .
+        When I’m not talking real estate, I’m probably chasing the perfect
+        souffle pancake, snowboarding, surfing Linda Mar, sailing, wine tasting,
+        or plotting my next trip.
       </GreetingText>
 
       <GreetingText>
         — Julia
+        <br />
+        <NetflixAnchor href="https://dre.ca.gov" target="_blank" rel="noopener noreferrer">
+          DRE 02228979
+        </NetflixAnchor>
       </GreetingText>
 
     </DashedRotatedContainer>

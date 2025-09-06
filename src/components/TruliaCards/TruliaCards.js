@@ -65,7 +65,7 @@ const TruliaCards = () => {
   return (
     <FullBleedBackground>
       <Title>
-        <Tag>Sneak Peek</Tag>
+        <Tag>For Sale</Tag>
         Homes near you
         {
           searchLocation ? ` in ${searchLocation?.city}, ${searchLocation?.stateCode}` : ''

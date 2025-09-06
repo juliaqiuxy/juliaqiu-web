@@ -3,25 +3,23 @@ import NextHead from 'next/head';
 import getConfig from 'next/config';
 import { withRouter } from 'next/router';
 
-const META_DESCRIPTION = 'Building https://netflix.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, Deno, GraphQL, React Native. She, her. Ex-Zillow.';
-const TITLE = 'julia.dev';
+const META_DESCRIPTION = 'Hi, I’m Julia, a real estate agent in the Bay Area and Tahoe.';
+const TITLE = 'juliamurzy.com';
 
 const JSONLD_DATA = {
   '@context': 'http://schema.org',
   '@type': 'Person',
-  email: 'mailto:julia@julia.dev',
+  email: 'mailto:julia@juliamurzy.com',
   firstName: 'Julia',
   id: 'juliaqiuxy',
-  image: '/images/migratingSlopeNinjaToZeit.gif',
-  jobTitle: 'Software Engineer',
-  lastName: 'Murzy',
-  name: 'Julia Murzy',
+  image: '/images/meta.gif',
+  jobTitle: 'Real Estate Agent',
+  lastName: '',
+  name: 'Julia',
   sameAs: [
-    'https://www.linkedin.com/in/juliaqiuxy',
-    'http://x.com/juliaqiuxy',
     'http://instagram.com/juliaqiuxy',
   ],
-  url: 'https://julia.dev',
+  url: 'https://juliamurzy.com',
 };
 
 const GOOGLE_MAX_LENGTH = 160;
@@ -102,8 +100,8 @@ const Head = withRouter((props) => (
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#0D0E14" />
 
-    <link rel="icon" href="https://julia.dev/images/favicon.png" />
-    <link rel="apple-touch-icon" href="https://julia.dev/images/favicon.png" />
+    <link rel="icon" href="https://juliamurzy.com/images/favicon.png" />
+    <link rel="apple-touch-icon" href="https://juliamurzy.com/images/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -114,13 +112,13 @@ const Head = withRouter((props) => (
     <meta
       property="og:url"
       key="og:url"
-      content={`https://julia.dev${props.router.asPath}`}
+      content={`https://juliamurzy.com${props.router.asPath}`}
     />
 
     <meta
       property="og:image"
       key="og:image"
-      content="https://julia.dev/images/meta.png"
+      content="https://juliamurzy.com/images/meta.png"
     />
 
     {/* TWITTER */}
@@ -134,7 +132,7 @@ const Head = withRouter((props) => (
     <meta
       name="twitter:image"
       key="twitter:image"
-      content="https://julia.dev/images/meta.png"
+      content="https://juliamurzy.com/images/meta.png"
     />
   </NextHead>
 ));

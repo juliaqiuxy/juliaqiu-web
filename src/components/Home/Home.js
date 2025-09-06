@@ -3,10 +3,7 @@ import styled from 'styled-components';
 
 import Greeting from '../Greeting/Greeting';
 import ProjectList from '../ProjectList/ProjectList';
-import OpenSource from '../OpenSource/OpenSource';
-import Talks from '../Talks/Talks';
 import Footer from '../Footer/Footer';
-import Articles from '../Articles/Articles';
 import Contact from '../Contact/Contact';
 import SmartLogo from './SmartLogo';
 import ThemeToggle from './ThemeToggle';
@@ -44,6 +41,7 @@ const HeaderContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
+  position: relative;
   & svg {
     height: 88px;
     color: var(--juliadev-fg);
@@ -106,11 +104,27 @@ const ThemeToggleContainer = styled.div`
   }
 `;
 
+const RELabel = styled.div`
+  background-image: red;
+  color: white;
+  position: absolute;
+  right: 16px;
+  bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--juliadev-fg);
+  text-transform: uppercase;
+  font-family: Tahoma, sans-serif;
+`;
+
 const Home = () => (
   <Container>
     <HeaderContainer>
       <LogoContainer>
         <SmartLogo />
+        <RELabel>
+          Real Estate
+        </RELabel>
       </LogoContainer>
       <HomeCalendlyLink
         href=""
@@ -125,18 +139,15 @@ const Home = () => (
           return false;
         }}
       >
-        Want to meet over coffee?
+        Looking to buy a house?
       </HomeCalendlyLink>
       <ThemeToggleContainer>
         <ThemeToggle />
       </ThemeToggleContainer>
     </HeaderContainer>
     <HomeContent>
-      <Greeting />
       <ProjectList />
-      <Articles />
-      <Talks />
-      <OpenSource />
+      <Greeting />
       <Contact />
     </HomeContent>
     <Footer />
