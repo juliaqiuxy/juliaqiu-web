@@ -42,7 +42,7 @@ primary_region = 'sjc'
     method = 'get'
     path = '/health'
     protocol = 'http'
-    tls_skip_verify = false
+    tls_skip_verify = true
 
 [[vm]]
   size = 'shared-cpu-1x'
