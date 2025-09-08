@@ -100,21 +100,24 @@ const ContentRankDetails = styled.div`
   display: flex;
 `;
 
-const numberFormatter = new Intl.NumberFormat('en-US');
+const numberFormatter = new Intl.NumberFormat('en-US', {
+  notation: 'compact',
+  compactDisplay: 'short',
+});
 
 const NetflixCard = ({ show, ...otherProps }) => {
   if (!show) {
     return null;
   }
 
-  const formattedWatchedHours = numberFormatter.format(show.hours);
+  const formattedWatchedHours = numberFormatter.format(show.views);
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <Link href={`https://www.netflix.com/title/${show.showId}`} target="_blank" rel="noreferrer noopener" {...otherProps}>
+    <Link href={`https://www.netflix.com/tudum/top10/${show.showId}`} target="_blank" rel="noreferrer noopener" {...otherProps}>
       <Container>
         <HeroContainer>
-          <HeroImg loading="lazy" src={show.boxartUrls?.horizontalSmallWebP} alt="" />
+          <HeroImg loading="lazy" src={show.image} alt="" />
           <HeroOverlay />
         </HeroContainer>
         <ContentContainer>
@@ -125,16 +128,14 @@ const NetflixCard = ({ show, ...otherProps }) => {
           </ContentDetails>
           <ContentNotes>
             <ContentViewDetails>
-              Viewed
-              {' '}
               {formattedWatchedHours}
               {' '}
-              hours
+              Views
             </ContentViewDetails>
             <ContentRankDetails>
-              <RedStrikeContainer>
+              <RedStrikeContainer title={`${show.weeksInTopTen} week(s) in top 10`}>
                 {
-                  new Array(show.weeksInTopTen).fill('').map((_, index) => (
+                  new Array(Math.min(show.weeksInTopTen, 18)).fill('').map((_, index) => (
                     // eslint-disable-next-line react/no-array-index-key
                     <RedStrike key={index} />
                   ))

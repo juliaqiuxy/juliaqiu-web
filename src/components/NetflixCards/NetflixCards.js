@@ -50,7 +50,7 @@ const Tag = styled.span`
   flex: none;
 `;
 
-const parseDate = (rawDate) => {
+export const parseDate = (rawDate) => {
   if (!rawDate) {
     throw new Error('Invalid Date');
   }
@@ -67,7 +67,7 @@ const parseDate = (rawDate) => {
   return endDate;
 };
 
-const getWeekRangeFromEndDate = (endDate) => {
+export const getWeekRangeFromEndDate = (endDate) => {
   if (!endDate) {
     throw new Error('Invalid Date');
   }
@@ -97,8 +97,9 @@ const NetflixCards = () => {
   });
   const { shows: tvShows } = tvShowsData;
 
-  const endDate = films?.[0]?.week ? parseDate(films[0].week) : '';
-  const weekRange = endDate ? getWeekRangeFromEndDate(endDate) : '';
+  // const endDate = films?.[0]?.week ? parseDate(films[0].week) : '';
+  // const weekRange = endDate ? getWeekRangeFromEndDate(endDate) : '';
+  const weekRange = films?.[0]?.weekRange ? `from ${films[0].weekRange}` : 'this week';
 
   return (
     <>
@@ -106,7 +107,7 @@ const NetflixCards = () => {
         <FullBleedBackground>
           <Title>
             <Tag>Sneak Peek</Tag>
-            Global Top 10 Films from
+            Global Top 10 Films
             {' '}
             {weekRange}
           </Title>
@@ -122,7 +123,7 @@ const NetflixCards = () => {
         <FullBleedBackground>
           <Title>
             <Tag>Sneak Peek</Tag>
-            Global Top 10 TV Shows from
+            Global Top 10 TV Shows
             {' '}
             {weekRange}
           </Title>
