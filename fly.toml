@@ -1,4 +1,10 @@
-app = "juliaqiu-web"
+# fly.toml app configuration file generated for juliaqiu-web on 2025-09-06T14:21:37-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'juliaqiu-web'
+primary_region = 'sjc'
 
 [[services]]
   internal_port = 3001
@@ -9,30 +15,34 @@ app = "juliaqiu-web"
     soft_limit = 500
 
   [[services.ports]]
-    handlers = ["http"]
-    port = "80"
+    port = 80
+    handlers = ['http']
 
   [[services.ports]]
-    handlers = ["tls", "http"]
-    port = "443"
+    port = 443
+    handlers = ['tls', 'http']
 
   [[services.tcp_checks]]
-    interval = 10000
-    timeout = 2000
+    interval = '10s'
+    timeout = '2s'
 
   # Roughly translated, this section says every ten seconds, 
   # perform a HTTP GET on /health looking for it to return a 
   # HTTP 200 status within one second. The parameters of a 
   # http_check are listed below.
   [[services.http_checks]]
-    interval = 10000
-    method = "get"
-    path = "/health"
-    protocol = "http"
-    timeout = 1000
+    interval = '10s'
+    timeout = '1s'
+    method = 'get'
+    path = '/health'
+    protocol = 'http'
     tls_skip_verify = true
 
   [scaling]
     min = 1
     max = 1
     strategy = "immediate"
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = "512mb"
