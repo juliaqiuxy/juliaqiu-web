@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import chroma from 'chroma-js';
 
+import ZillowIcon from './images/zillow.svg';
+
 const gradient = chroma.scale(
   ['#006AFF', '#00ADBB', '#E50914'],
 ).mode('lch').colors(10);
@@ -90,10 +92,19 @@ const GreetingText = styled.p`
   }
 `;
 
+const ZillowAnchor = styled.a`
+  color: rgba(0, 106, 255, 1);
+  text-decoration: underline;
+`;
+
 const NetflixAnchor = styled.a`
   color: var(--juliadev-accents-0);
   text-decoration: underline;
   font-size: 16px;
+`;
+
+const CompanyLogoWrapper = styled.span`
+  margin-right: 6px;
 `;
 
 const Greeting = () => (
@@ -119,7 +130,14 @@ const Greeting = () => (
       <GreetingText>
         For buyers, here’s what roughly you can expect:
         <ul>
-          <li>Find a house</li>
+          <li>
+            <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">
+              <CompanyLogoWrapper>
+                <ZillowIcon />
+              </CompanyLogoWrapper>
+              Find a house
+            </ZillowAnchor>
+          </li>
           <li>Make an offer</li>
           <li>Negotiate terms and counteroffers</li>
           <li>Sign the purchase agreement</li>
@@ -144,7 +162,7 @@ const Greeting = () => (
       </GreetingText>
 
       <GreetingText>
-        Oh and when I’m not talking real estate, I’m probably chasing the perfect
+        Finally, when I’m not talking real estate, I’m probably chasing the perfect
         souffle pancake, snowboarding, surfing Linda Mar, sailing, wine tasting
         or plotting my next trip.
       </GreetingText>
