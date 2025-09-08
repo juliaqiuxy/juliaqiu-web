@@ -1,3 +1,5 @@
+// import { withCache } from '../../lib/shows';
+
 const TRULIA_GRAPHQL_ENDPOINT = 'https://www.trulia.com/graphql';
 const STANDARD_HEADERS = {
   // Authorization: `token ${this.accessToken}`,
@@ -58,7 +60,7 @@ const getUserLocation = async (userIp) => {
   return responseJson.data.homepage.defaultLocation;
 };
 
-const getHomes = async ({ city, stateCode }) => {
+const getForSaleHomes = async ({ city, stateCode }) => {
   const query = /* GraphQL */`query WEB_searchHomesBySearchDetailsQuery(
     $searchDetails: SEARCHDETAILS_Input!
   ) {
@@ -141,15 +143,21 @@ const getHomes = async ({ city, stateCode }) => {
   };
 };
 
+// const getHomes = withCache(async () => {}, 1000 * 60 * 60 * 12); // Cache for 12 hours
+const getHomes = async (userIp) => {
+  const userLocation = await getUserLocation(userIp);
+  const homes = await getForSaleHomes(userLocation);
+
+  return homes;
+};
+
 export default async (req, res) => {
   try {
     const xForwardedFor = req.headers['x-forwarded-for'] || '';
 
     const [userIp] = xForwardedFor.split(',').map((ip) => ip.trim());
 
-    const userLocation = await getUserLocation(userIp);
-
-    const homes = await getHomes(userLocation);
+    const homes = await getHomes(userIp);
     res.json(homes);
   } catch (error) {
     res.status = 500;
