@@ -113,12 +113,39 @@ const Greeting = () => (
 
       <GreetingText>
         I use familiar, millennial- and Gen Z-friendly tools to make everything
-        smooth, fast, and hassle-free.
+        smooth, fast and hassle-free.
       </GreetingText>
 
       <GreetingText>
-        When I’m not talking real estate, I’m probably chasing the perfect
-        souffle pancake, snowboarding, surfing Linda Mar, sailing, wine tasting,
+        For buyers, here’s what roughly you can expect:
+        <ul>
+          <li>Find a house</li>
+          <li>Make an offer</li>
+          <li>Negotiate terms and counteroffers</li>
+          <li>Sign the purchase agreement</li>
+          <li>Schedule inspection and appraisal</li>
+          <li>Do a final walkthrough</li>
+          <li>Close and get the keys</li>
+        </ul>
+      </GreetingText>
+
+      <GreetingText>
+        For sellers, I keep it short and to the point—so you
+        know exactly what matters and nothing that doesn’t.
+      </GreetingText>
+
+      <GreetingText>
+        Also, whether I represent you as a buyer or a seller,
+        I don’t see or manage your financials. Your loan officer
+        handles the mortgage side of things—I just coordinate with
+        them to keep everything moving smoothly. That said, I’m happy
+        to make recommendations for loan officers or lenders
+        I’ve worked with before.
+      </GreetingText>
+
+      <GreetingText>
+        Oh and when I’m not talking real estate, I’m probably chasing the perfect
+        souffle pancake, snowboarding, surfing Linda Mar, sailing, wine tasting
         or plotting my next trip.
       </GreetingText>
 
