@@ -169,6 +169,11 @@ const Greeting = () => (
         and I contribute to open source projects, experimenting (and often failing)
         with souffle pancakes, wine tasting, snowboarding, ice skating, surfing Linda Mar,
         sailing, golfing and traveling the world.
+        {' '}
+        <strong>Fun fact:</strong>
+        {' '}
+        So far we’ve made it to 30+ countries together and stopped by
+        11 different Netflix offices along the way.
       </GreetingText>
 
       <GreetingText>
