@@ -18,7 +18,7 @@ export const massageShows = (shows) => {
   });
 };
 
-export const parseShows = (html) => {
+export const parseShows = (slug, html) => {
   const $ = cheerio.load(html);
 
   const section = $('section.medCard[data-guid="top-10-table"]');
@@ -41,7 +41,7 @@ export const parseShows = (html) => {
     const weeksInTopTen = $row.find('[data-uia="top10-table-row-weeks"]').text().trim();
 
     shows.push({
-      showId: 'tv',
+      showId: slug,
       rank,
       image,
       title,

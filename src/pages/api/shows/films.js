@@ -7,7 +7,7 @@ export const getShows = withCache(async () => {
   }
 
   const responseHTML = await response.text();
-  return parseShows(responseHTML);
+  return parseShows('', responseHTML);
 }, 1000 * 60 * 60 * 12); // Cache for 12 hours
 
 export default async (req, res) => {
