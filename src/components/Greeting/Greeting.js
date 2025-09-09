@@ -123,7 +123,7 @@ const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
       <GreetingText>
-        Hi, I’m Julia. I live in San Francisco and I’m a Senior Software Engineer at
+        Hi, I’m Julia. I live in San Francisco and work as an Engineering Lead at
         {' '}
         <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
           <CompanyLogoWrapper>
@@ -131,15 +131,17 @@ const Greeting = () => (
           </CompanyLogoWrapper>
           Netflix
         </NetflixAnchor>
-        {' '}
-        on the team that builds
+        {', '}
+        where I focus on
         {' '}
         <a href="https://www.netflix.com/tudum" target="_blank" rel="noopener noreferrer">Tudum</a>
+        {' and '}
+        <a href="https://www.netflixhouse.com" target="_blank" rel="noopener noreferrer">House</a>
         .
       </GreetingText>
 
       <GreetingText>
-        Prior to joining Netflix, I spent almost 4 years at
+        Before Netflix, I spent four years at
         {' '}
         <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">
           <CompanyLogoWrapper>
@@ -148,7 +150,7 @@ const Greeting = () => (
           Zillow
         </ZillowAnchor>
         {' '}
-        in challenging engineering and lead roles working on
+        in engineering and lead roles on
         {' '}
         <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">
           <CompanyLogoWrapper>
@@ -156,31 +158,21 @@ const Greeting = () => (
           </CompanyLogoWrapper>
           Trulia
         </TruliaAnchor>
-        , where I&apos;ve had the pleasure of shipping multiple products from start to finish.
+        , where I shipped multiple products from start to finish.
       </GreetingText>
 
       <GreetingText>
-        In our mutual free time, my partner,
+        Outside of work, my partner,
         {' '}
         <a href="https://jakemurzy.com" target="_blank" rel="noopener noreferrer">Jake Murzy</a>
-        , and I contribute to open-source through shared projects.
-        The latest of which,
         {' '}
-        <a href="https://ndaify.com" target="_blank" rel="noopener noreferrer">NDAify</a>
-        , helps you send non-disclosure agreements in just a few clicks and is
-        {' '}
-        <a href="https://github.com/NDAify" target="_blank" rel="noopener noreferrer">open-source on GitHub</a>
-        .
+        and I contribute to open source projects, experimenting (and often failing)
+        with souffle pancakes, wine tasting, snowboarding, ice skating, surfing Linda Mar,
+        sailing, golfing and traveling the world.
       </GreetingText>
 
       <GreetingText>
-        Otherwise, I spend my time failing to make the perfect souffle pancake,
-        {' '}
-        wine tasting, snowboarding, surfing Linda Mar, sailing or traveling the world.
-      </GreetingText>
-
-      <GreetingText>
-        You can listen to me blab about stuff on
+        You can also catch me rambling on
         {' '}
         <XAnchor href="https://x.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">
           <CompanyLogoWrapper>
