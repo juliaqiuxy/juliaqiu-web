@@ -7,6 +7,7 @@ import OpenSource from '../OpenSource/OpenSource';
 import Talks from '../Talks/Talks';
 import Footer from '../Footer/Footer';
 import Articles from '../Articles/Articles';
+import Awards from '../Awards/Awards';
 import Contact from '../Contact/Contact';
 import SmartLogo from './SmartLogo';
 import ThemeToggle from './ThemeToggle';
@@ -134,6 +135,7 @@ const Home = () => (
     <HomeContent>
       <Greeting />
       <ProjectList />
+      <Awards />
       <Articles />
       <Talks />
       <OpenSource />
