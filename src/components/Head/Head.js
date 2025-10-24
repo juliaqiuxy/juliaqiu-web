@@ -4,12 +4,12 @@ import getConfig from 'next/config';
 import { withRouter } from 'next/router';
 
 const META_DESCRIPTION = 'Hi, I’m Julia, a real estate agent in the Bay Area and Tahoe.';
-const TITLE = 'juliamurzy.com';
+const TITLE = 'julia.sale';
 
 const JSONLD_DATA = {
   '@context': 'http://schema.org',
   '@type': 'Person',
-  email: 'mailto:julia@juliamurzy.com',
+  email: 'mailto:julia@julia.sale',
   firstName: 'Julia',
   id: 'juliaqiuxy',
   image: '/images/meta.gif',
@@ -19,7 +19,7 @@ const JSONLD_DATA = {
   sameAs: [
     'http://instagram.com/juliaqiuxy',
   ],
-  url: 'https://juliamurzy.com',
+  url: 'https://julia.sale',
 };
 
 const GOOGLE_MAX_LENGTH = 160;
@@ -100,8 +100,8 @@ const Head = withRouter((props) => (
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#0D0E14" />
 
-    <link rel="icon" href="https://juliamurzy.com/images/favicon.png" />
-    <link rel="apple-touch-icon" href="https://juliamurzy.com/images/favicon.png" />
+    <link rel="icon" href="https://julia.sale/images/favicon.png" />
+    <link rel="apple-touch-icon" href="https://julia.sale/images/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -112,13 +112,13 @@ const Head = withRouter((props) => (
     <meta
       property="og:url"
       key="og:url"
-      content={`https://juliamurzy.com${props.router.asPath}`}
+      content={`https://julia.sale${props.router.asPath}`}
     />
 
     <meta
       property="og:image"
       key="og:image"
-      content="https://juliamurzy.com/images/meta.png"
+      content="https://julia.sale/images/meta.png"
     />
 
     {/* TWITTER */}
@@ -132,7 +132,7 @@ const Head = withRouter((props) => (
     <meta
       name="twitter:image"
       key="twitter:image"
-      content="https://juliamurzy.com/images/meta.png"
+      content="https://julia.sale/images/meta.png"
     />
   </NextHead>
 ));

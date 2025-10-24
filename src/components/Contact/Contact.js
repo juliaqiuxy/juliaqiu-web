@@ -111,11 +111,11 @@ const ContactItem = () => (
     <ProjectSubDescription>
       {'Email me at '}
       <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=re@juliamurzy.com"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=julia@julia.sale"
         target="_blank"
         rel="noopener noreferrer"
       >
-        re@juliamurzy.com
+        julia@julia.sale
       </a>
       {' '}
       or
