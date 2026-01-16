@@ -7,16 +7,19 @@ import TruliaIcon from './images/trulia.svg';
 import XIcon from './images/x.svg';
 import NetflixIcon from './images/netflix.svg';
 
-const gradient = chroma.scale(
-  ['#006AFF', '#00ADBB', '#E50914'],
-).mode('lch').colors(10);
+const gradient = chroma
+  .scale(['#006AFF', '#00ADBB', '#E50914'])
+  .mode('lch')
+  .colors(10);
 
-const reversedGradient = chroma.scale(
-  ['#E50914', '#00ADBB', '#006AFF'],
-).mode('lch').colors(10);
+const reversedGradient = chroma
+  .scale(['#E50914', '#00ADBB', '#006AFF'])
+  .mode('lch')
+  .colors(10);
 
 const gradientKeyframeRules = [
-  ...gradient.map((color, ii) => `
+  ...gradient.map(
+    (color, ii) => `
     ${ii * 5}% {
       background-image: 
         linear-gradient(to right, ${color} 50%, transparent 50%), 
@@ -24,16 +27,19 @@ const gradientKeyframeRules = [
         linear-gradient(to bottom, ${color} 50%, transparent 50%), 
         linear-gradient(to bottom, ${color} 50%, transparent 50%);
     }
-  `),
-  ...reversedGradient.map((color, ii) => `
-  ${(ii * 5) + 50}% {
+  `,
+  ),
+  ...reversedGradient.map(
+    (color, ii) => `
+  ${ii * 5 + 50}% {
     background-image: 
       linear-gradient(to right, ${color} 50%, transparent 50%), 
       linear-gradient(to right, ${color} 50%, transparent 50%), 
       linear-gradient(to bottom, ${color} 50%, transparent 50%), 
       linear-gradient(to bottom, ${color} 50%, transparent 50%);
   }
-`),
+`,
+  ),
 ];
 
 const Container = styled.div`
@@ -54,7 +60,14 @@ const Container = styled.div`
 `;
 
 const DashedRotatedContainer = styled.div`
-  background-image: linear-gradient(to right, ${gradient[0]} 50%, transparent 50%), linear-gradient(to right, ${gradient[0]} 50%, transparent 50%), linear-gradient(to bottom, ${gradient[0]} 50%, transparent 50%), linear-gradient(to bottom, ${gradient[0]} 50%, transparent 50%);
+  background-image: linear-gradient(
+      to right,
+      ${gradient[0]} 50%,
+      transparent 50%
+    ),
+    linear-gradient(to right, ${gradient[0]} 50%, transparent 50%),
+    linear-gradient(to bottom, ${gradient[0]} 50%, transparent 50%),
+    linear-gradient(to bottom, ${gradient[0]} 50%, transparent 50%);
   background-position: left top, left bottom, left top, right top;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 20px 1px, 20px 1px, 1px 20px, 1px 20px;
@@ -63,10 +76,10 @@ const DashedRotatedContainer = styled.div`
 
   animation-name: borderColor;
   animation-duration: 20s;
-  animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  
+
   @media only screen and (min-width: 768px) {
     transform: rotate(-2deg);
     padding: 3pc;
@@ -101,7 +114,7 @@ const ZillowAnchor = styled.a`
 `;
 
 const TruliaAnchor = styled.a`
-  color: #01ADBB;
+  color: #01adbb;
   text-decoration: underline;
 `;
 
@@ -111,7 +124,7 @@ const XAnchor = styled.a`
 `;
 
 const NetflixAnchor = styled.a`
-  color: #E50914;
+  color: #e50914;
   text-decoration: underline;
 `;
 
@@ -123,29 +136,52 @@ const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
       <GreetingText>
-        Hi, I’m Julia. I live in San Francisco and work as an Engineering Manager at 
+        Hi, I’m Julia. I live in San Francisco and work as an Engineering
+        Manager at
         {' '}
-        <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
+        <NetflixAnchor
+          href="https://www.netflix.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <CompanyLogoWrapper>
             <NetflixIcon />
           </CompanyLogoWrapper>
           Netflix
         </NetflixAnchor>
         {', '}
-        where I manage a hybrid product and platform team focused on AI driven localization. My team’s mission is to make experiencing Netflix feel immersive and meaningful, no matter what language you speak.
+        where I manage a hybrid product and platform team focused on AI driven
+        localization. My team’s mission is to make experiencing Netflix feel
+        immersive and meaningful, no matter what language you speak.
       </GreetingText>
       <GreetingText>
         Previously at Netflix, I served as an engineering lead for
         {' '}
-        <a href="https://www.netflix.com/tudum" target="_blank" rel="noopener noreferrer">Tudum</a>
+        <a
+          href="https://www.netflix.com/tudum"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tudum
+        </a>
         {' and '}
-        <a href="https://www.netflix.com/house" target="_blank" rel="noopener noreferrer">Netflix House</a>
+        <a
+          href="https://www.netflix.com/house"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Netflix House
+        </a>
         , two zero-to-one business verticals launched at Netflix.
       </GreetingText>
       <GreetingText>
         Before Netflix, I spent four years at
         {' '}
-        <ZillowAnchor href="https://www.zillow.com" target="_blank" rel="noopener noreferrer">
+        <ZillowAnchor
+          href="https://www.zillow.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <CompanyLogoWrapper>
             <ZillowIcon />
           </CompanyLogoWrapper>
@@ -154,7 +190,11 @@ const Greeting = () => (
         {' '}
         in engineering and lead roles on
         {' '}
-        <TruliaAnchor href="http://www.trulia.com" target="_blank" rel="noopener noreferrer">
+        <TruliaAnchor
+          href="http://www.trulia.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <CompanyLogoWrapper>
             <TruliaIcon />
           </CompanyLogoWrapper>
@@ -166,21 +206,32 @@ const Greeting = () => (
       <GreetingText>
         Outside of work, my partner,
         {' '}
-        <a href="https://jakemurzy.com" target="_blank" rel="noopener noreferrer">Jake Murzy</a>
+        <a
+          href="https://jakemurzy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jake Murzy
+        </a>
         {' '}
-        and I contribute to open source projects, wine tasting, snowboarding, ice skating, surfing Linda Mar,
-        sailing, golfing and traveling the world.
+        and I contribute to open source projects, wine tasting, snowboarding,
+        ice skating, surfing Linda Mar, sailing, golfing and traveling the
+        world.
         {' '}
         <strong>Fun fact:</strong>
         {' '}
-        So far we’ve made it to 30+ countries together and stopped by
-        13 different Netflix offices along the way.
+        So far we’ve made it to 30+ countries
+        together and stopped by 13 different Netflix offices along the way.
       </GreetingText>
 
       <GreetingText>
         You can also catch me rambling on
         {' '}
-        <XAnchor href="https://x.com/juliaqiuxy" target="_blank" rel="noopener noreferrer">
+        <XAnchor
+          href="https://x.com/juliaqiuxy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <CompanyLogoWrapper>
             <XIcon />
           </CompanyLogoWrapper>
@@ -189,10 +240,7 @@ const Greeting = () => (
         .
       </GreetingText>
 
-      <GreetingText>
-        — Julia
-      </GreetingText>
-
+      <GreetingText>— Julia</GreetingText>
     </DashedRotatedContainer>
   </Container>
 );
