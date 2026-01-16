@@ -123,7 +123,7 @@ const Greeting = () => (
   <Container>
     <DashedRotatedContainer>
       <GreetingText>
-        Hi, I’m Julia. I live in San Francisco and work as an Engineering Lead at
+        Hi, I’m Julia. I live in San Francisco and work as an Engineering Manager at 
         {' '}
         <NetflixAnchor href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
           <CompanyLogoWrapper>
@@ -132,14 +132,16 @@ const Greeting = () => (
           Netflix
         </NetflixAnchor>
         {', '}
-        where I focus on
+        where I manage a hybrid product and platform team focused on AI driven localization. My team’s mission is to make experiencing Netflix feel immersive and meaningful, no matter what language you speak.
+      </GreetingText>
+      <GreetingText>
+        Previously at Netflix, I served as an engineering lead for
         {' '}
         <a href="https://www.netflix.com/tudum" target="_blank" rel="noopener noreferrer">Tudum</a>
         {' and '}
-        <a href="https://www.netflixhouse.com" target="_blank" rel="noopener noreferrer">House</a>
-        .
+        <a href="https://www.netflix.com/house" target="_blank" rel="noopener noreferrer">Netflix House</a>
+        , two zero-to-one business verticals launched at Netflix.
       </GreetingText>
-
       <GreetingText>
         Before Netflix, I spent four years at
         {' '}
@@ -166,14 +168,13 @@ const Greeting = () => (
         {' '}
         <a href="https://jakemurzy.com" target="_blank" rel="noopener noreferrer">Jake Murzy</a>
         {' '}
-        and I contribute to open source projects, experimenting (and often failing)
-        with souffle pancakes, wine tasting, snowboarding, ice skating, surfing Linda Mar,
+        and I contribute to open source projects, wine tasting, snowboarding, ice skating, surfing Linda Mar,
         sailing, golfing and traveling the world.
         {' '}
         <strong>Fun fact:</strong>
         {' '}
         So far we’ve made it to 30+ countries together and stopped by
-        11 different Netflix offices along the way.
+        13 different Netflix offices along the way.
       </GreetingText>
 
       <GreetingText>

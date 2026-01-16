@@ -3,7 +3,7 @@ import NextHead from 'next/head';
 import getConfig from 'next/config';
 import { withRouter } from 'next/router';
 
-const META_DESCRIPTION = 'Building https://netflix.com on weekdays, https://slope.ninja and https://ndaify.com on weekends. React ❤️, Node, Deno, GraphQL, React Native. She, her. Ex-Zillow.';
+const META_DESCRIPTION = 'Engineering Manager at Netflix working on AI-driven localization to help entertain the world. Builder at heart, usually planning the next trip.';
 const TITLE = 'julia.dev';
 
 const JSONLD_DATA = {
@@ -13,13 +13,12 @@ const JSONLD_DATA = {
   firstName: 'Julia',
   id: 'juliaqiuxy',
   image: '/images/migratingSlopeNinjaToZeit.gif',
-  jobTitle: 'Software Engineer',
+  jobTitle: 'Engineering Manager',
   lastName: 'Murzy',
   name: 'Julia Murzy',
   sameAs: [
     'https://www.linkedin.com/in/juliaqiuxy',
     'http://x.com/juliaqiuxy',
-    'http://instagram.com/juliaqiuxy',
   ],
   url: 'https://julia.dev',
 };
