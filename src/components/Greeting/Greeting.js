@@ -172,7 +172,7 @@ const Greeting = () => (
         >
           Netflix House
         </a>
-        , two zero-to-one business verticals launched at Netflix.
+        , two 0-to-1 business verticals.
       </GreetingText>
       <GreetingText>
         Before Netflix, I spent four years at
