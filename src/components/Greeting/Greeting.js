@@ -155,7 +155,7 @@ const Greeting = () => (
         immersive and meaningful, no matter what language you speak.
       </GreetingText>
       <GreetingText>
-        Previously at Netflix, I served as an engineering lead for
+        Previously at Netflix, I was the engineering lead for
         {' '}
         <a
           href="https://www.netflix.com/tudum"
@@ -172,10 +172,10 @@ const Greeting = () => (
         >
           Netflix House
         </a>
-        , two 0-to-1 business verticals.
+        , both built from the ground up as new business verticals.
       </GreetingText>
       <GreetingText>
-        Before Netflix, I spent four years at
+        Before my current company, I spent four years at
         {' '}
         <ZillowAnchor
           href="https://www.zillow.com"
