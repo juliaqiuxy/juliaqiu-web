@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import chroma from 'chroma-js';
-import { Tooltip } from 'react-tooltip';
+import Tooltip from '@rc-component/tooltip';
 
 import ZillowIcon from './images/zillow.svg';
 import TruliaIcon from './images/trulia.svg';
@@ -227,16 +227,24 @@ const Greeting = () => (
         {' '}
         <strong>Fun fact:</strong>
         {' '}
-        <Tooltip anchorSelect=".countries" place="top">
-          🇦🇹 🇦🇺 🇧🇪 🇨🇦 🇨🇳 🇭🇷 🇨🇾 🇨🇿 🇩🇰 🇪🇪 🇫🇮 🇫🇷 🇩🇪 🇬🇷
-          <br />
-          🇭🇰 🇭🇺 🇮🇩 🇮🇪 🇮🇹 🇯🇵 🇱🇻 🇲🇴 🇲🇾 🇲🇽 🇳🇱 🇳🇿 🇳🇴 🇵🇭
-          <br />
-          🇵🇱 🇵🇹 🇸🇬 🇰🇷 🇪🇸 🇸🇪 🇨🇭 🇹🇼 🇹🇭 🇹🇷 🇺🇸 🇦🇪 🇬🇧 🇻🇳
-        </Tooltip>
         So far we’ve made it to
         {' '}
-        <CountriesButton className="countries">40+ countries</CountriesButton>
+
+        <Tooltip
+          placement="top"
+          trigger={['hover']}
+          overlay={(
+            <span>
+              🇦🇹 🇦🇺 🇧🇪 🇨🇦 🇨🇳 🇭🇷 🇨🇾 🇨🇿 🇩🇰 🇪🇪 🇫🇮 🇫🇷 🇩🇪 🇬🇷
+              <br />
+              🇭🇰 🇭🇺 🇮🇩 🇮🇪 🇮🇹 🇯🇵 🇱🇻 🇲🇴 🇲🇾 🇲🇽 🇳🇱 🇳🇿 🇳🇴 🇵🇭
+              <br />
+              🇵🇱 🇵🇹 🇸🇬 🇰🇷 🇪🇸 🇸🇪 🇨🇭 🇹🇼 🇹🇭 🇹🇷 🇺🇸 🇦🇪 🇬🇧 🇻🇳
+            </span>
+          )}
+        >
+          <CountriesButton href="#">40+ countries</CountriesButton>
+        </Tooltip>
         {' '}
         together and stopped by 13 different Netflix offices along the way.
       </GreetingText>
