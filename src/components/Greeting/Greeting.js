@@ -129,10 +129,20 @@ const NetflixAnchor = styled.a`
   text-decoration: underline;
 `;
 
-const CountriesButton = styled.a`
+const CountriesLink = styled.a`
   color: var(--juliadev-fg);
   text-decoration: underline;
   cursor: pointer;
+`;
+
+const CountryLink = styled.a`
+  color: var(--juliadev-fg);
+  cursor: pointer;
+`;
+
+const CountriesName = styled.span`
+  color: #fff;
+  font-size: 14px;
 `;
 
 const CompanyLogoWrapper = styled.span`
@@ -234,16 +244,182 @@ const Greeting = () => (
           placement="top"
           trigger={['hover']}
           overlay={(
-            <span>
-              🇦🇹 🇦🇺 🇧🇪 🇨🇦 🇨🇳 🇭🇷 🇨🇾 🇨🇿 🇩🇰 🇪🇪 🇫🇮 🇫🇷 🇩🇪 🇬🇷
+            <>
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Austria</CountriesName>}>
+                <CountryLink>🇦🇹</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Australia</CountriesName>}>
+                <CountryLink>🇦🇺</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Belgium</CountriesName>}>
+                <CountryLink>🇧🇪</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Canada</CountriesName>}>
+                <CountryLink>🇨🇦</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>China</CountriesName>}>
+                <CountryLink>🇨🇳</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Croatia</CountriesName>}>
+                <CountryLink>🇭🇷</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Cyprus</CountriesName>}>
+                <CountryLink>🇨🇾</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Czech Republic</CountriesName>}>
+                <CountryLink>🇨🇿</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Denmark</CountriesName>}>
+                <CountryLink>🇩🇰</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Estonia</CountriesName>}>
+                <CountryLink>🇪🇪</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Finland</CountriesName>}>
+                <CountryLink>🇫🇮</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>France</CountriesName>}>
+                <CountryLink>🇫🇷</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Germany</CountriesName>}>
+                <CountryLink>🇩🇪</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Greece</CountriesName>}>
+                <CountryLink>🇬🇷</CountryLink>
+              </Tooltip>
+
               <br />
-              🇭🇰 🇭🇺 🇮🇩 🇮🇪 🇮🇹 🇯🇵 🇱🇻 🇲🇴 🇲🇾 🇲🇽 🇳🇱 🇳🇿 🇳🇴 🇵🇭
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Hong Kong</CountriesName>}>
+                <CountryLink>🇭🇰</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Hungary</CountriesName>}>
+                <CountryLink>🇭🇺</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Indonesia</CountriesName>}>
+                <CountryLink>🇮🇩</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Ireland</CountriesName>}>
+                <CountryLink>🇮🇪</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Italy</CountriesName>}>
+                <CountryLink>🇮🇹</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Japan</CountriesName>}>
+                <CountryLink>🇯🇵</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Latvia</CountriesName>}>
+                <CountryLink>🇱🇻</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Macao</CountriesName>}>
+                <CountryLink>🇲🇴</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Malaysia</CountriesName>}>
+                <CountryLink>🇲🇾</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Mexico</CountriesName>}>
+                <CountryLink>🇲🇽</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Netherlands</CountriesName>}>
+                <CountryLink>🇳🇱</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>New Zealand</CountriesName>}>
+                <CountryLink>🇳🇿</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Norway</CountriesName>}>
+                <CountryLink>🇳🇴</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Philippines</CountriesName>}>
+                <CountryLink>🇵🇭</CountryLink>
+              </Tooltip>
+
               <br />
-              🇵🇱 🇵🇹 🇸🇬 🇰🇷 🇪🇸 🇸🇪 🇨🇭 🇹🇼 🇹🇭 🇹🇷 🇺🇸 🇦🇪 🇬🇧 🇻🇳
-            </span>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Poland</CountriesName>}>
+                <CountryLink>🇵🇱</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Portugal</CountriesName>}>
+                <CountryLink>🇵🇹</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Singapore</CountriesName>}>
+                <CountryLink>🇸🇬</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>South Korea</CountriesName>}>
+                <CountryLink>🇰🇷</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Spain</CountriesName>}>
+                <CountryLink>🇪🇸</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Sweden</CountriesName>}>
+                <CountryLink>🇸🇪</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Switzerland</CountriesName>}>
+                <CountryLink>🇨🇭</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Taiwan</CountriesName>}>
+                <CountryLink>🇹🇼</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Thailand</CountriesName>}>
+                <CountryLink>🇹🇭</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Turkey</CountriesName>}>
+                <CountryLink>🇹🇷</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>United States</CountriesName>}>
+                <CountryLink>🇺🇸</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>United Arab Emirates</CountriesName>}>
+                <CountryLink>🇦🇪</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>United Kingdom</CountriesName>}>
+                <CountryLink>🇬🇧</CountryLink>
+              </Tooltip>
+
+              <Tooltip placement="top" trigger={['hover']} overlay={<CountriesName>Vietnam</CountriesName>}>
+                <CountryLink>🇻🇳</CountryLink>
+              </Tooltip>
+            </>
           )}
         >
-          <CountriesButton href="#">40+ countries</CountriesButton>
+          <CountriesLink href="#">40+ countries</CountriesLink>
         </Tooltip>
         {' '}
         together and stopped by 13 different Netflix offices along the way.
