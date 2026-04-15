@@ -7,6 +7,8 @@ import { ThemeProvider, getThemePreference } from '../lib/useTheme';
 
 import Head from '../components/Head/Head';
 
+import 'react-tooltip/dist/react-tooltip.css';
+
 const lightVars = `
   --juliadev-bg: #F2F3F3;
   --juliadev-fg: #0D0E14;

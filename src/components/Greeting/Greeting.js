@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import chroma from 'chroma-js';
+import { Tooltip } from 'react-tooltip';
 
 import ZillowIcon from './images/zillow.svg';
 import TruliaIcon from './images/trulia.svg';
@@ -128,6 +129,12 @@ const NetflixAnchor = styled.a`
   text-decoration: underline;
 `;
 
+const CountriesButton = styled.a`
+  color: var(--juliadev-fg);
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
 const CompanyLogoWrapper = styled.span`
   margin-right: 6px;
 `;
@@ -220,7 +227,17 @@ const Greeting = () => (
         {' '}
         <strong>Fun fact:</strong>
         {' '}
-        So far we’ve made it to 30+ countries
+        <Tooltip anchorSelect=".countries" place="top">
+          🇦🇹 🇦🇺 🇧🇪 🇨🇦 🇨🇳 🇭🇷 🇨🇾 🇨🇿 🇩🇰 🇪🇪 🇫🇮 🇫🇷 🇩🇪 🇬🇷
+          <br />
+          🇭🇰 🇭🇺 🇮🇩 🇮🇪 🇮🇹 🇯🇵 🇱🇻 🇲🇴 🇲🇾 🇲🇽 🇳🇱 🇳🇿 🇳🇴 🇵🇭
+          <br />
+          🇵🇱 🇵🇹 🇸🇬 🇰🇷 🇪🇸 🇸🇪 🇨🇭 🇹🇼 🇹🇭 🇹🇷 🇺🇸 🇦🇪 🇬🇧 🇻🇳
+        </Tooltip>
+        So far we’ve made it to
+        {' '}
+        <CountriesButton className="countries">40+ countries</CountriesButton>
+        {' '}
         together and stopped by 13 different Netflix offices along the way.
       </GreetingText>
 
